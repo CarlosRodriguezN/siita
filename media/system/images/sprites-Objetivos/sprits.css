@@ -1,0 +1,55 @@
+.sprite-meta_am{ background-position: 0 0; width: 16px; height: 16px; } 
+.sprite-meta_bn{ background-position: 0 -66px; width: 16px; height: 16px; } 
+.sprite-meta_rj{ background-position: 0 -132px; width: 16px; height: 16px; } 
+.sprite-meta_vd{ background-position: 0 -198px; width: 16px; height: 16px; } 
+
+.sprite-meta{
+    background: url(sprite-meta.png) no-repeat 0 -132px; width: 16px; height: 16px;
+}
+
+.sprite-alineacion_am{ background-position: 0 0; width: 16px; height: 16px; } 
+.sprite-alineacion_bn{ background-position: 0 -66px; width: 16px; height: 16px; } 
+.sprite-alineacion_rj{ background-position: 0 -132px; width: 16px; height: 16px; } 
+.sprite-alineacion_vd{ background-position: 0 -198px; width: 16px; height: 16px; } 
+
+.sprite-alineacion {
+    background: url(sprite-alineacion.png) no-repeat 0 -132px; width: 16px; height: 16px;
+}
+
+
+.sprite-indicadores_am{ background-position: 0 0; width: 16px; height: 16px; } 
+.sprite-indicadores_bn{ background-position: 0 -66px; width: 16px; height: 16px; } 
+.sprite-indicadores_rj{ background-position: 0 -132px; width: 16px; height: 16px; } 
+.sprite-indicadores_vd{ background-position: 0 -198px; width: 16px; height: 16px; }
+
+.sprite-indicadores {
+    background: url(sprite-indicadores.png) no-repeat 0 -132px; width: 16px; height: 16px;
+}
+
+
+.sprite-acciones_am{ background-position: 0 0; width: 16px; height: 16px; } 
+.sprite-acciones_bn{ background-position: 0 -66px; width: 16px; height: 16px; } 
+.sprite-acciones_rj{ background-position: 0 -132px; width: 16px; height: 16px; } 
+.sprite-acciones_vd{ background-position: 0 -198px; width: 16px; height: 16px; } 
+
+.sprite-acciones {
+    background: url(sprite-acciones.png) no-repeat 0 -132px; width: 16px; height: 16px;
+}
+
+.sprite-actividades_am{ background-position: 0 0; width: 16px; height: 16px; } 
+.sprite-actividades_bn{ background-position: 0 -66px; width: 16px; height: 16px; } 
+.sprite-actividades_rj{ background-position: 0 -132px; width: 16px; height: 16px; } 
+.sprite-actividades_vd{ background-position: 0 -198px; width: 16px; height: 16px; } 
+
+.sprite-actividades{
+    background: url(sprite-actividades.png) no-repeat 0 -132px; width: 16px; height: 16px;
+}
+
+.sprite-atributos-ind_am{ background-position: 0 0; width: 16px; height: 16px; } 
+.sprite-atributos-ind_bn{ background-position: 0 -66px; width: 16px; height: 16px; } 
+.sprite-atributos-ind_rj{ background-position: 0 -132px; width: 16px; height: 16px; } 
+.sprite-atributos-ind_vd{ background-position: 0 -198px; width: 16px; height: 16px; } 
+
+.sprite-atributos-ind{
+    background: url(sprite-atributos-ind.png) no-repeat 0 -132px; width: 16px; height: 16px;
+}

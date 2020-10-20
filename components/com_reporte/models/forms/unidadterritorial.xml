@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <fieldset name="unidadterritorial">
+        <!-- Lista de Provincias -->
+        <field  name        = "idProvincia"
+                type        = "provincias"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                required    = "true"
+                label       = "COM_PROGRAMA_INDICADOR_PROVINCIA_LABEL"
+                description = "COM_PROGRAMA_INDICADOR_PROVINCIA_DESC">
+            <option value="0">COM_PROGRAMA_INDICADOR_PROVINCIA_TITLE</option>
+        </field>
+        
+        <!-- Lista de Cantones -->
+        <field  name        = "idCanton"
+                type        = "list"
+                label       = "COM_PROGRAMA_INDICADOR_CANTON_LABEL"
+                description = "COM_PROGRAMA_INDICADOR_CANTON_DESC"
+                class       = "inputbox">
+            <option value="0"> COM_PROGRAMA_INDICADOR_CANTON_TITLE </option>
+        </field>
+        
+        <!-- Lista de Parroquias -->
+        <field  name        = "idParroquia"
+                type        = "list"
+                label       = "COM_PROGRAMA_INDICADOR_PARROQUIA_LABEL"
+                description = "COM_PROGRAMA_INDICADOR_PARROQUIA_DESC"
+                class       = "inputbox">
+            <option value="0"> COM_PROGRAMA_INDICADOR_PARROQUIA_TITLE </option>
+        </field>
+    </fieldset>
+</form>

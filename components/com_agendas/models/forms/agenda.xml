@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="agenda">
+        <!-- codigo de la beneficiario -->
+        <field  name            = "intIdAgenda_ag"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- Descripción de la agenda-->
+        <field  name            = "strDescripcion_ag" 
+                type            = "textarea" 
+                label           = "COM_AGENDAS_FIELD_AGENDA_DESCRIPCION_LABEL"
+                description     = "COM_AGENDAS_FIELD_AGENDA_DESCRIPCION_DESC"
+                required        = "true"
+                rows            = "5" 
+                cols            = "3"
+        />
+        
+         <!-- Fecha de inicio -->
+        <field  name             = "dteFechaInicio_ag" 
+                type             = "calendar" 
+                label            = "COM_AGENDAS_FIELD_AGENDA_FECHA_INICIO_LABEL"
+                description      = "COM_AGENDAS_FIELD_AGENDA_FECHA_INICIO_DESC"
+                format           = "%Y-%m-%d" 
+                required        = "true"
+        />
+        
+        <!-- Fecha de fin -->
+        <field  name             = "dteFechaFin_ag" 
+                type             = "calendar" 
+                label            = "COM_AGENDAS_FIELD_AGENDA_FECHA_FIN_LABEL"
+                description      = "COM_AGENDAS_FIELD_AGENDA_FECHA_FIN_DESC"
+                format           = "%Y-%m-%d" 
+                required        = "true"
+        />
+        
+        <!-- Publicados -->
+        <field  name            ="published"
+                type            ="list"
+                label           ="JSTATUS"
+                description     ="JFIELD_PUBLISH_DESC"
+                class           ="inputbox"
+                filter          ="intval"
+                size            ="1"
+                default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+    
+    <fieldset name="detalleagd">
+        <!-- Identificador del detalle -->
+        <field  name            = "intIdDetalle_dt"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- Nombre del campo del detalle -->
+        <field  name            = "strCampo_dt" 
+                type            = "text" 
+                label           = "COM_AGENDAS_FIELD_AGD_DETALLE_CAMPO_LABEL"
+                description     = "COM_AGENDAS_FIELD_AGD_DETALLE_CAMPO_DESC"
+                required        = "true"
+                size            = "30"
+        />
+        
+        <!-- Valor del campo -->
+        <field  name            = "strValorCampo_dt" 
+                type            = "text" 
+                label           = "COM_AGENDAS_FIELD_AGD_DETALLE_VALOR_LABEL"
+                description     = "COM_AGENDAS_FIELD_AGD_DETALLE_VALOR_DESC"
+                required        = "true"
+                size            = "30"
+        />
+        
+    </fieldset>
+    <fieldset name="estructuraagd">
+        <!-- Identificador del detalle -->
+        <field  name            = "intIdEstructura_es"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- elemento padre en la estructura -->
+        <field  name            = "intIdEstuctura_padre_es"
+                type            = "estructura"
+                extension       = "com_mantenimiento"
+                label           = "COM_AGENDAS_FIELD_AGD_ESTRUCTURA_PADRE_LABEL"
+                description     = "COM_AGENDAS_FIELD_AGD_ESTRUCTURA_PADRE_DESC"
+                class           = "inputbox">
+            <option value="0">COM_AGENDAS_FIELD_AGD_ESTRUCTURA_PADRE_TITLE</option>
+        </field>
+        
+        <!-- nombre del elmento de la estructura -->
+        <field  name            = "strDescripcion_es" 
+                type            = "text" 
+                label           = "COM_AGENDAS_FIELD_AGD_ESTRUCTURA_DESCRIPCION_LABEL"
+                description     = "COM_AGENDAS_FIELD_AGD_ESTRUCTURA_DESCRIPCION_DESC"
+                required        = "true"
+                size            = "30"
+        />
+        
+        <!-- nivel del elemento en la estructura -->
+        <field  name            = "intNivel" 
+                type            = "text" 
+                label           = "COM_AGENDAS_FIELD_AGD_ESTRUCTURA_NIVEL_LABEL"
+                description     = "COM_AGENDAS_FIELD_AGD_ESTRUCTURA_NIVEL_DESC"
+                required        = "true"
+                size            = "30"
+        />
+        
+    </fieldset>
+</form>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="itemagd">
+        <!-- codigo del item -->
+        <field  name            = "intIdItem_it"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- codigo de la agenda -->
+        <field  name            = "intIdAgenda_ag"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- codigo de la estructura -->
+        <field  name            = "intIdEstructura_es"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- codigo del item padre -->
+        <field  name            = "intIdItem_padre_it"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- Descripción del item -->
+        <field  name            = "strDescripcion_it" 
+                type            = "textarea" 
+                label           = "COM_MANTENIMIENTO_FIELD_AGD_ITEM_DESCRIPCION_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_AGD_ITEM_DESCRIPCION_DESC"
+                required        = "true"
+                rows            = "5" 
+                cols            = "3"
+        />
+        
+        <!-- nivel del item -->
+        <field  name            = "strNivel_it" 
+                type            = "text" 
+                label           = "COM_MANTENIMIENTO_FIELD_AGD_ITEM_NIVEL_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_AGD_ITEM_NIVEL_DESC"
+                required        = "true"
+                size            = "30"
+        />
+        
+    </fieldset>
+    
+</form>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <!-- INFORMACION GENERAL DEL TEMA -->
+    <fieldset name="formTema">
+        
+        <!-- ID TEMA-->
+        <field  name            = "intId_tma"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                class           = "readonly"
+        />
+        
+        <!-- TIPO DE TEMA -->
+        <field  name            = "intId_tt"
+                type            = "tipostema"
+                extension       = "com_conflitos"
+                label           = "COM_CONFLICTOS_FIELD_TIPO_TEMA_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_TIPO_TEMA_DESC"
+                required        = "true">
+            <option value="0">COM_CONFLICTOS_FIELD_TIPO_TEMA_TITLE</option>
+        </field>
+        
+        <!-- Campo txt para la gestion de la Legitimidad -->
+        <field  name            = "idTipoTemaTxt"
+                type            = "text"
+                label           = "COM_CONFLICTOS_FIELD_TIPO_TEMA_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_TIPO_TEMA_DESC"
+                required        = "true"
+                size            = "35"
+        />
+        
+        <!-- NIVEL DE IMPACTO -->
+        <field  name            = "intId_ni"
+                type            = "nivelesimpacto"
+                extension       = "com_conflitos"
+                label           = "COM_CONFLICTOS_FIELD_NIVEL_IMPACTO_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_NIVEL_IMPACTO_DESC"
+                required        = "true">
+            <option value="0">COM_CONFLICTOS_FIELD_NIVEL_IMPACTO_TITLE</option>
+        </field>
+
+        <!-- TITULO DEL TEMA -->
+        <field  name            = "strTitulo_tma"
+                type            = "text"
+                label           = "COM_CONFLICTOS_FIELD_TITULO_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_TITULO_DESC"
+                size            = "35"
+                required        = "true"
+        />
+        
+        <!-- RESUMEN -->
+        <field  name            = "strResumen_tma"
+                type            = "textarea"
+                label           = "COM_CONFLICTOS_FIELD_RESUMEN_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_RESUMEN_DESC"
+                rows            = "4" 
+                cols            = "5"
+                required        = "true"    
+        />
+        
+        <!-- OBSERVACION -->
+        <field  name            = "strObservaciones_tma"
+                type            = "textarea"
+                label           = "COM_CONFLICTOS_FIELD_OBSERVACION_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_OBSERVACION_DESC"
+                rows            = "4" 
+                cols            = "5"
+        />
+        
+        <!-- SUGERENCIA -->
+        <field  name            = "strSugerencias_tma"
+                type            = "textarea"
+                label           = "COM_CONFLICTOS_FIELD_SUGERENCIA_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_SUGERENCIA_DESC"
+                rows            = "4" 
+                cols            = "5"
+        />
+
+    </fieldset>
+    
+     <!-- UNIDAD TERRITORIAL DE TEMA -->
+    <fieldset name="undTerrTema">
+        
+        <!-- TIPO DE TEMA -->
+        <field  name            = "undTerr_provicia"
+                type            = "provincias"
+                extension       = "com_conflitos"
+                label           = "COM_CONFLICTOS_FIELD_UNDTERR_PROVINCIA_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_UNDTERR_PROVINCIA_DESC"
+                required        = "true">
+            <option value="0">SELECCIONE_PROVINCIA</option>
+        </field>
+        <!-- TIPO DE TEMA -->
+        <field  name            = "undTerr_canton"
+                type            = "list"
+                class           = "inputbox"
+                extension       = "com_conflitos"
+                label           = "COM_CONFLICTOS_FIELD_UNDTERR_CANTON_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_UNDTERR_CANTON_DESC"
+                required        = "true">
+            <option value="0">SELECCIONE_CANTON</option>
+        </field>
+        <!-- TIPO DE TEMA -->
+        <field  name            = "undTerr_parroquia"
+                type            = "list"
+                class           = "inputbox"
+                extension       = "com_conflitos"
+                label           = "COM_CONFLICTOS_FIELD_UNDTERR_PARROQUIA_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_UNDTERR_PARROQUIA_DESC"
+                required        = "true">
+            <option value="0">SELECCIONE_PARROQUIA</option>
+        </field>
+        
+        
+    </fieldset>
+    
+    
+    <!-- ACTORES DEL TEMA -->
+    <fieldset name="actorTema">
+        
+        <!-- ID TEMA-->
+        <field  name            = "intId_ad"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                class           = "readonly"
+        />
+        
+        <!-- TIPO DE TEMA -->
+        <field  name            = "actor_intId_ad"
+                type            = "actores"
+                extension       = "com_conflitos"
+                label           = "COM_CONFLICTOS_FIELD_ACTOR_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_ACTOR_DESC"
+                required        = "true">
+            <option value="0">COM_CONFLICTOS_FIELD_ACTOR_TILTE</option>
+        </field>
+        
+        
+        <!-- FECHA DEL ACTOR EN EL TEMA -->
+        <field  name             = "actor_dteFecha_ad" 
+                type             = "calendar" 
+                label            = "COM_CONFLICTOS_FIELD_FECHA_ACTUACION_LABEL"
+                description      = "COM_CONFLICTOS_FIELD_FECHA_ACTUACION_DESC"
+                format           = "%Y-%m-%d" 
+                required        = "true"
+        />
+        
+        <!-- DESCRIOCION DEL ACTOR EN EL TEMA -->
+        <field  name            = "actor_strDescripcion_ad"
+                type            = "textarea"
+                label           = "COM_CONFLICTOS_FIELD_DESCRIPCION_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_DESCRIPCION_DESC"
+                rows            ="4" 
+                cols            ="5"
+                required        = "true"
+        />
+    </fieldset>
+    
+    <!-- Estados -->
+    <fieldset name="estadoTema">
+        
+        <!-- ID TEMA-->
+        <field  name            = "estado_intId_ec"
+                type            = "estados"
+                extension       = "com_conflitos"
+                label           = "COM_CONFLICTOS_FIELD_ESTADO_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_ESTADO_DESC"
+                required        = "true">
+            <option value="0">COM_CONFLICTOS_FIELD_ESTADO_TITLE</option>
+            />
+        </field>
+        
+        <!-- Campo txt para la gestion de la Legitimidad -->
+        <field  name            = "idEstadoTxt"
+                type            = "text"
+                label           = "COM_CONFLICTOS_FIELD_ESTADO_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_ESTADO_LABEL"
+                required        = "true"
+                size            = "35"
+        />
+        
+        <!-- FECHA DE INICIO DEL ESTADO -->
+        <field name             = "estado_dteFechaInicio_te" 
+               type             = "calendar" 
+               label            = "COM_CONFLICTOS_FIELD_FECHA_INICIO_LABEL"
+               description      = "COM_CONFLICTOS_FIELD_FECHA_INICIO_DESC"
+               format           = "%Y-%m-%d" 
+               required        = "true"
+        />
+        <!-- FECHA DE FIN DEL ESTADO -->
+        <field name             = "estado_dteFechaFin_te" 
+               type             = "calendar" 
+               label            = "COM_CONFLICTOS_FIELD_FECHA_FIN_LABEL"
+               description      = "COM_CONFLICTOS_FIELD_FECHA_FIN_DESC"
+               format           = "%Y-%m-%d" 
+        />
+    </fieldset>
+    
+    <!-- ESTADOS -->
+    <fieldset name="fuenteTema">
+        
+        <!-- FILTRO TIPO DE FUENTE -->
+        <field  name            = "fuente_intId_tf"
+                type            = "tiposfuente"
+                extension       = "com_conflitos"
+                label           = "COM_CONFLICTOS_FIELD_FUENTE_TIPOS_FUENTE_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_FUENTE_TIPOS_FUENTE_DESC"
+                required        = "true">
+            <option value="0">COM_CONFLICTOS_FIELD_FUENTE_TIPOS_FUENTE_TITLE</option>
+            />
+        </field>
+        
+        <!-- FUENTE -->
+        <field  name            = "fuente_intId_fte"
+                type            = "list"
+                class           = "inputbox"
+                label           = "COM_CONFLICTOS_FIELD_FUENTE_FUENTE_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_FUENTE_FUENTE_DESC"
+                required        = "true">
+            <option value="0">COM_CONFLICTOS_FIELD_FUENTE_FUENTE_TITLE</option>
+            />
+        </field>
+        
+        <!-- FECHA DE INICIO DEL ESTADO -->
+        <field name             = "fuente_dteFecha_tf" 
+               type             = "calendar" 
+               label            = "COM_CONFLICTOS_FIELD_FUENTE_FECHA_LABEL"
+               description      = "COM_CONFLICTOS_FIELD_FUENTE_FECHA_DESC"
+               default          = "" 
+               format           = "%Y-%m-%d" 
+               required         = "true"
+        />
+       
+        <!-- DESCRIPCION DE LA FUENTE EN EL TEMA-->
+        <field  name            = "strObservacion_tf"
+                type            = "textarea"
+                label           = "COM_CONFLICTOS_FIELD_FUENTE_DESCRIPCION_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_FUENTE_DESCRIPCION_DESC"
+                rows            = "4" 
+                cols            = "5"
+                required        = "true"
+        />
+    </fieldset>
+    
+</form>

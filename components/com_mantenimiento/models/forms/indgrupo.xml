@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="indgrupo">
+        <!-- codigo de la beneficiario -->
+        <field  name            = "intId_gpo"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+        />
+        
+        <!-- Descripción -->
+        <field  name            = "strDescripcion_gpo" 
+                type            = "textarea" 
+                label           = "COM_MANTENIMIENTO_FIELD_IND_GRUPO_DESCRIPCION_LABEL" 
+                description     = "COM_MANTENIMIENTO_FIELD_IND_GRUPO_DESCRIPCION_DESC" 
+                rows            = "5" 
+                cols            = "3"
+                required        = "true"
+         />
+        
+        <!-- Lista de Categorias -->
+        <field  name            = "intId_gpo_padre"
+                type            = "indgrupo"
+                extension       = "com_mantenimiento"
+                class           = "inputbox"
+                label           = "COM_MANTENIMIENTO_FIELD_IND_GRUPO_IND_PADRE_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_IND_GRUPO_IND_PADRE_DESC">
+            <option value="0">COM_MANTENIMIENTO_FIELD_IND_GRUPO_IND_PADRE_TITLE</option>
+        </field>
+         
+        <!-- Publicados -->
+        <field  name            = "published"
+                type            = "list"
+                label           = "JSTATUS"
+                description     = "JFIELD_PUBLISH_DESC"
+                class           = "inputbox"
+                filter          = "intval"
+                size            = "1"
+                default         = "1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

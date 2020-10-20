@@ -1,0 +1,579 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <!-- Informacion General de una propuesta de proyecto -->
+    <fieldset name="propuesta">
+        <!-- Identificador de propuesta de proyecto -->
+        <field  name            = "intIdPropuesta_cp"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- Identificador del tipo de entidad de la propuesta de proyecto -->
+        <field  name            = "intIdtipoentidad_te"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+                default         = "6"
+        />
+        
+        <!-- Identificador de entidad de la propuesta de proyecto -->
+        <field  name            = "intIdentidad_ent"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- Identificador de institucion -->
+        <field  name            = "intCodigo_ins"
+                type            = "institucioncp"
+                default         = ""
+                extension       = "com_canastaproy"
+                label           = "COM_CANASTAPROY_FIELD_PROPUESTA_INSTITUCION_LABEL"
+                description     = "COM_CANASTAPROY_FIELD_PROPUESTA_INSTITUCION_DESC"
+                required        = "true">
+            <option value="0">COM_CANASTAPROY_FIELD_PROPUESTA_INSTITUCION_TITLE</option>
+        </field>
+        
+        <!-- Identificador de prioridad -->
+        <field  name            = "inpCodigo_estado"
+                type            = "estadocp"
+                default         = ""
+                extension       = "com_canastaproy"
+                label           = "COM_CANASTAPROY_FIELD_PROPUESTA_PRIORIDAD_LABEL"
+                description     = "COM_CANASTAPROY_FIELD_PROPUESTA_PRIORIDAD_DESC"
+                required        = "true">
+            <option value="0">COM_CANASTAPROY_FIELD_PROPUESTA_PRIORIDAD_TITLE</option>
+        </field>
+        
+        <!-- Codigo de la propuesta de proyecto -->
+        <field  name            = "strCodigoPropuesta_cp"
+                type            = "text"
+                default         = ""
+                label           = "COM_CANASTAPROY_FIELD_PROPUESTA_CODIGO_LABEL"
+                description     = "COM_CANASTAPROY_FIELD_PROPUESTA_CODIGO_DESC"
+                size            = "50"
+                required        = "true">
+        </field>
+        
+        <!-- Nombre de la propuesta del proyecto -->
+        <field  name            = "strNombre_cp"
+                type            = "text"
+                label           = "COM_CANASTAPROY_FIELD_PROPUESTA_NOMBRE_LABEL"
+                description     = "COM_CANASTAPROY_FIELD_PROPUESTA_NOMBRE_DESC"
+                size            = "50"
+                required        = "true">
+        </field>
+        
+        <!-- Monto DCM del proyecto -->
+        <field  name            = "dcmMonto_cp"
+                type            = "text"
+                label           = "COM_CANASTAPROY_FIELD_PROPUESTA_MONTO_DCM_LABEL"
+                description     = "COM_CANASTAPROY_FIELD_PROPUESTA_MONTO_DCM_DESC"
+                size            = "50"
+                required        = "true">
+        </field>
+        
+        <!-- Numero de beneficiarios del proyecto  -->
+        <field  name            = "intNumeroBeneficiarios"
+                type            = "text"
+                label           = "COM_CANASTAPROY_FIELD_PROPUESTA_BENEFICIARIOS_LABEL"
+                description     = "COM_CANASTAPROY_FIELD_PROPUESTA_BENEFICIARIOS_DESC"
+                size            = "50"
+                required        = "true">
+        </field>
+        
+        <!-- Decripcion del proyecto -->
+        <field  name            = "strDescripcion_cp"
+                type            = "textarea"
+                label           = "COM_CANASTAPROY_FIELD_PROPUESTA_DESCRIPCION_LABEL"
+                description     = "COM_CANASTAPROY_FIELD_PROPUESTA_DESCRIPCION_DESC"
+                rows            ="5" 
+                cols            ="3">
+        </field>
+        
+        <!-- Publicados -->
+        <field  name            ="published"
+                type            ="list"
+                label           ="JSTATUS"
+                description     ="JFIELD_PUBLISH_DESC"
+                filter          ="intval"
+                size            ="1"
+                default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+        
+        <!-- Datos Relacion de un Proyecto -->
+        <field  name    = "dataIndicadores"
+                type    = "hidden"
+                readonly= "true"
+                value   = '0' />
+
+    </fieldset>
+
+    <!-- Ubicacion Territorial - DPA -->
+    <fieldset name="ubicacionTerritorialCP">
+        
+        <!-- Provincia -->
+        <field  name            = "idProvincia"
+                type            = "provincias"
+                extension       = "com_canastaproy"
+                label           = "COM_CANASTAPROY_FIELD_PROPUESTA_UT_PROVINCIA_LABEL"
+                description     = "COM_CANASTAPROY_FIELD_PROPUESTA_UT_PROVINCIA_DESC"
+                required        = "true">
+             <option value="0">COM_CANASTAPROY_FIELD_PROPUESTA_UT_PROVINCIA_TITLE</option>
+        </field>
+        
+        <!-- Canton -->
+        <field  name            = "idCanton"
+                type            = "list"
+                class           = "inputbox"
+                label           = "COM_CANASTAPROY_FIELD_PROPUESTA_UT_CANTON_LABEL"
+                description     = "COM_CANASTAPROY_FIELD_PROPUESTA_UT_CANTON_DESC"
+                required        = "true">
+            <option value="0">COM_CANASTAPROY_FIELD_PROPUESTA_UT_CANTON_TITLE</option>
+        </field>
+        
+        <!-- Parroquia -->
+        <field  name            = "idParroquia"
+                type            = "list"
+                label           = "COM_CANASTAPROY_FIELD_PROPUESTA_UT_PARROQUIA_LABEL"
+                description     = "COM_CANASTAPROY_FIELD_PROPUESTA_UT_PARROQUIA_DESC"
+                required        = "true">
+            <option value="0">COM_CANASTAPROY_FIELD_PROPUESTA_UT_PARROQUIA_TITLE</option>
+        </field>
+        
+        
+        <!-- Informacion de Coordenadas -->
+        <field  name        = "dataUndTerritorial"
+                type        = "hidden"
+                label       = "JGLOBAL_FIELD_ID_LABEL"
+                description = "JGLOBAL_FIELD_ID_DESC"
+                size        = "10"
+                default     = "0"
+                readonly    = "true"
+                class       = "readonly"
+        />
+        
+    </fieldset>
+    
+    <!-- Ubicacion Geografica - DPA-->
+    <fieldset name="formaGrafico" >
+        
+        <!-- Identificador del grafico de la propuesta de proyecto -->
+        <field  name            = "intId_gcp"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- Tipo de Graficos -->
+        <field  name        = "idTipoGrafico"
+                type        = "tiposgraficos"
+                extension   = "com_canastaproy"
+                label       = "COM_CANASTAPROY_FIELD_PROPUESTA_TIPO_GRAFICO_LABEL"
+                description = "COM_CANASTAPROY_FIELD_PROPUESTA_TIPO_GRAFICO_DESC"
+                required    = "true">
+            <option value="0">COM_CANASTAPROY_FIELD_PROPUESTA_TIPO_GRAFICO_TITLE</option>
+        </field>
+        
+        <!-- Descripcion del grafico de la Obra  -->
+        <field  name        = "strDescripcionGrafico_gcp" 
+                type        = "textarea" 
+                label       = "COM_CANASTAPROY_FIELD_PROPUESTA_DESCRIPCION_GCP_LABEL"
+                description = "COM_CANASTAPROY_FIELD_PROPUESTA_DESCRIPCION_GCP_DESC"
+                rows        = "3"
+                cols        = "4" 
+                required    = "true"    
+        />
+        
+        <!-- Informacion de Coordenadas -->
+        <field  name        = "dataCoordenadas"
+                type        = "hidden"
+                label       = "JGLOBAL_FIELD_ID_LABEL"
+                description = "JGLOBAL_FIELD_ID_DESC"
+                size        = "10"
+                default     = "0"
+                readonly    = "true"
+                class       = "readonly"
+        />
+    </fieldset>
+    
+    <!-- Coordenadas de los graficos-->
+    <fieldset name="coordenadasGrafico" >
+        
+        <!-- Identificador de coordenada de un grafico -->
+        <field  name            = "intId_cgcp"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- Latitud -->
+        <field  name        = "latitud"
+                type        = "text"
+                label       = "COM_CANASTAPROY_FIELD_PROPUESTA_LATITUD_LABEL"
+                description = "COM_CANASTAPROY_FIELD_PROPUESTA_LATITUD_DESC"
+                class       = "inputbox"
+                size        = "25"
+                maxlenght   = "50"
+        />
+        
+        <!-- Longitud -->
+        <field  name        = "longitud"
+                type        = "text"
+                label       = "COM_CANASTAPROY_FIELD_PROPUESTA_LONGITUD_LABEL"
+                description = "COM_CANASTAPROY_FIELD_PROPUESTA_LONGITUD_DESC"
+                class       = "inputbox"
+                size        = "25"
+                maxlenght   = "50"
+        />        
+    </fieldset>
+    
+    <!-- Solo para cuando el grafico sea de tipo circulo-->
+    <fieldset name="radioCirculo" >
+        <!-- Radio -->
+        <field  name        = "Radio"
+                type        = "text"
+                label       = "COM_CANASTAPROY_FIELD_PROPUESTA_RADIO_LABEL"
+                description = "COM_CANASTAPROY_FIELD_PROPUESTA_RADIO_DESC"
+                class       = "inputbox"
+                size        = "25"
+                maxlenght   = "50"
+        />
+    </fieldset>
+    
+    <!-- La aliniacion de la propuesta de proyecto con relacion al objetivo, meta y politica nacional-->
+    <fieldset name="alineacionProyecto">
+        
+        <!-- Objetivo Nacional -->
+        <field  name        = "intCodigo_on"
+                type        = "objsnacionales"
+                extension   = "com_canastaproy"
+                label       = "COM_CANASTAPROY_FIELD_PROPUESTA_OBJNACIONAL_LABEL"
+                description = "COM_CANASTAPROY_FIELD_PROPUESTA_OBJNACIONAL_DESC"
+                required    = "true">
+            <option value="0">COM_CANASTAPROY_FIELD_PROPUESTA_OBJNACIONAL_TITLE</option>
+        </field>
+        
+        <!-- Politica Nacional -->
+        <field  name        = "intCodigo_pn"
+                type        = "list"
+                label       = "COM_CANASTAPROY_FIELD_PROPUESTA_POLITICA_LABEL"
+                description = "COM_CANASTAPROY_FIELD_PROPUESTA_POLITICA_DESC"
+                required    = "true">
+            <option value="0">COM_CANASTAPROY_FIELD_PROPUESTA_POLITICA_TITLE</option>
+        </field>
+        
+        <!-- Meta Nacional -->
+        <field  name        = "idCodigo_mn"
+                type        = "list"
+                label       = "COM_CANASTAPROY_FIELD_PROPUESTA_META_LABEL"
+                description = "COM_CANASTAPROY_FIELD_PROPUESTA_META_DESC"
+                required    = "true">
+            <option value="0">COM_CANASTAPROY_FIELD_PROPUESTA_META_TITLE</option>
+        </field>
+        
+        <!-- Datos Relacion de un Proyecto -->
+        <field  name    = "dataAliniacionProyectoCP"
+                type    = "hidden"
+                value   = "0"
+                readonly= "true"
+        />
+    </fieldset>
+    
+    
+    <!-- - -->
+    <!-- INDICADORES -->
+    <!-- - -->
+    
+    <!-- Indicadores Economicos -->
+    <fieldset name="indEconomicos">
+        <!-- Financiero -->
+        <!-- Tasa de Descuento -->
+        <field  name        = "intTasaDctoFin"
+                type        = "text" 
+                label       = "COM_CANASTAPROY_FIELD_PROYECTO_TASADESCUENTO_LABEL" 
+                description = "COM_CANASTAPROY_FIELD_PROYECTO_TASADESCUENTO_DESC" 
+                size        = "10"
+        />
+        
+        <!-- Valor Actual Neto -->
+        <field  name        = "intValActualNetoFin" 
+                type        = "text" 
+                label       = "COM_CANASTAPROY_FIELD_PROYECTO_VALORACTUALNETO_LABEL" 
+                description = "COM_CANASTAPROY_FIELD_PROYECTO_VALORACTUALNETO_DESC" 
+                size        = "10" />
+        
+        <!-- Tasa Interna de Retorno - TIR -->
+        <field  name        = "intTIRFin" 
+                type        = "text" 
+                label       = "COM_CANASTAPROY_FIELD_PROYECTO_TASAINTERNARETORNO_LABEL" 
+                description = "COM_CANASTAPROY_FIELD_PROYECTO_TASAINTERNARETORNO_DESC" 
+                size        = "10" />
+        
+        <!-- Economico -->
+        <!-- Tasa de Descuento -->
+        <field  name        = "intTasaDctoEco"
+                type        = "text" 
+                label       = "COM_CANASTAPROY_FIELD_PROYECTO_TASADESCUENTO_LABEL" 
+                description = "COM_CANASTAPROY_FIELD_PROYECTO_TASADESCUENTO_DESC" 
+                size        = "10" />
+        
+        <!-- Valor Actual Neto -->
+        <field  name        = "intValActualNetoEco" 
+                type        = "text" 
+                label       = "COM_CANASTAPROY_FIELD_PROYECTO_VALORACTUALNETO_LABEL" 
+                description = "COM_CANASTAPROY_FIELD_PROYECTO_VALORACTUALNETO_DESC" 
+                size        = "10" />
+        
+        <!-- Tasa Interna de Retorno - TIR -->
+        <field  name        = "intTIREco" 
+                type        = "text" 
+                label       = "COM_CANASTAPROY_FIELD_PROYECTO_TASAINTERNARETORNO_LABEL" 
+                description = "COM_CANASTAPROY_FIELD_PROYECTO_TASAINTERNARETORNO_DESC" 
+                size        = "10" />
+    </fieldset>
+    
+    
+    <!-- BENEFICIARIOS -->
+    <fieldset name="beneficiarios">
+        <!-- Beneficiarios Directos Hombres -->
+        <field  name        = "intBenfDirectoHombre"
+                type        = "text" 
+                label       = "COM_CANASTAPROY_FIELD_PROYECTO_BENFDIRHOMBRES_LABEL" 
+                description = "COM_CANASTAPROY_FIELD_PROYECTO_BENFDIRHOMBRES_DESC" 
+                size        = "10" />
+        
+        <!-- Beneficiarios Directos Mujeres -->
+        <field  name        = "intBenfDirectoMujer" 
+                type        = "text" 
+                label       = "COM_CANASTAPROY_FIELD_PROYECTO_BENFDIRMUJERES_LABEL" 
+                description = "COM_CANASTAPROY_FIELD_PROYECTO_BENFDIRMUJERES_DESC" 
+                size        = "10" />
+        
+        <!-- Total Beneficiarios Directos -->
+        <field  name        = "intTotalBenfDirectos" 
+                type        = "text" 
+                label       = "COM_CANASTAPROY_FIELD_PROYECTO_TOTALBENFDIRECTOS_LABEL" 
+                description = "COM_CANASTAPROY_FIELD_PROYECTO_TOTALBENFDIRECTOS_DESC" 
+                size        = "10" />
+        
+        <!-- Beneficiarios Indirectos Hombres -->
+        <field  name        = "intBenfIndDirectoHombre"
+                type        = "text" 
+                label       = "COM_CANASTAPROY_FIELD_PROYECTO_BENFINDHOMBRES_LABEL" 
+                description = "COM_CANASTAPROY_FIELD_PROYECTO_BENFINDHOMBRES_DESC" 
+                size        = "10" />
+        
+        <!-- Beneficiarios Indirectos Mujeres -->
+        <field  name        = "intBenfIndDirectoMujer" 
+                type        = "text" 
+                label       = "COM_CANASTAPROY_FIELD_PROYECTO_BENFINDMUJERES_LABEL" 
+                description = "COM_CANASTAPROY_FIELD_PROYECTO_BENFINDMUJERES_DESC" 
+                size        = "10" />
+        
+        <!-- Total Beneficiarios Indirectos -->
+        <field  name        = "intTotalBenfIndDirectos" 
+                type        = "text" 
+                label       = "COM_CANASTAPROY_FIELD_PROYECTO_TOTALBENFINDIRECTOS_LABEL" 
+                description = "COM_CANASTAPROY_FIELD_PROYECTO_TOTALBENFINDIRECTOS_DESC" 
+                size        = "10" />
+    </fieldset>
+    
+    
+    <!-- GRUPO DE ATENCION PRIORITARIO -->
+    <fieldset name="gpoAtencionPrioritario">
+        <!-- Identificador Registro de Indicador GAP -->
+        <field  name    = "idGAP"
+                type    = "hidden"
+                readonly= "true"
+                value   = '0'
+        />
+        
+        <!-- Grupo de Atencion Prioritario -->
+        <field   name        = "cbGpoAtencionPrioritario"
+                 type        = "atencionpriotarios"
+                 extension   = "com_proyectos"
+                 class       = "inputbox"
+                 default     = ""
+                 label       = "COM_CANASTAPROY_FIELD_PROYECTO_GPOATENCIONPRIO_LABEL"
+                 description = "COM_CANASTAPROY_FIELD_PROYECTO_GPOATENCIONPRIO_DESC"
+                 required    = "true">
+            <option value="0">COM_CANASTAPROY_FIELD_PROYECTO_GPOATENCIONPRIO_TITLE</option>
+        </field>
+        
+        <!-- Beneficiarios Hombres -->
+        <field  name        = "intGAPMasculino"
+                type        = "text" 
+                default     = "" 
+                label       = "COM_CANASTAPROY_FIELD_PROYECTO_GAPMASCULINO_LABEL" 
+                description = "COM_CANASTAPROY_FIELD_PROYECTO_GAPMASCULINO_DESC" 
+                size        = "10" />
+        
+        <!-- Beneficiarios Mujeres -->
+        <field  name        = "intGAPFemenino" 
+                type        = "text" 
+                default     = "" 
+                label       = "COM_CANASTAPROY_FIELD_PROYECTO_GAPFEMENINO_LABEL"
+                description = "COM_CANASTAPROY_FIELD_PROYECTO_GAPFEMENINO_DESC" 
+                size        = "10" />
+        
+        <!-- Total de Beneficiarios -->
+        <field  name        = "intGAPTotal" 
+                type        = "text" 
+                default     = "" 
+                label       = "COM_CANASTAPROY_FIELD_PROYECTO_GAPTOTAL_LABEL"
+                description = "COM_CANASTAPROY_FIELD_PROYECTO_GAPTOTAL_DESC" 
+                size        = "10" />
+        
+        <!-- Datos Relacion de un Proyecto -->
+        <field  name    = "dataGAP"
+                type    = "hidden"
+                readonly= "true"
+                value   = '0'
+        />
+    </fieldset>
+
+    <!-- ENFOQUE IGUALDAD -->
+    <fieldset name="enfoqueIgualdad">
+
+        <!-- Identificador Registro de Indicador de Enfoque de Igualdad -->
+        <field  name    = "idEnfIgualdad"
+                type    = "hidden"
+                readonly= "true"
+                value   = "0"
+        />
+
+        <!-- Tipos de Enfoque de Igualdad -->
+        <field   name        = "cbEnfoqueIgualdad"
+                 type        = "TiposEnfoqueIgualdad"
+                 extension   = "com_proyectos"
+                 class       = "inputbox"
+                 default     = ""
+                 label       = "COM_CANASTAPROY_FIELD_PROYECTO_TIPOSENFOQUEIGUALDAD_LABEL"
+                 description = "COM_CANASTAPROY_FIELD_PROYECTO_TIPOSENFOQUEIGUALDAD_DESC"
+                 required    = "true">
+            <option value="0">COM_CANASTAPROY_FIELD_PROYECTO_TIPOSENFOQUEIGUALDAD_TITLE</option>
+        </field>
+        
+        <!-- Enfoque de Igualdad -->
+        <field  name        = "idEnfoqueIgualdad"
+                type        = "list"
+                class       = "inputbox"
+                label       = "COM_CANASTAPROY_FIELD_INDICADOR_ENFOQUEIGUALDAD_LABEL"
+                description = "COM_CANASTAPROY_FIELD_INDICADOR_ENFOQUEIGUALDAD_DESC"
+                required    = "true">
+            <option value="0">COM_CANASTAPROY_FIELD_INDICADOR_ENFOQUEIGUALDADCB_TITLE</option>
+        </field>
+        
+        <!-- Beneficiarios Hombres -->
+        <field  name        = "intEIMasculino"
+                type        = "text" 
+                default     = "" 
+                label       = "COM_CANASTAPROY_FIELD_PROYECTO_EIMASCULINO_LABEL" 
+                description = "COM_CANASTAPROY_FIELD_PROYECTO_EIMASCULINO_DESC" 
+                size        = "10" />
+        
+        <!-- Beneficiarios Mujeres -->
+        <field  name        = "intEIFemenino" 
+                type        = "text" 
+                default     = "" 
+                label       = "COM_CANASTAPROY_FIELD_PROYECTO_EIFEMENINO_LABEL"
+                description = "COM_CANASTAPROY_FIELD_PROYECTO_EIFEMENINO_DESC" 
+                size        = "10" />
+        
+        <!-- Total de Beneficiarios -->
+        <field  name        = "intEITotal" 
+                type        = "text" 
+                default     = "" 
+                label       = "COM_CANASTAPROY_FIELD_PROYECTO_EITOTAL_LABEL"
+                description = "COM_CANASTAPROY_FIELD_PROYECTO_EITOTAL_DESC" 
+                size        = "10" />
+        
+        <!-- Datos Relacion de un Proyecto -->
+        <field  name    = "dataEnfIgu"
+                type    = "hidden"
+                readonly= "true"
+                value   = '0'
+        />
+    </fieldset>
+    
+    <!-- ENFOQUE ECORAE -->
+    <fieldset name="enfoqueEcorae">
+        <!-- Identificador Registro de Indicador de Enfoque de Igualdad -->
+        <field  name    = "idEnfEcorae"
+                type    = "hidden"
+                readonly= "true"
+                value   = "0"
+        />
+        
+        <!-- Lista de Enfoque de Igualdad -->
+        <field   name        = "cbEnfoqueEcorae"
+                 type        = "enfoqueecorae"
+                 extension   = "com_proyectos"
+                 class       = "inputbox"
+                 default     = ""
+                 label       = "COM_CANASTAPROY_FIELD_PROYECTO_ENFOQUEECORAE_LABEL"
+                 description = "COM_CANASTAPROY_FIELD_PROYECTO_ENFOQUEECORAE_DESC"
+                 required    = "true">
+            <option value="0">COM_CANASTAPROY_FIELD_PROYECTO_ENFOQUEECORAE_TITLE</option>
+        </field>
+        
+        <!-- Beneficiarios Hombres -->
+        <field  name        = "intEnfEcoMasculino"
+                type        = "text" 
+                default     = "" 
+                label       = "COM_CANASTAPROY_FIELD_PROYECTO_EEMASCULINO_LABEL" 
+                description = "COM_CANASTAPROY_FIELD_PROYECTO_EEMASCULINO_DESC" 
+                size        = "10" />
+        
+        <!-- Beneficiarios Mujeres -->
+        <field  name        = "intEnfEcoFemenino" 
+                type        = "text" 
+                default     = "" 
+                label       = "COM_CANASTAPROY_FIELD_PROYECTO_EEFEMENINO_LABEL"
+                description = "COM_CANASTAPROY_FIELD_PROYECTO_EEFEMENINO_DESC" 
+                size        = "10" />
+        
+        <!-- Total de Beneficiarios -->
+        <field  name        = "intEnfEcoTotal" 
+                type        = "text" 
+                default     = "" 
+                label       = "COM_CANASTAPROY_FIELD_PROYECTO_EETOTAL_LABEL"
+                description = "COM_CANASTAPROY_FIELD_PROYECTO_EETOTAL_DESC" 
+                size        = "10" />
+        
+        <!-- Datos Relacion de un Proyecto -->
+        <field  name    = "dataIndicadores"
+                type    = "hidden"
+                readonly= "true"
+                value   = '0'
+        />
+        
+        <!-- Datos Planificacion de un Proyecto -->
+        <field  name    = "dtaPlanificacion"
+                type    = "hidden"
+                readonly= "true"
+                value   = '0'
+        />
+    </fieldset>
+
+</form>

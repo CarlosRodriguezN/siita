@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="funcionario">
+        <field  name            = "intCodigo_fnc"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        <!-- Apellido  -->
+        <field  name            ="strApellido_fnc" 
+             type               ="text"
+               class            ="inputbox"
+               description      ="COM_MANTENIMIENTO_FIELD_FUNCIONARIO_APELLIDO_LABEL"
+               label            ="COM_MANTENIMIENTO_FIELD_FUNCIONARIO_APELLIDO_DESC"
+               required         ="true"
+               size             ="30"
+         />
+        <!-- Nombre  -->
+        <field name             ="strNombre_fnc" 
+               type             ="text"
+               class            ="inputbox"
+               description      ="COM_MANTENIMIENTO_FIELD_FUNCIONARIO_NOMBRE_LABEL"
+               label            ="COM_MANTENIMIENTO_FIELD_FUNCIONARIO_NOMBRE_DESC"
+               required         ="true"
+               size             ="30"
+		/>
+        <!-- Email  -->
+        <field name             ="strCorreoelec_fnc" 
+               type             ="email"
+               class            ="inputbox"
+               description      ="COM_MANTENIMIENTO_FIELD_FUNCIONARIO_EMAIL_LABEL"
+               label            ="COM_MANTENIMIENTO_FIELD_FUNCIONARIO_EMAIL_DESC"
+               required         ="true"
+               size             ="30"
+               validate         ="email"
+		/>
+        <!-- Nombre  -->
+        <field name             ="strTelefono_fnc" 
+               type             ="text"
+               class            ="inputbox"
+               description      ="COM_MANTENIMIENTO_FIELD_FUNCIONARIO_TELEFONO_LABEL"
+               label            ="COM_MANTENIMIENTO_FIELD_FUNCIONARIO_TELEFONO_DESC"
+               required         ="true"
+               size             ="30"
+		/>
+        <!-- CI  -->
+        <field name             ="strCi_fnc" 
+               type             ="text"
+               class            ="inputbox"
+               description      ="COM_MANTENIMIENTO_FIELD_FUNCIONARIO_CI_LABEL"
+               label            ="COM_MANTENIMIENTO_FIELD_FUNCIONARIO_CI_DESC"
+               required         ="true"
+               size             ="30"
+		/>
+        <!-- Publicados -->
+        <field  name            ="published"
+                type            ="list"
+                label           ="JSTATUS"
+                description     ="JFIELD_PUBLISH_DESC"
+                class           ="inputbox"
+                filter          ="intval"
+                size            ="1"
+                default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

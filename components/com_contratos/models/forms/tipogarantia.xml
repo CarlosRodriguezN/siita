@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="tipogarantia">
+        <field  name            = "intIdTpoGarantia_tg"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "0"
+                readonly        = "true"
+                class           = "readonly"
+        />
+              
+        <!-- Codigo -->
+        <field  name            ="intCodTpoGarantia_tg" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_TIPOGARANTIA_CODIGO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_TIPOGARANTIA_CODIGO_DESC"
+                rows            ="10" 
+                cols            ="5" 
+                required        ="true"
+        />
+        <!-- NOMBRE -->
+        <field  name            ="strNombre_tg" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_TIPOGARANTIA_NOMBRE_LABEL"
+                description     ="COM_CONTRATOS_FIELD_TIPOGARANTIA_NOMBRE_DESC"
+                rows            ="10" 
+                cols            ="5" 
+                required        ="true"
+        />
+        
+        <!-- DESCRIPCION  -->
+        <field  name            ="strDescripcion_tg" 
+                type            ="textarea" 
+                label           ="COM_CONTRATOS_FIELD_TIPOGARANTIA_DESCRIPCION_LABEL"
+                description     ="COM_CONTRATOS_FIELD_TIPOGARANTIA_DESCRIPCION_DESC"
+                rows            ="10" 
+                cols            ="5" 
+        />
+        
+        <!-- Publicados -->
+        <field  name            ="published"
+                type            ="list"
+                label           ="JSTATUS"
+                description     ="JFIELD_PUBLISH_DESC"
+                class           ="inputbox"
+                filter          ="intval"
+                size            ="1"
+                default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

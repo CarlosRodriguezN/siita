@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <fieldset name="institucion">
+        <!-- id -->
+        <field  name            = "intCodigo_ins"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "0"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        <!-- Dependencia -->
+        <field  name            = "inpCodigo_depins"
+                type            = "dependenciasinstitucion"
+                extension       = "com_agendas"
+                class           = "inputbox"
+                label           = "COM_MANTENIMIENTO_FIELD_INSTITUICION_DEPENDENCIA_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_INSTITUICION_DEPENDENCIA_DESC"
+                required        = "true">
+            <option value="0">COM_MANTENIMIENTO_FIELD_INSTITUICION_DEPENDENCIA_TITLE</option>
+        </field>
+        
+        <!-- Sector -->
+        <field  name            = "inpCodigo_sec"
+                type            = "sectoresinstitucion"
+                extension       = "com_agendas"
+                class           = "inputbox"
+                label           = "COM_MANTENIMIENTO_FIELD_INSTITUICION_SECTOR_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_INSTITUICION_SECTOR_DESC"
+                required        = "true">
+            <option value="0">COM_MANTENIMIENTO_FIELD_INSTITUICION_SECTOR_TITLE</option>
+        </field>
+        
+        <!-- Función -->
+        <field  name            = "intCodigofuncion"
+                type            = "funcionesinstitucion"
+                extension       = "com_agendas"
+                class           = "inputbox"
+                label           = "COM_MANTENIMIENTO_FIELD_INSTITUICION_FUNCION_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_INSTITUICION_FUNCION_DESC"
+                required        = "true">
+            <option value="0">COM_MANTENIMIENTO_FIELD_INSTITUICION_FUNCION_TITLE</option>
+        </field>
+        
+        <!-- Norma -->
+        <field  name            = "intCodigoNorma"
+                type            = "normasinstitucion"
+                extension       = "com_agendas"
+                class           = "inputbox"
+                label           = "COM_MANTENIMIENTO_FIELD_INSTITUICION_NORMA_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_INSTITUICION_NORMA_DESC"
+                required        = "true">
+            <option value="0">COM_MANTENIMIENTO_FIELD_INSTITUICION_NORMA_TITLE</option>
+        </field>
+        
+        <!-- Tipo Institucion -->
+        
+        <field  name            = "intCodigoTipo_ins"
+                type            = "tiposinsinstitucion"
+                extension       = "com_agendas"
+                class           = "inputbox"
+                label           = "COM_MANTENIMIENTO_FIELD_INSTITUICION_TIPOINSTITUCION_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_INSTITUICION_TIPOINSTITUCION_DESC"
+                required        = "true">
+            <option value="0">COM_MANTENIMIENTO_FIELD_INSTITUICION_TIPOINSTITUCION_TITLE</option>
+        </field>
+        
+        <!-- nombre de la institucion -->
+        <field  name            = "strNombre_ins"
+                type            = "TEXT"
+                label           = "COM_MANTENIMIENTO_FIELD_INSTITUICION_NOMBRE_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_INSTITUICION_NOMBRE_DESC"
+                class           = "inputbox"
+                size            = "50"
+                required        = "true"
+        />
+        
+        
+        <!-- Ruc de la institucion -->
+        <field  name            = "strRuc_ins"
+                type            = "text"
+                label           = "COM_MANTENIMIENTO_FIELD_INSTITUICION_RUC_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_INSTITUICION_RUC_DESC"
+                class           = "inputbox"
+                size            = "50"
+                required        = "true"
+        />
+
+        <!-- Alias institucion -->
+        <field  name            = "strAlias_ins"
+                type            = "text"
+                label           = "COM_MANTENIMIENTO_FIELD_INSTITUICION_ALIAS_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_INSTITUICION_ALIAS_DESC"
+                class           = "inputbox"
+                size            = "50"
+                required        = "true"
+        />
+
+        <!-- funcion mandato -->
+        <field  name            = "strFuncionMandato_ins"
+                type            = "TEXT"
+                label           = "COM_MANTENIMIENTO_FIELD_INSTITUICION_MANINSTITUCION_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_INSTITUICION_MANINSTITUCION_DESC"
+                class           = "inputbox"
+                size            = "50"
+                required        = "true"
+        />
+        <!-- num Norma -->
+        <field  name            = "strNumNorma_ins"
+                type            = "TEXT"
+                label           = "COM_MANTENIMIENTO_FIELD_INSTITUICION_NUMNORMA_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_INSTITUICION_NUMNORMA_DESC"
+                class           = "inputbox"
+                size            = "50"
+                required        = "true"
+        />
+       
+        <!-- Numero de la norma -->
+        <field  name            = "strRegistroOficial_ins"
+                type            = "TEXT"
+                label           = "COM_MANTENIMIENTO_FIELD_INSTITUICION_REGOFICIAL_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_INSTITUICION_REGOFICIAL_DESC"
+                class           = "inputbox"
+                size            = "50"
+                required        = "true"
+        />
+        <!-- Fecha del registo oficial -->
+        <field  name            = "dteFechaRegOficial"
+                type            = "CALENDAR"
+                label           = "COM_MANTENIMIENTO_FIELD_INSTITUICION_FCHREGOFICIAL_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_INSTITUICION_FCHREGOFICIAL_DESC"
+                class           = "inputbox"
+                size            = "50"
+                required        = "true"
+        />
+        <!-- Mision />-->
+        <field  name            ="strMision" 
+                type            ="textarea" 
+                default         ="Misión" 
+                label           ="COM_MANTENIMIENTO_FIELD_INSTITUICION_MISION_LABEL" 
+                description     ="COM_MANTENIMIENTO_FIELD_INSTITUICION_MISION_DESC" 
+                rows            ="5" 
+                cols            ="3"
+         />
+        <!-- Vision  />-->
+        <field  name            ="strVision" 
+                type            ="textarea" 
+                default         ="Visión" 
+                label           ="COM_MANTENIMIENTO_FIELD_INSTITUICION_VISION_LABEL" 
+                description     ="COM_MANTENIMIENTO_FIELD_INSTITUICION_VISION_DESC" 
+                rows            ="5" 
+                cols            ="3"
+         />
+        <!-- Observacin -->
+        <field  name            = "strObservacion_ins"
+                type            = "textarea"
+                default         ="Observación"
+                label           = "COM_MANTENIMIENTO_FIELD_INSTITUICION_OBSERVACION_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_INSTITUICION_OBSERVACION_DESC"
+                rows            ="5" 
+                cols            ="3"
+        />
+        <!-- Publicados -->
+        <field  name            ="published"
+                type            ="list"
+                label           ="JSTATUS"
+                description     ="JFIELD_PUBLISH_DESC"
+                class           ="inputbox"
+                filter          ="intval"
+                size            ="1"
+                default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

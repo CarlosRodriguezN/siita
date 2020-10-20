@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+
+    <!-- GESTION DE ATRIBUTOS GENERALES DE UN INDICADOR -->
+    <fieldset name="InformacionGeneral">
+
+        <!-- Identificador del indicador de tipo plantilla -->
+        <field  name        = "intId_pi"
+                type        = "hidden"
+                label       = "JGLOBAL_FIELD_ID_LABEL"
+                description = "JGLOBAL_FIELD_ID_DESC"
+                size        = "10"
+                readonly    = "true"
+                class       = "readonly" />
+
+        <!-- Nombre del Indicador -->
+        <field  name        = "strNombre_pi" 
+                type        = "text" 
+                label       = "COM_MANTENIMIENTO_FIELD_ATRIBUTO_NOMBRE_LABLE" 
+                description = "COM_MANTENIMIENTO_FIELD_ATRIBUTO_NOMBRE_DESC" 
+                size        = "35"
+                class       = "required"
+                required    = "true" />
+        
+        <!-- Descripcion del Indicador -->
+        <field  name        = "strDescripcion_pi" 
+                type        = "textarea" 
+                label       = "COM_MANTENIMIENTO_FIELD_ATRIBUTO_DESCRIPCION_LABLE" 
+                description = "COM_MANTENIMIENTO_FIELD_ATRIBUTO_DESCRIPCION_DESC" 
+                rows        = "5" 
+                cols        = "3" />
+
+        <!-- Clase de Indicador -->
+        <field  name        = "inpCodigo_claseind"
+                type        = "claseindicador"
+                extension   = "com_mantenimiento"
+                label       = "COM_MANTENIMIENTO_FIELD_ATRIBUTO_CLASEINDICADOR_LABLE"
+                description = "COM_MANTENIMIENTO_FIELD_ATRIBUTO_CLASEINDICADOR_DESC">
+            <option value="">COM_MANTENIMIENTO_FIELD_ATRIBUTO_CLASEINDICADOR_TITLE</option>
+        </field>
+        
+        <!-- Lista de Unidad de Analisis -->
+        <field  name        = "inpCodigo_unianl"
+                type        = "unidadesanalisis"
+                extension   = "com_mantenimiento"
+                label       = "COM_MANTENIMIENTO_FIELD_ATRIBUTO_UNDANALISIS_LABLE"
+                description = "COM_MANTENIMIENTO_FIELD_ATRIBUTO_UNDANALISIS_DESC">
+            <option value="">COM_MANTENIMIENTO_FIELD_ATRIBUTO_UNDANALISIS_TITLE</option>
+        </field>
+        
+        <!-- Lista de Tipos de Unidad de Medida -->
+        <field  name        = "intIdTpoUndMedida"
+                type        = "tipounidadmedida"
+                extension   = "com_mantenimiento"
+                label       = "COM_MANTENIMIENTO_FIELD_ATRIBUTO_TPOUNDMEDIDA_LABLE"
+                description = "COM_MANTENIMIENTO_FIELD_ATRIBUTO_TPOUNDMEDIDA_DESC"
+                required    = "true">
+            <option value="">COM_MANTENIMIENTO_FIELD_ATRIBUTO_TPOUNDMEDIDA_TITLE</option>
+        </field>
+        
+        <!-- Unidades de Medida -->
+        <field  name        = "intCodigo_unimed"
+                type        = "unidadmedida" 
+                label       = "COM_MANTENIMIENTO_FIELD_ATRIBUTO_UNDMEDIDA_LABLE" 
+                description = "COM_MANTENIMIENTO_FIELD_ATRIBUTO_UNDMEDIDA_DESC"
+                default     = "0"
+                required    = "true">
+            <option value="0">COM_MANTENIMIENTO_FIELD_ATRIBUTO_UNDMEDIDA_TITLE</option>
+        </field>
+    </fieldset>
+
+    <!-- NUEVA VARIABLE -->
+    <fieldset name="nuevaVariable">
+        <!-- Nombre de la variable -->
+        <field  name        = "nombreNV"
+                type        = "text" 
+                label       = "COM_MANTENIMIENTO_FIELD_ATRIBUTO_NOMBRE_VARIABLE_LABLE" 
+                description = "COM_MANTENIMIENTO_FIELD_ATRIBUTO_NOMBRE_VARIABLE_DESC" 
+                size        = "25"/>
+        
+        <!-- alias de la variable -->
+        <field  name        = "aliasNV"
+                type        = "text" 
+                label       = "COM_MANTENIMIENTO_FIELD_ATRIBUTO_ALIAS_VARIABLE_LABLE"
+                description = "COM_MANTENIMIENTO_FIELD_ATRIBUTO_ALIAS_VARIABLE_DESC"
+                size        = "25"/>
+
+        <!-- Descripcion del Indicador -->
+        <field  name        = "descripcionNV"
+                type        = "textarea" 
+                label       = "COM_MANTENIMIENTO_FIELD_ATRIBUTO_DESCRIPCION_VARIABLE_LABLE" 
+                description = "COM_MANTENIMIENTO_FIELD_ATRIBUTO_DESCRIPCION_VARIABLE_DESC" 
+                rows        = "5" 
+                cols        = "3" />
+
+        <!-- Unidad de Analisis de una nueva Variable -->
+        <field  name        = "idUndAnalisisNV"
+                type        = "unidadesanalisis"
+                extension   = "com_mantenimiento"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_MANTENIMIENTO_FIELD_ATRIBUTO_UNDANALISIS_VARIABLE_LABLE"
+                description = "COM_MANTENIMIENTO_FIELD_ATRIBUTO_UNDANALISIS_VARIABLE_DESC"
+                required    = "true">
+            <option value="0">COM_MANTENIMIENTO_FIELD_ATRIBUTO_UNDANALISIS_VARIABLE_TITLE</option>
+        </field>
+
+        <!-- Filtro por Tipo de Unidad de Medida -->
+        <field  name        = "idTpoUndMedidaNV"
+                type        = "tipounidadmedida"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_MANTENIMIENTO_FIELD_ATRIBUTO_TPOUNDMEDIDA_VARIABLE_LABLE"
+                description = "COM_MANTENIMIENTO_FIELD_ATRIBUTO_TPOUNDMEDIDA_VARIABLE_DESC"
+                required    = "true">
+            <option value="0">COM_MANTENIMIENTO_FIELD_ATRIBUTO_TPOUNDMEDIDA_VARIABLE_TITLE</option>
+        </field>
+
+        <!-- Unidad de Medida -->
+        <field  name        = "idVarUndMedidaNV"
+                type        = "list" 
+                label       = "COM_MANTENIMIENTO_FIELD_ATRIBUTO_UNDMEDIDA_VARIABLE_LABLE" 
+                description = "COM_MANTENIMIENTO_FIELD_ATRIBUTO_UNDMEDIDA_VARIABLE_DESC"
+                default     = "0"
+                required    = "true">
+            <option value="0">COM_MANTENIMIENTO_FIELD_ATRIBUTO_UNDMEDIDA_VARIABLE_TITLE</option>
+        </field>
+        
+        
+        <!-- Identificador del indicador de tipo plantilla -->
+        <field  name            = "lstVIP"
+                type            = "hidden"
+                readonly        = "true"
+                class           = "readonly"/>
+
+    </fieldset>
+
+</form>

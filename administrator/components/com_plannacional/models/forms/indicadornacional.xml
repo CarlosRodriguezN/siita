@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="essential">
+        <field  name="intCodigo_in"
+                type="hidden"
+                label="JGLOBAL_FIELD_ID_LABEL"
+                description="JGLOBAL_FIELD_ID_DESC"
+                size="10"
+                default="0"
+                readonly="true"
+                class="readonly"
+        />
+        
+        <!-- Tipo de Indicador -->
+        <field  name        = "INTCODIGOTIPO_IND"
+                type        = "tiposindicador"
+                extension   = "com_plannacional"
+                class       = "inputbox"
+                label       = "COM_PLANNACIONAL_FIELD_INDICADORNACIONAL_TIPOINDICADOR_LABEL"
+                description = "COM_PLANNACIONAL_FIELD_INDICADORNACIONAL_TIPOINDICADOR_DESC"
+                required    = "true">
+            <option value="0">SELECCIONE CATEGORIA</option>
+        </field>
+        
+        <!-- Meta Nacional -->
+        <field  name        = "ID_CODIGO_MN"
+                type        = "metasnacionales"
+                extension   = "com_plannacional"
+                class       = "inputbox"
+                label       = "COM_PLANNACIONAL_FIELD_INDICADORNACIONAL_METANACIONAL_LABEL"
+                description = "COM_PLANNACIONAL_FIELD_INDICADORNACIONAL_METANACIONAL_DESC"
+                required    = "true">
+            <option value="0">SELECCIONE CATEGORIA</option>
+        </field>
+
+        <!-- Formula -->
+        <field  name="STRFORMULA_IN"
+                type="text"
+                label="COM_PLANNACIONAL_FIELD_INDICADORNACIONAL_FORMULA_LABEL"
+                description="COM_PROYECTO_FIELD_INDICADORNACIONAL_FORMULA_DESC"
+                class="inputbox"
+                size="30"
+                required="true"
+        />
+
+
+        <!-- Estatus Publicado o Despublicado -->
+        <field  name="published"
+                type="list"
+                label="JSTATUS"
+                description="JFIELD_PUBLISH_DESC"
+                class="inputbox"
+                filter="intval"
+                size="1"
+                default="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+    
+    
+    <fieldset name="editor">
+	<field  name="STRDESCRIPCION_IN"
+                type="editor"
+                label="COM_PLANNACIONAL_FIELD_INDICADORNACIONAL_DESCRIPCION_LABEL"
+                description="COM_PLANNACIONAL_FIELD_INDICADORNACIONAL_DESCRIPCION_DESC"
+                filter="safehtml"
+                class="inputbox"
+	/>
+    </fieldset>
+</form>

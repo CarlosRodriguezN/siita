@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="fiscalizador">
+        <field  name            = "intIdFiscalizador_fc"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "0"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        <!-- Persona -->
+        <field  name        = "intIdPersona_pc"
+                type        = "personas"
+                extension   = "com_agendas"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_CONTRATOS_FIELD_FISCALIZADOR_PERSONA_LABEL"
+                description = "COM_CONTRATOS_FIELD_FISCALIZADOR_PERSONA_DESC"
+                required    = "true">
+            <option value="0">SELECCIONE PERSONA</option>
+        </field>
+              
+        
+        <!-- CODIGO UNICO DE REGISTRO -->
+        <field  name            ="strRUC_fc" 
+                type            ="textarea" 
+                label           ="COM_CONTRATOS_FIELD_FISCALIZADOR_RUC_LABEL"
+                description     ="COM_CONTRATOS_FIELD_FISCALIZADOR_RUC_DESC"
+                rows            ="10" 
+                cols            ="5" 
+                required        ="true"
+        />
+        <!-- Fecha de registro -->
+      
+        <field  name            ="dteFechaRegistro_fc"
+                type            ="calendar" 
+                label           ="COM_CONTRATOS_FIELD_FISCALIZADOR_FECHAREGISTRO_LABEL" 
+                description     ="COM_CONTRATOS_FIELD_FISCALIZADOR_FECHAREGISTRO_DESC" 
+                format          ="%d-%m-%Y"
+                required        ="true"
+        />
+        <!-- Publicados -->
+        <field  name            ="published"
+                    type            ="list"
+                    label           ="JSTATUS"
+                    description     ="JFIELD_PUBLISH_DESC"
+                    class           ="inputbox"
+                    filter          ="intval"
+                    size            ="1"
+                    default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

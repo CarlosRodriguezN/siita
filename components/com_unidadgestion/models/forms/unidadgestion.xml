@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <!-- Informacion General de Unidad de Gestion -->
+    <fieldset name="unidadgestion">
+        <!-- Identificador de la unidad de getion -->
+        <field  name            = "intCodigo_ug"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_UNIDAD_GESTION_LABEL"
+                description     = "JGLOBAL_FIELD_ID_UNIDAD_GESTION_DESC"
+                size            = "10"
+        />
+        
+        <!-- Organigrama -->
+        <field  name            = "organigrama"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_UNIDAD_GESTION_LABEL"
+                description     = "JGLOBAL_FIELD_ID_UNIDAD_GESTION_DESC"
+                size            = "10"
+        />
+        
+        <!-- Identificador de la entidad con tipo unidad de gestion -->
+        <field  name            = "intIdentidad_ent"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_UG_ENTIDAD_LABEL"
+                description     = "JGLOBAL_FIELD_ID_UG_ENTIDAD_DESC"
+                size            = "10"
+        />
+        
+        <!-- Identificador del grupo de la unidad de gestion -->
+        <field  name            = "intIdGrupo_ug"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_GROUP_LABEL"
+                description     = "JGLOBAL_FIELD_ID_GROUP_DESC"
+                size            = "10"
+        />
+        
+        <!-- Identificador de la institución  por defecto 1 que es el id de ECORAE-->
+        <field  name            = "intCodigo_ins"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_INSTITUCION_LABEL"
+                description     = "JGLOBAL_FIELD_ID_INSTITUCION_DESC"
+                size            = "10"
+                default         = "1"
+        />
+        
+        <!-- Identificador del tipo de unidad de gestion -->
+        <field  name            = "intTpoUG_ug"
+                type            = "list"
+                label           = "COM_UNIDAD_GESTION_FIELD_TPO_UG_LABEL"
+                description     = "COM_UNIDAD_GESTION_FIELD_TPO_UG_DESC"
+                class           = "inputbox"
+                filter          = "intval"
+                size            = "1"
+                default         = "0"
+        >
+            <option value="1"> COM_UNIDAD_GESTION_FIELD_TPO_UG_UG_LABEL </option>
+            <option value="2"> COM_UNIDAD_GESTION_FIELD_TPO_UG_STP_LABEL </option>
+        </field>
+        
+        <!-- Identificador de la unidad de gestion padre o inmediata superior-->
+        <field  name            = "tb_intCodigo_ug"
+                type            = "unidadesgestion"
+                extension       = "com_unidadgestion"
+                label           = "COM_UNIDAD_GESTION_FIELD_UG_PADRE_LABEL"
+                description     = "COM_UNIDAD_GESTION_FIELD_UG_PADRE_DESC">
+            <option value="0">COM_UNIDAD_GESTION_FIELD_UG_PADRE_TITLE</option>
+        </field>
+        
+        <!-- Descripción/Nobre del PEI -->
+        <field  name            = "strNombre_ug"
+                type            = "text"
+                label           = "COM_UNIDAD_GESTION_FIELD_UG_NOMBRE_LABEL"
+                description     = "COM_UNIDAD_GESTION_FIELD_UG_NOMBRE_DESC"
+                size            = "50"
+                required        = "true"
+        />
+        
+        <!-- Fecha de Inicio -->
+        <field  name            = "strAlias_ug"
+                type            = "text"
+                label           = "COM_UNIDAD_GESTION_FIELD_UG_ALIAS_LABEL"
+                description     = "COM_UNIDAD_GESTION_FIELD_UG_ALIAS_DESC"
+                size            = "50"
+                required        = "true"
+        />
+        
+    </fieldset>
+    
+    <!--  -->
+    <fieldset name="funcionario">
+        
+        <!-- Identificador del funcionario de la unidad de gestión -->
+        <field  name            = "intId_ugf"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_UG_FUNCIONARIO_LABEL"
+                description     = "JGLOBAL_FIELD_ID_UG_FUNCIONARIO_DESC"
+                size            = "10"
+        />
+        
+        <!-- Identificador de la unidad de getion -->
+        <field  name            = "intCodigo_ug"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_UNIDAD_GESTION_LABEL"
+                description     = "JGLOBAL_FIELD_ID_UNIDAD_GESTION_DESC"
+                size            = "10"
+        />
+        
+        <!-- Identificador del funcionario -->
+        <field  name            = "intCodigo_fnc"
+                type            = "funcionarioug"
+                extension       = "com_unidadgestion"
+                label           = "COM_UNIDAD_GESTION_FIELD_FUNCIONARIO_LABEL"
+                description     = "COM_UNIDAD_GESTION_FIELD_FUNCIONARIO_DESC"
+                class           = "inputbox"
+                required        = "true">
+            <option value="0">COM_UNIDAD_GESTION_FIELD_FUNCIONARIO_TITLE</option>
+        </field>
+        
+        <field  name            = "intCodigo_fnc_aux"
+                type            = "text"
+                label           = "COM_UNIDAD_GESTION_FIELD_FUNCIONARIO_LABEL"
+                description     = "COM_UNIDAD_GESTION_FIELD_FUNCIONARIO_DESC"
+                class           = "inputbox"
+                required        = "true">
+        </field>
+        
+        <!-- Identificador del cargo del funcionario -->
+        <field  name            = "inpCodigo_cargo"
+                type            = "cargofuncionario"
+                extension       = "com_unidadgestion"
+                label           = "COM_UNIDAD_GESTION_FIELD_CARGO_FUNCIONARIO_LABEL"
+                description     = "COM_UNIDAD_GESTION_FIELD_CARGO_FUNCIONARIO_DESC"
+                class           = "inputbox"
+                required        = "true">
+            <option value="0">COM_UNIDAD_GESTION_FIELD_CARGO_FUNCIONARIO_TITLE</option>
+        </field>
+        
+        <!-- Fecha de inicio del cargo del funcionario -->
+        <field  name            = "dteFechaInicio_ugf"
+                type            = "calendar"
+                label           = "COM_UNIDAD_GESTION_FIELD_FECHA_INICIO_LABEL"
+                description     = "COM_UNIDAD_GESTION_FIELD_FECHA_INICIO_DESC"
+                class           = "inputbox"
+                size            = "20"
+                required        = "true"
+        />
+        
+        <!-- Fecha de fin del cargo del funcionario -->
+        <field  name            = "dteFechaFin_ugf"
+                type            = "calendar"
+                label           = "COM_UNIDAD_GESTION_FIELD_FECHA_FIN_LABEL"
+                description     = "COM_UNIDAD_GESTION_FIELD_FECHA_FIN_DESC"
+                class           = "inputbox"
+                size            = "20"
+                required        = "true"
+        />
+    </fieldset>
+    
+    <!-- Formulario de gestion de contextos -->
+    <fieldset name="dtaContextos">
+
+        <!-- Nombre de un contexto -->        
+        <field  name        = "strNombreContexto" 
+                type        = "text"
+                label       = "COM_UNIDAD_GESTION_FIELD_CONTEXTO_NOMBRE_LABEL"
+                description = "COM_UNIDAD_GESTION_FIELD_CONTEXTO_NOMBRE_DESC" 
+                class       = "inputbox"
+                required    = "true"
+                size        = "50" />
+        
+        <!-- Descripción de un Contexto -->
+        <field  name            = "strDescripcionContexto"
+                type            = "textarea"
+                label           = "COM_UNIDAD_GESTION_FIELD_CONTEXTO_DESCRIPCION_LABEL"
+                description     = "COM_UNIDAD_GESTION_FIELD_CONTEXTO_DESCRIPCION_DESC"
+                class           = "inputbox"
+                cols            = "5"
+                rows            = "3"
+                required        = "true"
+        />
+
+    </fieldset>
+
+    <!-- Formulario de Opciones Adicionales  -->
+    <fieldset name="opAdicionales">
+
+        <!-- Nombre de la opcion adicional -->        
+        <field  name            = "nombreOp" 
+                type            = "text"
+                label           = "COM_UNIDAD_GESTION_FIELD_OP_ADD_NOMBRE_LABEL"
+                description     = "COM_UNIDAD_GESTION_FIELD_OP_ADD_NOMBRE_DESC" 
+                class           = "inputbox"
+                required        = "true"
+                size            = "30" />
+        
+        <!-- URL de acceso ala opcion adicional -->
+        <field  name            = "urlOp"
+                type            = "textarea"
+                label           = "COM_UNIDAD_GESTION_FIELD_OP_ADD_URL_LABEL"
+                description     = "COM_UNIDAD_GESTION_FIELD_OP_ADD_URL_DESC"
+                class           = "inputbox"
+                required        = "true"
+        />
+
+        <!-- Descripción de la opcion adicional -->
+        <field  name            = "descripcionOp"
+                type            = "textarea"
+                label           = "COM_UNIDAD_GESTION_FIELD_OP_ADD_DESCRIPCION_LABEL"
+                description     = "COM_UNIDAD_GESTION_FIELD_OP_ADD_DESCRIPCION_DESC"
+                class           = "inputbox"
+        />
+        
+    </fieldset>
+
+    
+</form>

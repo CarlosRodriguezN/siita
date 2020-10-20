@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <!-- INFORMACION GENERAL DEL ACTOR -->
+    <fieldset name="formActor">
+        
+        <!-- ID TEMA-->
+        <field  name            = "intId_act"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+        />
+        
+        <!-- TITULO DEL TEMA -->
+        <field  name            = "strNombre_act"
+                type            = "text"
+                label           = "COM_CONFLICTOS_FIELD_ACTORES_NOMBRE_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_ACTORES_NOMBRE_DESC"
+                size            = "35"
+                required        = "true"
+        />
+        
+        <!-- APELLIDO -->
+        <field  name            = "strApellido_act"
+                type            = "text"
+                label           = "COM_CONFLICTOS_FIELD_ACTORES_APELLIDO_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_ACTORES_APELLIDO_DESC"
+                size            = "35"
+                required        = "true"
+        />
+        <!-- CORREO -->
+        <field  name            = "strCorreo_act"
+                type            = "text"
+                label           = "COM_CONFLICTOS_FIELD_ACTORES_CORREO_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_ACTORES_CORREO_DESC"
+                size            = "35"
+                required        = "true"
+        />
+        
+    </fieldset>
+    
+    <!-- Legitmidad  -->
+    <fieldset name="legitimdadActor">
+        
+        <!-- INCIDENCIA-->
+        <field  name            = "intId_leg"
+                type            = "legitimidades"
+                extension       = "com_conflitos"
+                label           = "COM_CONFLICTOS_FIELD_ACTORES_LEGITIMIDAD_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_ACTORES_LEGITIMIDAD_DESC"
+                required        = "true">
+            <option value="0">COM_CONFLICTOS_FIELD_ACTORES_LEGITIMIDAD_TITLE</option>
+        </field>
+        
+        <!-- Campo txt para la gestion de la Legitimidad -->
+        <field  name            = "idLegitimidadTxt"
+                type            = "text"
+                label           = "COM_CONFLICTOS_FIELD_ACTORES_LEGITIMIDAD_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_ACTORES_LEGITIMIDAD_DESC"
+                required        = "true"
+                size            = "35"
+        />
+        
+        <!-- DESCRIPCION -->
+        <field  name            = "strDescripcion_fl"
+                type            = "textarea"
+                label           = "COM_CONFLICTOS_FIELD_ACTORES_LEGITIMIDAD_DESCRICION_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_ACTORES_LEGITIMIDAD_DESCRICION_DESC"
+                rows            = "3" 
+                cols            = "4"
+                required        = "true"
+        />
+    </fieldset>
+    
+    <!-- INCIDENCIA DE UNA ACTORES. -->
+    <fieldset name="incidenciaActor">
+        
+        <!-- INCIDENCIA-->
+        <field  name            = "intId_inc"
+                type            = "incidencias"
+                extension       = "com_conflitos"
+                label           = "COM_CONFLICTOS_FIELD_ACTORES_INCIDENCIA_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_ACTORES_INCIDENCIA_DESC"
+                required        = "true">
+            <option value="0">COM_CONFLICTOS_FIELD_ACTORES_INCIDENCIA_TITLE</option>
+        </field>
+        
+        <!-- Campo TXT para la gestion de la incidencia -->
+        <field  name            = "idIncidenciaTxt"
+                type            = "text"
+                label           = "COM_CONFLICTOS_FIELD_ACTORES_INCIDENCIA_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_ACTORES_INCIDENCIA_DESC"
+                required        = "true"
+                size            = "35"
+        />
+        
+        <!-- FECHA DE LA INCIDENCIA -->
+        <field name             = "dtefecha_fi" 
+               type             = "calendar" 
+               label            = "COM_CONFLICTOS_FIELD_ACTORES_FECHA_INCIDENCA_LABEL"
+               description      = "COM_CONFLICTOS_FIELD_ACTORES_FECHA_INCIDENCA_DESC"
+               default          = "" 
+               format           = "%Y-%m-%d" 
+        />
+    </fieldset>
+    
+    
+    <!-- UNIDAD TERRITORIAL DE TEMA -->
+    <fieldset name="undTerrTema">
+        
+        <!-- TIPO DE TEMA -->
+        <field  name            = "undTerr_provicia"
+                type            = "provincias"
+                extension       = "com_conflitos"
+                label           = "COM_CONFLICTOS_FIELD_UNDTERR_PROVINCIA_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_UNDTERR_PROVINCIA_DESC"
+                required        = "true">
+            <option value="0">SELECCIONE_PROVINCIA</option>
+        </field>
+        <!-- TIPO DE TEMA -->
+        <field  name            = "undTerr_canton"
+                type            = "actores"
+                extension       = "com_conflitos"
+                label           = "COM_CONFLICTOS_FIELD_UNDTERR_CANTON_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_UNDTERR_CANTON_DESC"
+                required        = "true">
+            <option value="0">SELECCIONE_CANTON</option>
+        </field>
+        <!-- TIPO DE TEMA -->
+        <field  name            = "undTerr_parroquia"
+                type            = "actores"
+                extension       = "com_conflitos"
+                label           = "COM_CONFLICTOS_FIELD_UNDTERR_PARROQUIA_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_UNDTERR_PARROQUIA_DESC"
+                required        = "true">
+            <option value="0">SELECCIONE_PARROQUIA</option>
+        </field>
+        
+        
+    </fieldset>
+    
+    <!-- Funcion del Actor -->
+    <fieldset name="funcionActor">
+        <!-- TIPO DE TEMA -->
+        <field  name            = "intId_fcn"
+                type            = "funciones"
+                extension       = "com_conflitos"
+                label           = "COM_CONFLICTOS_FIELD_FUNCION_FUNCION_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_FUNCION_FUNCION_DESC"
+                required        = "true">
+            <option value="0">COM_CONFLICTOS_FIELD_FUNCION_FUNCION_TITLE</option>
+        </field>
+        
+        <!-- Campo txt para la gestion de la Funcion del Actor-->
+        <field  name            = "idFuncionActorTxt"
+                type            = "text"
+                label           = "COM_CONFLICTOS_FIELD_FUNCION_FUNCION_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_FUNCION_FUNCION_DESC"
+                required        = "true"
+                size            = "35"
+        />
+        
+        <!-- FECHA DESDE -->
+        <field name             = "dtefecha_ini_fi" 
+               type             = "calendar" 
+               label            = "COM_CONFLICTOS_FIELD_ACTORES_FUNCION_FECHA_INICIO_LABEL"
+               description      = "COM_CONFLICTOS_FIELD_ACTORES_FUNCION_FECHA_INICIO_DESC"
+               default          = "" 
+               format           = "%Y-%m-%d" 
+        />
+        
+        <!-- FECHA HASTA -->
+        <field name             = "dtefecha_fin_fi" 
+               type             = "calendar" 
+               label            = "COM_CONFLICTOS_FIELD_ACTORES_FUNCION_FECHA_HASTA_LABEL"
+               description      = "COM_CONFLICTOS_FIELD_ACTORES_FUNCION_FECHA_HASTA_DESC"
+               default          = "" 
+               format           = "%Y-%m-%d" 
+        />
+        
+    </fieldset>
+    
+    
+</form>

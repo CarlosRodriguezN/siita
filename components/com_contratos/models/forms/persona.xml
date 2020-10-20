@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="persona">
+        <field  name            = "intIdPersona_pc"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "0"
+                readonly        = "true"
+                class           = "readonly"
+        />
+                          
+        <!-- APELLIDO -->
+        <field  name            ="strApellidos_pc" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_PERSONA_APELLIDO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_PERSONA_APELLIDO_DESC"
+                size            ="45"
+                required        ="true"
+        />
+        <!-- NOMBRE -->
+        <field  name            ="strNombres_pc" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_PERSONA_NOMBRE_LABEL"
+                description     ="COM_CONTRATOS_FIELD_PERSONA_NOMBRE_DESC"
+                size            ="45"
+                required        ="true"
+        />
+        <!-- CEDULA -->
+        <field  name            ="strCedula_pc" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_PERSONA_CEDULA_LABEL"
+                description     ="COM_CONTRATOS_FIELD_PERSONA_CEDULA_DESC"
+                size            ="45"
+                required        ="true"
+        />
+        <!-- CORREO -->
+        <field  name            ="strCorreoElectronico_pc" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_PERSONA_CORREO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_PERSONA_CORREO_DESC"
+                size            ="45"
+                required        ="true"
+        />
+
+        <!-- TELEFONO -->
+        <field  name            ="strTelefono_pc" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_PERSONA_TELEFONO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_PERSONA_TELEFONO_DESC"
+                size            ="45"
+                required        ="true"
+        />
+        <!-- CELULAR -->
+        <field  name            ="strCelular_pc" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_PERSONA_CELULAR_LABEL"
+                description     ="COM_CONTRATOS_FIELD_PERSONA_CELULAR_DESC"
+                size            ="45"
+                required        ="true"
+        />
+        <!-- Publicados -->
+        <field  name            ="published"
+                type            ="list"
+                label           ="JSTATUS"
+                description     ="JFIELD_PUBLISH_DESC"
+                class           ="inputbox"
+                filter          ="intval"
+                size            ="1"
+                default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

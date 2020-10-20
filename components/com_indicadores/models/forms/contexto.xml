@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <!-- GESTION DE ATRIBUTOS GENERALES DE UN INDICADOR -->
+    <fieldset name="InformacionGeneral">
+        <!-- Nombre del Indicador -->
+        <field  name        = "nombreIndicador" 
+                type        = "textarea" 
+                label       = "COM_INDICADORES_CONTEXTO_ATRIBUTO_NOMBRE_LABLE" 
+                description = "COM_INDICADORES_CONTEXTO_ATRIBUTO_NOMBRE_DESC" 
+                rows        = "5" 
+                cols        = "3"
+                required    = "true"/>
+        
+        <!-- Descripcion del Indicador -->
+        <field  name        = "descripcionIndicador" 
+                type        = "textarea" 
+                label       = "COM_INDICADORES_CONTEXTO_ATRIBUTO_DESCRIPCION_LABLE" 
+                description = "COM_INDICADORES_CONTEXTO_ATRIBUTO_DESCRIPCION_DESC" 
+                rows        = "5" 
+                cols        = "3" />
+        
+        <!-- Nombre del Reporte, asociado a Tableau -->
+        <field  name        = "nombreReporte" 
+                type        = "textarea" 
+                label       = "COM_INDICADORES_CONTEXTO_ATRIBUTO_REPORTE_LABLE" 
+                description = "COM_INDICADORES_CONTEXTO_ATRIBUTO_REPORTE_DESC" 
+                rows        = "5" 
+                cols        = "3" />
+    </fieldset>
+
+    <!-- UNIDAD DE GESTION -->
+    <fieldset name="UnidadGestion">
+        <!-- Lista de Unidades de Gestion -->
+        <field  name        = "intIdUndGestion"
+                type        = "unidadesgestion"
+                extension   = "com_indicadores"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_INDICADORES_CONTEXTO_ATRIBUTO_UGESTION_LABLE"
+                description = "COM_INDICADORES_CONTEXTO_ATRIBUTO_UGESTION_DESC"
+                required    = "true">
+            <option value="0">COM_INDICADORES_CONTEXTO_ATRIBUTO_UGESTION_TITLE</option>
+        </field>
+        
+    </fieldset>
+    
+    <!-- RANGOS DE GESTION - CONTEXTO -->
+    <fieldset name="rangosGestion">
+        <field  name        = "rgValMinimo" 
+                type        = "text" 
+                label       = "COM_INDICADORES_CONTEXTO_ATRIBUTO_RGVALMINIMO_LABLE" 
+                description = "COM_INDICADORES_CONTEXTO_ATRIBUTO_RGVALMINIMO_DESC" 
+                size        = "15"
+                required    = "true"/>
+        
+        <field  name        = "rgValMaximo" 
+                type        = "text" 
+                label       = "COM_INDICADORES_CONTEXTO_ATRIBUTO_RGVALMAXIMO_LABLE" 
+                description = "COM_INDICADORES_CONTEXTO_ATRIBUTO_RGVALMAXIMO_DESC" 
+                size        = "15"
+                required    = "true"/>
+        
+        <field  name        = "rgColor" 
+                type        = "color" 
+                label       = "COM_INDICADORES_CONTEXTO_ATRIBUTO_RGCOLOR_LABLE" 
+                description = "COM_INDICADORES_CONTEXTO_ATRIBUTO_RGCOLOR_DESC" 
+                size        = "15"
+                required    = "true"/>
+    </fieldset>
+    
+    <!-- RESPONSABLE -->
+    <fieldset name="Responsable">
+        <!-- Lista de Unidades de Gestion -->
+        <field  name        = "intIdUGResponsable"
+                type        = "unidadesgestion"
+                extension   = "com_indicadores"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_INDICADORES_CONTEXTO_ATRIBUTO_UGRESPONSABLE_LABLE"
+                description = "COM_INDICADORES_CONTEXTO_ATRIBUTO_UGRESPONSABLE_DESC"
+                required    = "true">
+            <option value="0">COM_INDICADORES_CONTEXTO_ATRIBUTO_UGRESPONSABLE_TITLE</option>
+        </field>
+        
+        <field  name        = "idResponsable" 
+                type        = "list" 
+                label       = "COM_INDICADORES_CONTEXTO_ATRIBUTO_RESPONSABLE_LABLE" 
+                description = "COM_INDICADORES_CONTEXTO_ATRIBUTO_RESPONSABLE_DESC"
+                required    = "true">
+            <option value="0">COM_INDICADORES_CONTEXTO_ATRIBUTO_RESPONSABLE_TITLE</option>
+        </field>
+    </fieldset>
+    
+    
+    <!-- Metodo de Calculo -->
+    <fieldset name="metodocalculo">
+        <field  name        = "idMetodoCalculo" 
+                type        = "list" 
+                label       = "COM_INDICADORES_CONTEXTO_METODO_CALCULO_LABLE" 
+                description = "COM_INDICADORES_CONTEXTO_METODO_CALCULO_DESC"
+                required    = "true">
+            <option value="0">COM_INDICADORES_CONTEXTO_METODO_CALCULO_TITLE</option>
+            <option value="1">COM_INDICADORES_CONTEXTO_METODO_CALCULO_MINIMO</option>
+            <option value="2">COM_INDICADORES_CONTEXTO_METODO_CALCULO_MAXIMO</option>
+            <option value="3">COM_INDICADORES_CONTEXTO_METODO_CALCULO_PROMEDIO</option>
+            <option value="4">COM_INDICADORES_CONTEXTO_METODO_CALCULO_PONDERADO</option>
+        </field>
+    </fieldset>
+    
+    <!-- INDICADORES -->
+    <fieldset name="indicador">
+        <!-- Filtro por Tipo de Entidad -->
+        <field  name        = "idTpoEntidad"
+                type        = "tipoentidad"
+                extension   = "com_indicadores"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_INDICADORES_CONTEXTO_ATRIBUTO_INDTPOENTIDAD_LABLE"
+                description = "COM_INDICADORES_CONTEXTO_ATRIBUTO_INDTPOENTIDAD_DESC"
+                required    = "true">
+            <option value="0">COM_INDICADORES_CONTEXTO_ATRIBUTO_INDTPOENTIDAD_TITLE</option>
+        </field>
+
+        <!-- Lista de Entidades -->
+        <field  name        = "idEntidad" 
+                type        = "list" 
+                label       = "COM_INDICADORES_CONTEXTO_ATRIBUTO_INDENTIDAD_LABLE" 
+                description = "COM_INDICADORES_CONTEXTO_ATRIBUTO_INDENTIDAD_DESC"
+                default     = "0"
+                required    = "true">
+            <option value="0">COM_INDICADORES_CONTEXTO_ATRIBUTO_INDENTIDAD_TITLE</option>
+        </field>
+
+        <!-- Indicador -->
+        <field  name        = "idIndicador" 
+                type        = "list" 
+                label       = "COM_INDICADORES_CONTEXTO_ATRIBUTO_LSTINDICADOR_LABLE" 
+                description = "COM_INDICADORES_CONTEXTO_ATRIBUTO_LSTINDICADOR_DESC"
+                default     = "0"
+                required    = "true">
+            <option value="0">COM_INDICADORES_CONTEXTO_ATRIBUTO_LSTINDICADOR_TITLE</option>
+        </field>
+        
+        <field  name        = "factorPonderacion"
+                type        = "text" 
+                label       = "COM_INDICADORES_CONTEXTO_FACTOR_PONDERACION_LABLE" 
+                description = "COM_INDICADORES_CONTEXTO_FACTOR_PONDERACION_DESC" 
+                default     = "1"
+                size        = "10"/>
+    </fieldset>
+    
+    <!-- Informacion adicional del indicador -->
+    <fieldset name="dtaAdicionalIndicador">
+        <field  name        = "umbralIndicador"
+                type        = "text" 
+                label       = "COM_INDICADORES_CONTEXTO_INDICADOR_UMBRAL_LABLE" 
+                description = "COM_INDICADORES_CONTEXTO_INDICADOR_UMBRAL_DESC" 
+                readonly    = "true"
+                size        = "10"/>
+        
+        <field  name        = "lineaBase"
+                type        = "text" 
+                label       = "COM_INDICADORES_CONTEXTO_INDICADOR_LB_LABLE" 
+                description = "COM_INDICADORES_CONTEXTO_INDICADOR_LB_DESC" 
+                readonly    = "true"
+                size        = "10"/>
+    </fieldset>
+    
+    <!-- Unidad de Gestion Responsable -->    
+    <fieldset name="indUGResponsable">
+        <field  name        = "UGResponsable"
+                type        = "text" 
+                label       = "COM_INDICADORES_CONTEXTO_INDICADOR_UGRESPONSABLE_LABLE" 
+                description = "COM_INDICADORES_CONTEXTO_INDICADOR_UGRESPONSABLE_DESC" 
+                readonly    = "true"
+                size        = "25"/>
+    </fieldset>
+    
+    <!-- Funcionario Responsable -->    
+    <fieldset name="indFuncionarioUG">
+        <field  name        = "ResponsableUG"
+                type        = "text" 
+                label       = "COM_INDICADORES_CONTEXTO_INDICADOR_FUNCIONARIOUG_LABLE" 
+                description = "COM_INDICADORES_CONTEXTO_INDICADOR_FUNCIONARIOUG_DESC" 
+                readonly    = "true"
+                size        = "25"/>
+        
+        <field  name        = "funcionario"
+                type        = "text" 
+                label       = "COM_INDICADORES_CONTEXTO_LSTINDICADOR_FUNCIONARIO_LABLE" 
+                description = "COM_INDICADORES_CONTEXTO_LSTINDICADOR_FUNCIONARIO_DESC" 
+                readonly    = "true"
+                size        = "25"/>
+    </fieldset>
+    
+    <!-- SENPLADES -->
+    <fieldset name="senplades">
+
+        <field  name        = "intSenplades_indEnt"
+                type        = "radio"
+                label       = "COM_INDICADORES_SENPLADES_LABEL"
+                default     = "0"
+                description = "COM_INDICADORES_SENPLADES_DESC">
+            <option value="1"> JYes </option>
+            <option value="0"> JNO </option>
+        </field>
+
+    </fieldset>
+
+</form>

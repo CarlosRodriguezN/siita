@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="unidadanalisis">
+        <field  name            = "inpCodigo_unianl"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- Descripción  />-->
+        <field  name            ="strDescripcion_unianl" 
+                type            ="textarea" 
+                default         ="Unidad Análisis" 
+                label           ="COM_MANTENIMIENTO_FIELD_UNIDADANALISIS_DESCRIPCION_LABEL" 
+                description     ="COM_MANTENIMIENTO_FIELD_UNIDADANALISIS_DESCRIPCION_DESC" 
+                rows            ="5" 
+                cols            ="3"
+         />
+        <!-- Publicados -->
+        <field  name            ="published"
+                type            ="list"
+                label           ="JSTATUS"
+                description     ="JFIELD_PUBLISH_DESC"
+                class           ="inputbox"
+                filter          ="intval"
+                size            ="1"
+                default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

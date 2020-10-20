@@ -1,0 +1,16 @@
+/*Ubica el acoredeon en el mapa*/
+.inMap{
+    width: 490px;
+    padding-top:1em;
+    padding-bottom:1em;
+    padding-right:1em;
+    padding-left:1em;
+}
+
+.contPrograma{
+    padding: 0px;
+/*    padding-top:0px;
+    padding-bottom:0px;
+    padding-right:0px;
+    padding-left:0px;*/
+}

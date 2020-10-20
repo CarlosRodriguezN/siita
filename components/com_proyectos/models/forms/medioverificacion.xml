@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <fieldset name="medVerificacion">
+        <!-- Registro de medios de verificacion -->
+        <field  name        = "txtMedVerificacion" 
+                type        = "textarea" 
+                label       = "COM_PROYECTOS_FIELD_MARCOLOGICO_MEDVERIFICACION_LABEL" 
+                description = "COM_PROYECTOS_FIELD_MARCOLOGICO_MEDVERIFICACION_DESC" 
+                rows        = "5" 
+                cols        = "3" />
+        
+    </fieldset>
+    
+    <fieldset name="supuestos">
+        <!-- Registro de Supuestos -->
+        <field  name        = "txtSupuestos" 
+                type        = "textarea" 
+                label       = "COM_PROYECTOS_FIELD_MARCOLOGICO_SUPUESTOS_LABEL" 
+                description = "COM_PROYECTOS_FIELD_MARCOLOGICO_SUPUESTOS_DESC" 
+                rows        = "5" 
+                cols        = "3" />
+    </fieldset>
+</form>

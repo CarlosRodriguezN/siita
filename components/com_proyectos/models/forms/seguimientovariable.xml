@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <fieldset name="seguimientoVariable">
+
+        <!-- Lista de Variables Asociadas a un indicador -->
+        <field  name        = "idVariableIndicador"
+                type        = "variableindicador"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                required    = "true"
+                label       = "COM_PROYECTOS_SEGUIMIENTO_VARIABLE_LABEL"
+                description = "COM_PROYECTOS_SEGUIMIENTO_VARIABLE_DESC">
+            <option value="0">COM_PROYECTOS_SEGUIMIENTO_VARIABLE_TITLE</option>
+        </field>
+        
+        <!-- Fecha Seguimiento -->
+        <field  name        = "fchSeguimiento" 
+                type        = "calendar" 
+                label       = "COM_PROYECTOS_SEGUIMIENTO_FECHA_LABEL"
+                description = "COM_PROYECTOS_SEGUIMIENTO_FECHA_DESC"
+                format      = "%Y-%m-%d"/>
+
+        <!-- Valor Seguimiento -->                
+        <field  name        = "valorSeguimiento" 
+                type        = "text" 
+                label       = "COM_PROYECTOS_SEGUIMIENTO_VALOR_LABEL"
+                description = "COM_PROYECTOS_SEGUIMIENTO_VALOR_DESC"
+                size        = "10" />
+    </fieldset>
+</form>

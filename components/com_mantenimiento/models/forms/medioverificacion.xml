@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="medioverificacion">
+        <!-- codigo de medio verificacion -->
+        <field  name            = "intCodigo_medver"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- codigo de la categoria -->
+        <field  name            = "strCodigocategoria"
+                type            = "categoriasmediover"
+                extension       = "com_mantenimiento"
+                class           = "inputbox"
+                default         = ""
+                label           = "COM_MANTENIMIENTO_FIELD_MEDIOVERIFICACION_CATEGORIA_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_MEDIOVERIFICACION_CATEGORIA_DESC"
+                required        = "true">
+            <option value="0">Categoría</option>
+        </field>
+        
+        <!-- codigo del objetivo marco lógico -->
+        <field  name            = "intCodigo_ojtoml"
+                type            = "marcoslogicos"
+                extension       = "com_mantenimiento"
+                class           = "inputbox"
+                default         = ""
+                label           = "COM_MANTENIMIENTO_FIELD_MEDIOVERIFICACION_OJTOML_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_MEDIOVERIFICACION_OJTOML_DESC"
+                required        = "true">
+            <option value="0">Marco lógico </option>
+        </field>
+        
+        <!-- Descripción />-->
+        <field  name            ="strDescripcion_medver" 
+                type            ="textarea" 
+                default         ="Medio Verificación" 
+                label           ="COM_MANTENIMIENTO_FIELD_MEDIOVERIFICACION_DESCRIPCION_LABEL" 
+                description     ="COM_MANTENIMIENTO_FIELD_MEDIOVERIFICACION_DESCRIPCION_DESC" 
+                rows            ="5" 
+                cols            ="3"
+         />
+     
+        <!-- Fecha registro supuesto -->
+        <field  name            = "dteFecharegistro_medver"
+                type            = "CALENDAR"
+                label           = "COM_MANTENIMIENTO_FIELD_MEDIOVERIFICACION_FECHAREGISTRO_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_MEDIOVERIFICACION_FECHAREGISTRO_DESC"
+                class           = "inputbox"
+                size            = "50"
+                required        = "true"
+                
+        /><!-- Fecha modificación supuesto -->
+        <field  name            = "dteFechamodificacion_medver"
+                type            = "CALENDAR"
+                label           = "COM_MANTENIMIENTO_FIELD_MEDIOVERIFICACION_FECHAMODIFICACION_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_MEDIOVERIFICACION_FECHAMODIFICACION_DESC"
+                class           = "inputbox"
+                size            = "50"
+                required        = "true"
+        />
+        
+        <!-- Publicados -->
+        <field  name            ="published"
+                type            ="list"
+                label           ="JSTATUS"
+                description     ="JFIELD_PUBLISH_DESC"
+                class           ="inputbox"
+                filter          ="intval"
+                size            ="1"
+                default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

@@ -1,0 +1,22 @@
+/*clases necesarias para el infowidos*/
+
+.tableContent{
+    top: -9px;
+    width:95%;
+    cellspacing:0px;
+    cellpadding:0px;
+}
+/*
+el tamaño de el contenido de los tab
+*/
+.contentTab{
+    overflow: auto; 
+    height: 160px;
+    width: 100%;
+}
+/*
+El tamaños de el div
+*/
+.tabdiv{
+   height: 230px;
+}

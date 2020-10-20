@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="variable">
+        <!-- codigo de la categoria -->
+        <field  name            = "intCodigo_var"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- Tipo de Variable -->
+        <field  name            = "inpCodigo_tipovar"
+                type            = "tiposvariable"
+                extension       = "com_mantenimiento"
+                class           = "inputbox"
+                default         = ""
+                label           = "COM_MANTENIMIENTO_FIELD_VARIABLE_TIPOVARIABLE_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_VARIABLE_TIPOVARIABLE_DESC"
+                required        = "true">
+            <option value="0">COM_MANTENIMIENTO_FIELD_VARIABLE_TIPOVARIABLE_TITLE</option>
+        </field>
+       
+        <!-- Descripción Variable />-->
+        <field  name            ="strDescripcion_var" 
+                type            ="textarea" 
+                default         ="Nombre de la Variable" 
+                label           ="COM_MANTENIMIENTO_FIELD_VARIABLE_DESCRIPCION_LABEL" 
+                description     ="COM_MANTENIMIENTO_FIELD_VARIABLE_DESCRIPCION_DESC" 
+                rows            ="5" 
+                cols            ="3"
+         />
+         
+        <!-- Fecha del registo -->
+        <field  name            = "dteFechaRegistro_var"
+                type            = "CALENDAR"
+                label           = "COM_MANTENIMIENTO_FIELD_VARIABLE_FCHREGISTRO_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_VARIABLE_FCHREGISTRO_DESC"
+                class           = "inputbox"
+                size            = "50"
+                required        = "true"
+        />
+        
+        <!-- Fecha modificacion -->
+        <field  name            = "dteFechaModificacion_var"
+                type            = "CALENDAR"
+                label           = "COM_MANTENIMIENTO_FIELD_VARIABLE_FCHMODIFICACION_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_VARIABLE_FCHMODIFICACION_DESC"
+                class           = "inputbox"
+                size            = "50"
+                required        = "true"
+        />
+        
+        <!-- Publicados -->
+        <field  name            ="published"
+                type            ="list"
+                label           ="JSTATUS"
+                description     ="JFIELD_PUBLISH_DESC"
+                class           ="inputbox"
+                filter          ="intval"
+                size            ="1"
+                default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

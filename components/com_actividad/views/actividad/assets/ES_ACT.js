@@ -1,0 +1,17 @@
+JSL_ALERT_ALL_NEED = "Campos con asterisco, SON OBLIGATORIOS";
+JSL_DOCUMT = "Docs";
+JSL_UPDATE = "Editar";
+JSL_DELETE = "Eliminar";
+JSL_UPLOAD_DOC = "Subir";
+JSL_ECORAE = 'SIITA-ECORAE';
+JSL_CONFIRM_DEL_ACTIVIDAD = "¿Est&aacute; seguro que desea eliminar este registro?";
+JSL_CONFIRM_DEL_DOCUMENTO = "¿Desea eliminar el documento?";
+JSL_OK = " SI ";
+JSL_CANCEL = " NO ";
+JSL_CONFIRM_DEL_DOCUMENTO = "¿Desea eliminar el documento,los cambios serán permanentes?";
+JSL_COM_PEI_FIELD_OBJETIVO_CNFIRNCHANGES = "¿Desea guardar los cambios?";
+JSL_CONFIRM_DEL_OBJETIVO = " ¿Desea eliminar el objetivo?";
+JSL_ECORAEJSL_ECORAE = 'SIITA-ECORAE'; 
+JSL_DOWNDOC="Descargar";
+JSL_NOUPLOAD="---";
+JSL_NONE="---";

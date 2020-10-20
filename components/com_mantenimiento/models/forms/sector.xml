@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <fieldset name="sector">
+        <field  name            = "inpCodigo_sec"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "0"
+                readonly        = "true"
+                class           = "readonly"
+        /> 
+        
+        <!-- descripcion -->
+        <field  name            = "strCodigoCategoria"
+                type            = "categoriassector"
+                extension       = "com_mantenimiento"
+                class           = "inputbox"
+                label           = "COM_MANTENIMIENTO_FIELD_SECTOR_CATEGORIA_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_SECTOR_CATEGORIA_DESC"
+                required        = "true"
+        >
+            <option value="0">COM_MANTENIMIENTO_FIELD_SECTOR_CATEGORIA_TITLE</option>
+        </field>
+        
+        <!-- descripcion -->
+        <field  name            = "strDescripcion_sec"
+                type            = "textarea"
+                default         = "Sector"
+                label           = "COM_MANTENIMIENTO_FIELD_SECTOR_DESCRIPCION_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_SECTOR_DESCRIPCION_DESC"
+                class           ="inputbox"
+                rows            ="5" 
+                cols            ="3"
+        />
+
+        <!-- Publicados -->
+        <field  name            ="published"
+                type            ="list"
+                label           ="JSTATUS"
+                description     ="JFIELD_PUBLISH_DESC"
+                class           ="inputbox"
+                filter          ="intval"
+                size            ="1"
+                default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

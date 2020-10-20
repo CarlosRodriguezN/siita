@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="cargofnc">
+        <!-- codigo del cargo -->
+        <field  name            = "inpCodigo_cargo"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "0"
+        />
+        
+        <!-- Nombre del cargo -->
+        <field  name            = "strNombre_cargo" 
+                type            = "text" 
+                label           = "COM_MANTENIMIENTO_FIELD_CARGO_FNC_NOMBRE_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_CARGO_FNC_NOMBRE_DESC"
+                required        = "true"
+                size            = "30"
+        />
+        
+    </fieldset>
+    
+</form>

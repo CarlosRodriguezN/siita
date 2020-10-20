@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="beneficiario">
+        <!-- codigo de la beneficiario -->
+        <field  name            = "incodigo_ben"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- Lista de Categorias -->
+        <field  name            = "intId_td"
+                type            = "tipodimension"
+                extension       = "com_mantenimiento"
+                class           = "inputbox"
+                label           = "COM_MANTENIMIENTO_FIELD_BENEFICIARIO_TIPO_DIMENSION_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_BENEFICIARIO_TIPO_DIMENSION_DESC"
+                required        = "true">
+            <option value="0">COM_MANTENIMIENTO_FIELD_BENEFICIARIO_TIPO_DIMENSION_TITLE</option>
+        </field>
+        
+        <!-- codigo de la grupo -->
+        <field  name            = "intId_dim"
+                type            = "dimensiones"
+                extension       = "com_mantenimiento"
+                class           = "inputbox"
+                label           = "COM_MANTENIMIENTO_FIELD_BENEFICIARIO_DIMENSION_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_BENEFICIARIO_DIMENSION_DESC"
+                required        = "true">
+            <option value="0">COM_MANTENIMIENTO_FIELD_BENEFICIARIO_DIMENSION_TITLE</option>
+        </field>
+        
+        <!-- Descripción -->
+        <field  name            ="strDescripcion_ben" 
+                type            ="textarea" 
+                default         ="Beneficiario" 
+                label           ="COM_MANTENIMIENTO_FIELD_BENEFICIARIO_DESCRIPCION_LABEL" 
+                description     ="COM_MANTENIMIENTO_FIELD_BENEFICIARIO_DESCRIPCION_DESC" 
+                rows            ="5" 
+                cols            ="3"
+         />
+         
+        <!-- Publicados -->
+        <field  name            ="published"
+                type            ="list"
+                label           ="JSTATUS"
+                description     ="JFIELD_PUBLISH_DESC"
+                class           ="inputbox"
+                filter          ="intval"
+                size            ="1"
+                default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

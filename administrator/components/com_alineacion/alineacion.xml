@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: infosalud.xml 14 2013-04-04 18:35:20Z chdemko $ -->
+<extension type="component" version="1.6.0" method="upgrade">
+
+	<name>com_alineacion</name>
+	<!-- The following elements are optional and free of formatting conttraints -->
+	<creationDate>Octubre 2013</creationDate>
+	<author>Espoch</author>
+	<authorEmail>info@espoch.edu.ec</authorEmail>
+	<authorUrl>http://dev.siita.ecorae</authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>License Info</license>
+	<!--  The version string is recorded in the components table -->
+	<version>0.1.0</version>
+	<!-- The description is optional and defaults to the name -->
+	<description>COM_ALINEACION_DESCRIPTION</description>
+
+	<!-- Site Main File Copy Section -->
+	<!-- Note the folder attribute: This attribute describes the folder to copy FROM in the package to install therefore files copied in this section are copied from /site/ in the package -->
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>alineacion.php</filename>
+		<filename>controller.php</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+        <folder>controllers</folder>
+        <folder>language</folder>
+	</files>
+
+	<administration>
+		<!-- Administration Main File Copy Section -->
+		<!-- Note the folder attribute: This attribute describes the folder
+			to copy FROM in the package to install therefore files copied
+			in this section are copied from /admin/ in the package -->
+		<files folder="admin">
+			<!-- Admin Main File Copy Section -->
+			<filename>index.html</filename>
+			<filename>alineacion.php</filename>
+            <filename>controller.php</filename>
+
+            <!-- Archivos de Gestion de Interfaces (views) del SGP -->
+            <folder>views</folder>
+
+            <!-- Archivos de Gestion de Informacion del sistema de SGP -->
+		    <folder>models</folder>
+
+            <!-- Archivos de Gestion de Eventos del sistema de SGP -->
+            <folder>controllers</folder>
+		</files>
+
+        <languages folder="admin">
+			<language tag="es-ES">language/es-ES/es-ES.com_alineacion.ini</language>
+			<language tag="es-ES">language/es-ES/es-ES.com_alineacion.sys.ini</language>
+		</languages>
+	</administration>
+</extension>

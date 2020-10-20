@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="atributo">
+        <field  name            = "intIdMulta_mta"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "0"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        <!-- CONTRATO -->
+        <field  name        = "intIdContrato_ctr"
+                type        = "contratos"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_CONTRATOS_FIELD_MULTA_CONTRATO_LABEL"
+                description = "COM_CONTRATOS_FIELD_MULTA_CONTRATO_DESC"
+                required    = "true">
+            <option value="0">SELECCIONE CONTRATO</option>
+        </field>
+       
+        <!-- Codigo -->
+        <field  name            ="intCodMulta_mta" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_MULTA_CODIGO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_MULTA_CODIGO_DESC"
+                rows            ="10" 
+                cols            ="5" 
+                required        ="true"
+        />
+        <!-- NOMBRE -->
+        <field  name            ="dcmMonto_mta" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_MULTA_MONTO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_MULTA_MONTO_DESC"
+                rows            ="10" 
+                cols            ="5" 
+                required        ="true"
+        />
+        <!-- VALOR -->
+        <field  name            ="strObservacioin_mta" 
+                type            ="textArea" 
+                label           ="COM_CONTRATOS_FIELD_MULTA_OBSERVACION_LABEL"
+                description     ="COM_CONTRATOS_FIELD_MULTA_OBSERVACION_DESC"
+                rows            ="10" 
+                cols            ="5" 
+                required        ="true"
+        />
+        <!-- Publicados -->
+        <field  name            ="published"
+                type            ="list"
+                label           ="JSTATUS"
+                description     ="JFIELD_PUBLISH_DESC"
+                class           ="inputbox"
+                filter          ="intval"
+                size            ="1"
+                default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

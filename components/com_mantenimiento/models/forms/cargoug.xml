@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="cargoug">
+        <!-- codigo del cargo-unidad gestion -->
+        <field  name            = "intId_ugc"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_CARGOUG_LABEL"
+                description     = "JGLOBAL_FIELD_ID_CARGOUG_DESC"
+                size            = "10"
+                default         = "0"
+        />
+        
+        <!-- codigo de la unidad de gestion -->
+        <field  name            = "intCodigo_ug"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_UG_LABEL"
+                description     = "JGLOBAL_FIELD_ID_UG_DESC"
+                size            = "10"
+                default         = "0"
+        />
+        
+        <!-- ID de grupo Joomla -->
+        <field  name            = "intIdGrupo_cargo"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_GRUPO_LABEL"
+                description     = "JGLOBAL_FIELD_ID_GRUPO_DESC"
+                size            = "10"
+                default         = "0"
+        />
+        
+        <!-- Codigo del cargo -->
+        <field  name            = "inpCodigo_cargo"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_CARGO_LABEL"
+                description     = "JGLOBAL_FIELD_ID_CARGO_DESC"
+                size            = "10"
+                default         = "0"
+        />
+        
+        <!-- Nombre de la unidad de gestion -->
+        <field  name            = "strNombreUG" 
+                type            = "text" 
+                label           = "COM_MANTENIMIENTO_FIELD_CARGO_UG_NAMEUG_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_CARGO_UG_NAMEUG_DESC"
+                size            = "60"
+        />
+        
+        <!-- Identificador del cargo del funcionario -->
+        <field  name            = "inpCodigo_cargo"
+                type            = "cargofuncionario"
+                extension       = "com_funcionarios"
+                label           = "COM_MANTENIMIENTO_FIELD_CARGO_FNC_NOMBRE_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_CARGO_FNC_NOMBRE_DESC"
+                class           = "inputbox"
+                required        = "true">
+            <option value="0">COM_MANTENIMIENTO_FIELD_CARGO_FNC_NOMBRE_TITLE</option>
+        </field>
+        
+        <!-- Descripción del cargo -->
+        <field  name            = "strDescripcion_cargo" 
+                type            = "textarea" 
+                label           = "COM_MANTENIMIENTO_FIELD_CARGO_UG_DESCRIPCION_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_CARGO_UG_DESCRIPCION_DESC"
+                required        = "true"
+                rows            = "4" 
+                cols            = "2"
+        />
+        
+    </fieldset>
+    
+</form>

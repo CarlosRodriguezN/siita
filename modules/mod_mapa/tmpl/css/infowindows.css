@@ -1,0 +1,36 @@
+/*clases necesarias para el infowidos*/
+
+.tableContent{
+    top: -9px;
+    width:95%;
+    cellspacing:0px;
+    cellpadding:0px;
+}
+/*
+el tamaño de el contenido de los tab
+*/
+.contentTab{
+    overflow: auto; 
+    height: 160px;
+    width: 100%;
+    font-size: 0.7em !important; 
+    padding: 0em !important;
+}
+#infTabs-1, 
+#infTabs-2, 
+#infTabs-3 
+{
+    padding: 0em !important;
+}
+/*
+El tamaños de el div
+*/
+.tabdiv{
+   height: 230px;
+}
+
+/* Tamaño de las imgenes en el infowindow*/
+.imgCarrusel{
+    height:127px ;
+    width:200px
+}

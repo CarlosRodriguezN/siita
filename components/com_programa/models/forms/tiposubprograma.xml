@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <fieldset name="essential">
+        <!-- ID de tipo sub Programa -->
+        <field  name            = "intIdTipoSubPrograma"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "0"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- CODIGO del tipo del sub Programa -->
+        <field  name        = "strCodigoTipoSubPrograma" 
+                type        = "text" 
+                default     = "" 
+                label       = "COM_PROGRAMA_FIELD_TIPO_SUB_PROGRAMA_CODIGOTIPOSUBPROGRAMA_LABEL" 
+                description = "COM_PROGRAMA_FIELD_TIPO_SUB_PROGRAMA_CODIGOTIPOSUBPROGRAMA_DESC" 
+                size        = "25" 
+                required        = "true"
+        />
+        
+        <!-- identificador de una SUBPROGRAMA -->
+        <field  name            = "intId_SubPrograma"
+                type            = "subProgramas"
+                extension       = "com_programas"
+                class           = "inputbox"
+                default         = ""
+                label           = "COM_PROGRAMA_FIELD_TIPO_SUB_PROGRAMA_SUBPROGRAMA_LABEL"
+                description     = "COM_PROGRAMA_FIELD_TIPO_SUB_PROGRAMA_SUBPROGRAMA_DESC"
+                required        = "true">
+            <option value="0">SELECCIONE SUB-PROGRAMA</option>
+        </field>
+         
+        <!-- DESCRIPCION del programa -->
+        <field  name        = "strDescripcion" 
+                type        = "textarea" 
+                default     = ""
+                label       = "COM_PROGRAMA_FIELD_TIPO_SUB_PROGRAMA_DESCRIPCION_LABEL" 
+                description = "COM_PROGRAMA_FIELD_TIPO_SUB_PROGRAMA_DESCRIPCION_DESC" 
+                required    = "true"
+                rows        = "5" 
+                cols        = "10" />
+        <!-- Publicados -->
+        <field  name        = "published"
+                type        = "list"
+                label       = "JSTATUS"
+                description = "JFIELD_PUBLISH_DESC"
+                class       = "inputbox"
+                filter      = "intval"
+                size        = "1"
+                default     = "1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+        
+        <field  name            = "dataPrograma"
+                type            = "hidden"
+                default         = "0"
+                readonly        = "true"
+        />
+        
+        
+    </fieldset>
+</form>

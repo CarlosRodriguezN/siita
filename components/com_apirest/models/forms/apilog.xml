@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <!-- Informacion General de un Plan Estratégico Institucional -->
+    <fieldset name="frmapilog">
+
+        <!-- IP's Asociadas a la institucion -->
+        <field  name            ="dtaApiLog" 
+                type            ="textarea" 
+                label           ="COM_APIREST_IPS_LABEL" 
+                description     ="COM_APIREST_IPS_DESC" 
+                rows            ="20" 
+                cols            ="1">
+        </field>
+
+    </fieldset>
+
+</form>

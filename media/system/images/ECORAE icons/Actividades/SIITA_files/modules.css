@@ -1,0 +1,141 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*Estilos Menu Principal*/
+
+div.menu90 td {
+	border-right:1px dotted #cdcdcd;
+	}
+	
+/*Estilos Rotador de Imagenes Principal*/
+
+.lof-image-link {
+	float:left;
+	}
+
+.lof-title {
+	clear:none !important;
+	}
+
+.lof-readmore {
+	clear:none !important;
+	}
+
+#lof-content-description {
+	float:left;
+	width:215px;
+	height:187px;
+	margin-left:10px;
+	padding-top:55px;
+	border-left:1px solid #45a4d7;
+	padding-left:35px;
+	background-color:#f2f2f3;
+	}
+
+.lof-inner {
+	padding:0px !important;
+	margin:0px !important;
+	}
+
+.lof-articlessroller .lof-navigator-outer {
+	margin-right:290px !important;
+	margin-bottom:10px;
+	}
+
+.lof-articlessroller .lof-bottom .lof-navigator-outer {
+	background:none !important;
+	}
+
+#lof-content-description .lof-title {
+	font-size:16px;
+	color:#707173;
+	font-weight:normal;
+	/*background-image:url(../images/bg_title_slide.jpg);*/
+	background-position:left top;
+	background-repeat:no-repeat;
+	padding-top:0px !important;
+	padding-bottom:30px;
+	}
+
+.lof-readmore {
+	background:url(../images/bg_readmore.png) !important;
+	background-repeat:no-repeat !important;
+	height:16px;
+	padding-left:7px !important;
+	padding-top:2px !important;
+	font-size:11px;
+	margin-left:145px;
+	color:#45a4d7;
+	}
+
+/*Estilos Tabs*/
+
+ul.gkTabs {
+	height:35px;
+	border-left:6px solid #707173 !important;
+	background:url(../images/bg_tabs_options.jpg) !important;
+	background-repeat:repeat-x !important;
+	}
+
+ul.gkTabs li {
+	line-height:35px !important;
+	}
+
+.gkTabItem {
+	padding-top:0px;
+	}
+
+ul.gkTabs li:hover, ul.gkTabs li.active {
+	color:#45A4D7 !important;
+	}
+
+.gkTabContainer0 {
+	border-left:1px solid #cdcdcd;
+	border-right:1px solid #cdcdcd;
+	border-bottom:1px solid #cdcdcd;
+	}
+
+/*Estilos menu System*/
+
+.click-menu94 .inbox2 {
+	border-bottom:2px solid #FFF !important;
+	}
+
+.click-menu94 .inbox2:hover {
+	border-bottom:2px solid #FFF !important;
+	text-decoration:underline !important;
+	}
+
+#slideclick941 .seq1 {
+	margin-right:10px;
+	}
+
+#slideclick941 .seq2 {
+	margin-right:10px;
+	}
+
+#subsection941 .seq1 {
+	margin-right:10px;
+	margin-top:4px;
+	margin-left:6px;
+	}
+
+#subsection941 .seq2 {
+	margin-right:10px;
+	margin-top:4px;
+	margin-left:6px;
+	}
+
+#topclick941 {
+	border-left:6px solid #707173;
+	}
+
+#subsection941 {
+	margin-left:6px;
+	}
+
+/*Estilos para menu inferior*/
+
+div.menu95 a:hover {
+	text-decoration:underline !important;
+	}

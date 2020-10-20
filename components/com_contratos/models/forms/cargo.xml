@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="cargo">
+        <field  name            = "intIdCargo_cgo"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "0"
+                readonly        = "true"
+                class           = "readonly"
+        />
+       
+        <!-- CODIGO UNICO DE REGISTRO -->
+        <field  name            ="strDescripcion_cgo" 
+                type            ="textarea" 
+                label           ="COM_CONTRATOS_FIELD_CARGO_DESCRIPCION_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CARGO_DESCRIPCION_DESC"
+                rows            ="10" 
+                cols            ="5" 
+                required        ="true"
+        />
+        <!-- Publicados -->
+        <field  name            ="published"
+                type            ="list"
+                label           ="JSTATUS"
+                description     ="JFIELD_PUBLISH_DESC"
+                class           ="inputbox"
+                filter          ="intval"
+                size            ="1"
+                default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

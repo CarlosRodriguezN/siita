@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <!-- INFORMACION GENERAL DEL TEMA -->
+    <fieldset name="formTema">
+        
+        <!-- ID Fuente-->
+        <field  name            = "intId_fte"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- TIPO DE FUENTE -->
+        <field  name            = "intId_tf"
+                type            = "tiposfuente"
+                extension       = "com_conflitos"
+                label           = "COM_CONFLICTOS_FIELD_FUENTE_TIPO_FUENTE_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_FUENTE_TIPO_FUENTE_DESC"
+                required        = "true">
+            <option value="0">COM_CONFLICTOS_FIELD_FUENTE_TIPO_FUENTE_TITLE</option>
+        </field>
+        
+        <field  name            = "idTpoFuenteTxt"
+                type            = "text"
+                label           = "COM_CONFLICTOS_FIELD_FUENTE_TIPO_FUENTE_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_FUENTE_TIPO_FUENTE_DESC"
+                required        = "true"
+                size            = "35"
+        />
+
+        <!-- TITULO DEL TEMA -->
+        <field  name            = "strDescripcion_fte"
+                type            = "text"
+                label           = "COM_CONFLICTOS_FIELD_FUENTE_DESCRICION_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_FUENTE_DESCRICION_DESC"
+                size            = "35"
+                required        = "true"
+        />
+        
+        <!-- RESUMEN -->
+        <field  name            = "strObservaciones_fte"
+                type            = "textarea"
+                label           = "COM_CONFLICTOS_FIELD_FUENTE_OBSERVACION_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_FUENTE_OBSERVACION_DESC"
+                rows            = "3" 
+                cols            = "4"
+                required        = "true"
+        />
+        
+        <!-- Publicados -->
+        <field  name            ="intVigencia_fte"
+                type            ="list"
+                label           ="COM_CONFLICTOS_FIELD_FUENTE_VIGENCIA_LABEL"
+                description     ="COM_CONFLICTOS_FIELD_FUENTE_VIGENCIA_DESC"
+                filter          ="intval"
+                size            ="1"
+                default         ="1"
+        >
+            <option value="1"> JVIGENTE </option>
+            <option value="0"> JUNVIGENTE </option>
+           
+        </field>
+        
+    </fieldset>
+    
+    <!-- Legitimidad  -->
+    <fieldset name="legitimdadFuente">
+        
+        <!-- INCIDENCIA-->
+        <field  name            = "intId_leg"
+                type            = "legitimidades"
+                extension       = "com_conflitos"
+                label           = "COM_CONFLICTOS_FIELD_FUENTE_LEGITIMIDAD_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_FUENTE_LEGITIMIDAD_DESC"
+                required        = "true">
+            <option value="0">COM_CONFLICTOS_FIELD_FUENTE_LEGITIMIDAD_TITLE</option>
+        </field>
+        
+        <!-- Campo txt para la gestion de la Legitimidad -->
+        <field  name            = "idLegitimidadTxt"
+                type            = "text"
+                label           = "COM_CONFLICTOS_FIELD_FUENTE_LEGITIMIDAD_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_FUENTE_LEGITIMIDAD_DESC"
+                required        = "true"
+                size            = "35"
+        />
+        
+        <!-- FECHA DE LA INCIDENCIA -->
+        <field name             = "dteFecha_fl" 
+               type             = "calendar" 
+               label            = "COM_CONFLICTOS_FIELD_FUENTE_LEGITIMIDAD_FECHA_LABEL"
+               description      = "COM_CONFLICTOS_FIELD_FUENTE_LEGITIMIDAD_FECHA_DESC"
+               format           = "%Y-%m-%d" 
+        />
+        
+        <!-- DESCRIPCION -->
+        <field  name            = "strDescripcion_fl"
+                type            = "textarea"
+                label           = "COM_CONFLICTOS_FIELD_FUENTE_LEGITIMIDAD_DESCRICION_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_FUENTE_LEGITIMIDAD_DESCRICION_DESC"
+                rows            = "3" 
+                cols            = "4"
+                required        = "true"
+        />
+    </fieldset>
+    
+    <!-- INCIDENCIA DE UNA FUENTE. -->
+    <fieldset name="incidenciaFuente">
+        
+        <!-- INCIDENCIA-->
+        <field  name            = "intId_inc"
+                type            = "incidencias"
+                extension       = "com_conflitos"
+                label           = "COM_CONFLICTOS_FIELD_FUENTE_INCIDENCIA_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_FUENTE_INCIDENCIA_DESC"
+                required        = "true">
+            <option value="0">COM_CONFLICTOS_FIELD_FUENTE_INCIDENCIA_TITLE</option>
+        </field>
+        
+        <!-- Campo TXT para la gestion de la incidencia -->
+        <field  name            = "idIncidenciaTxt"
+                type            = "text"
+                label           = "COM_CONFLICTOS_FIELD_FUENTE_INCIDENCIA_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_FUENTE_INCIDENCIA_DESC"
+                required        = "true"
+                size            = "35"
+        />
+        
+        <!-- FECHA DE LA INCIDENCIA -->
+        <field name             = "dtefecha_fi" 
+               type             = "calendar" 
+               label            = "COM_CONFLICTOS_FIELD_FUENTE_FECHA_INCIDENCA_LABEL"
+               description      = "COM_CONFLICTOS_FIELD_FUENTE_FECHA_INCIDENCA_DESC"
+               format           = "%Y-%m-%d" 
+        />
+    </fieldset>
+    
+    
+    <!-- UNIDAD TERRITORIAL DE TEMA -->
+    <fieldset name="undTerrTema">
+        
+        <!-- TIPO DE TEMA -->
+        <field  name            = "undTerr_provicia"
+                type            = "provincias"
+                extension       = "com_conflitos"
+                class           = "inputbox"
+                default         = ""
+                label           = "COM_CONFLICTOS_FIELD_UNDTERR_PROVINCIA_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_UNDTERR_PROVINCIA_DESC"
+                required        = "true">
+            <option value="0">SELECCIONE_PROVINCIA</option>
+        </field>
+        <!-- TIPO DE TEMA -->
+        <field  name            = "undTerr_canton"
+                type            = "actores"
+                extension       = "com_conflitos"
+                class           = "inputbox"
+                default         = ""
+                label           = "COM_CONFLICTOS_FIELD_UNDTERR_CANTON_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_UNDTERR_CANTON_DESC"
+                required        = "true">
+            <option value="0">SELECCIONE_CANTON</option>
+        </field>
+        <!-- TIPO DE TEMA -->
+        <field  name            = "undTerr_parroquia"
+                type            = "actores"
+                extension       = "com_conflitos"
+                class           = "inputbox"
+                default         = ""
+                label           = "COM_CONFLICTOS_FIELD_UNDTERR_PARROQUIA_LABEL"
+                description     = "COM_CONFLICTOS_FIELD_UNDTERR_PARROQUIA_DESC"
+                required        = "true">
+            <option value="0">SELECCIONE_PARROQUIA</option>
+        </field>
+        
+        
+    </fieldset>
+    
+    
+</form>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <fieldset name="lineabase">
+        <!-- id -->
+        <field  name            = "intCodigo_lbind"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "0"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- Nombre de Linea Base -->
+        <field  name            = "strDescripcion_lbind"
+                type            = "TEXT"
+                label           = "COM_MANTENIMIENTO_FIELD_LINEA_BASE_DESCRIPCION_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_LINEA_BASE_DESCRIPCION_DESC"
+                class           = "inputbox"
+                size            = "50"
+                required        = "true"
+        />
+        
+        <!-- Fuente -->
+        <field  name            = "intCodigo_fuente"
+                type            = "lineabasefuente"
+                extension       = "com_mantenimiento"
+                class           = "inputbox"
+                label           = "COM_MANTENIMIENTO_FIELD_LINEA_BASE_FUENTE_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_LINEA_BASE_FUENTE_DESC"
+                required        = "true">
+            <option value="0">COM_MANTENIMIENTO_FIELD_LINEA_BASE_FUENTE_TITLE</option>
+        </field>
+        
+        <!-- Periodicidad -->
+        <field  name            = "intCodigo_per"
+                type            = "lineabaseperiodicidad"
+                extension       = "com_mantenimiento"
+                class           = "inputbox"
+                label           = "COM_MANTENIMIENTO_FIELD_LINEA_BASE_PERIODICIDAD_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_LINEA_BASE_PERIODICIDAD_DESC"
+                required        = "true">
+            <option value="0">COM_MANTENIMIENTO_FIELD_LINEA_BASE_PERIODICIDAD_TITLE</option>
+        </field>
+        
+        <!-- Valor de linea base -->
+        <field  name            = "dcmValor_lbind"
+                type            = "text"
+                label           = "COM_MANTENIMIENTO_FIELD_LINEA_BASE_VALOR_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_LINEA_BASE_VALOR_DESC"
+                class           = "inputbox"
+                size            = "50"
+        />
+
+        <!-- Fecha de Inicio -->
+        <field  name            = "dteFechaInicio_lbind"
+                type            = "calendar"
+                label           = "COM_MANTENIMIENTO_FIELD_LINEA_BASE_FECHAINICIO_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_LINEA_BASE_FECHAINICIO_DESC"
+                format          = "%Y-%m-%d"
+        />
+
+        <!-- Fecha de Fin -->
+        <field  name            = "dteFechaFin_lbind"
+                type            = "calendar"
+                label           = "COM_MANTENIMIENTO_FIELD_LINEA_BASE_FECHAFIN_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_LINEA_BASE_FECHAFIN_DESC"
+                format          = "%Y-%m-%d"
+        />
+        
+        <!-- Publicados -->
+        <field  name            = "published"
+                type            = "list"
+                label           = "JSTATUS"
+                description     = "JFIELD_PUBLISH_DESC"
+                class           = "inputbox"
+                filter          = "intval"
+                size            = "1"
+                default         = "1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

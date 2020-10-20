@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: apirest.xml 14 2013-04-04 18:35:20Z chdemko $ -->
+<extension type="component" version="1.6.0" method="upgrade">
+
+	<name>com_apirest</name>
+	<!-- The following elements are optional and free of formatting conttraints -->
+	<creationDate>Enero 2015</creationDate>
+	<author>ESPOCH - ECORAE</author>
+	<authorEmail>info@espoch.edu.ec</authorEmail>
+	<authorUrl>http://www.espoch.edu.ec</authorUrl>
+	<copyright>Copyright Info</copyright>
+	<license>License Info</license>
+
+	<!--  The version string is recorded in the components table -->
+	<version>0.1.0</version>
+
+	<!-- The description is optional and defaults to the name -->
+	<description>COM_APIREST_DESCRIPTION</description>
+
+	<!-- Site Main File Copy Section -->
+	<!-- Note the folder attribute: This attribute describes the folder to copy FROM in the package to install therefore files copied in this section are copied from /site/ in the package -->
+	<files folder="site">
+		<filename>index.html</filename>
+		<filename>apirest.php</filename>
+		<filename>controller.php</filename>
+		<folder>views</folder>
+		<folder>models</folder>
+        <folder>controllers</folder>
+        <folder>language</folder>
+	</files>
+
+    <media destination="com_apirest" folder="media">
+        <filename>index.html</filename>
+        <folder>css</folder>
+        <folder>js</folder>
+    </media>
+
+	<administration>
+		<files folder="admin">
+			<!-- Admin Main File Copy Section -->
+			<filename>index.html</filename>
+			<filename>apirest.php</filename>
+            <filename>controller.php</filename>
+
+            <!-- Archivos de Gestion de Interfaces (views) del SGP -->
+            <folder>views</folder>
+
+            <!-- Archivos de Gestion de Informacion del sistema de SGP -->
+		    <folder>models</folder>
+
+            <!-- Archivos de Gestion de Eventos del sistema de SGP -->
+            <folder>controllers</folder>
+		</files>
+
+        <languages folder="admin">
+			<language tag="es-ES">language/es-ES/es-ES.com_apirest.ini</language>
+			<language tag="es-ES">language/es-ES/es-ES.com_apirest.sys.ini</language>
+		</languages>
+	</administration>
+</extension>
+

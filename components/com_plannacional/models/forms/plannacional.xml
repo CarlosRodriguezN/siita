@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <fieldset name="essential">
+        <!-- codigo de la categoria -->
+      <field  name            = "intCodigo_pn"
+              type            = "hidden"
+              label           = "JGLOBAL_FIELD_ID_LABEL"
+              description     = "JGLOBAL_FIELD_ID_DESC"
+              size            = "10"
+              readonly        = "true"
+              class           = "readonly"
+        />
+       <!-- Fecha de inicio -->
+      <field  name            = "dteFechaInicio_pn"
+              type            = "calendar"
+              label           = "COM_PLANNACIONAL_FIELD_PLANNACIONAL_FCHINICIO_LABEL"
+              description     = "COM_PLANNACIONAL_FIELD_PLANNACIONAL_FCHINICIO_DESC"
+              class           = "inputbox"
+              size            = "11"
+              required        = "true"
+        />
+        <!-- Fecha Fin -->
+      <field  name            = "dteFechafFin_pn"
+              type            = "calendar"
+              label           = "COM_PLANNACIONAL_FIELD_PLANNACIONAL_FCHFIN_LABEL"
+              description     = "COM_PLANNACIONAL_FIELD_PLANNACIONAL_FCHFIN_DESC"
+              class           = "inputbox"
+              size            = "11"
+              required        = "true"
+        />
+                 <!-- Descripción  />-->
+      <field  name              ="blnVigente_pn" 
+              type            ="text" 
+              default         ="Grupo" 
+              label           ="COM_PLANNACIONAL_FIELD_PLANNACIONAL_VIGENCIA_LABEL" 
+              description     ="COM_PLANNACIONAL_FIELD_PLANNACIONAL_VIGENCIA_DESC" 
+              class           = "inputbox"
+              size            = "11"
+              required        = "true" 
+         />
+            <!-- Descripción  />-->
+      <field  name              ="strDescripcion_pn" 
+              type            ="textarea" 
+              default         ="" 
+              label           ="COM_PLANNACIONAL_FIELD_PLANNACIONAL_DESCRIPCION_LABEL" 
+              description     ="COM_PLANNACIONAL_FIELD_PLANNACIONAL_DESCRIPCION_DESC" 
+              rows            ="10" 
+              cols            ="5"
+         />
+        <!-- Publicados -->
+      <field  name            ="published"
+              type            ="list"
+              label           ="JSTATUS"
+              description     ="JFIELD_PUBLISH_DESC"
+              class           ="inputbox"
+              filter          ="intval"
+              size            ="1"
+              default         ="1"
+      >
+         <option value="1"> JPUBLISHED </option>
+         <option value="0"> JUNPUBLISHED </option>
+      </field>
+   </fieldset>
+</form>

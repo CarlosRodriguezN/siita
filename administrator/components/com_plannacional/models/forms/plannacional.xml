@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="essential">
+        <field  name="INTCODIGO_PN"
+                type="hidden"
+                label="JGLOBAL_FIELD_ID_LABEL"
+                description="JGLOBAL_FIELD_ID_DESC"
+                size="10"
+                default="0"
+                readonly="true"
+                class="readonly"
+        />
+        
+        <field  name="STRDESCRIPCION_PN"
+                type="text"
+                label="COM_PLANNACIONAL_FIELD_PLANNACIONAL_DESCRIPCION_LABEL"
+                description="COM_PLANNACIONAL_FIELD_PLANNACIONAL_DESCRIPCION_DESC"
+                class="inputbox"
+                size="30"
+                required="true"
+        />
+        
+        <!-- fecha inicio del plan nacional -->
+        <field
+            name        = "DTEFECHAINICIO_PN"
+            type        = "calendar"
+            label       = "COM_PLANNACIONAL_FIELD_PLANNACIONAL_FCHINICIO_LABEL"
+            description = "COM_PLANNACIONAL_FIELD_PLANNACIONAL_FCHINICIO_DESC"
+            size        = "20"
+            required    = "true"
+            default     = ""
+            format      = "%Y-%m-%d" 
+        />
+        
+        <!-- fecha fin del plan nacional -->
+        <field
+            name        = "DTEFECHAFIN_PN"
+            type        = "calendar"
+            label       = "COM_PLANNACIONAL_FIELD_PLANNACIONAL_FCHFIN_LABEL"
+            description = "COM_PLANNACIONAL_FIELD_PLANNACIONAL_FCHFIN_DESC"
+            size        = "20"
+            required    = "true"
+            default     = ""
+            format      = "%Y-%m-%d" 
+        />
+        
+        <!-- Vigencia de plan nacional -->
+        <field  name        = "BLNVIGENTE_PN"
+                type        = "list"
+                label       = "COM_PLANNACIONAL_FIELD_PLANNACIONAL_VIGENCIA_LABEL"
+                description = "COM_PLANNACIONAL_FIELD_PLANNACIONAL_VIGENCIA_DESC"
+                class       = "inputbox"
+                filter      = "intval"
+                size        = "1"
+                default     = "1"
+        >
+            <option value="1"> COM_PLANNACIONAL_FIELD_PLANNACIONAL_VIGENTE </option>
+            <option value="0"> COM_PLANNACIONAL_FIELD_PLANNACIONAL_NOVIGENTE </option>
+        </field>
+        
+        
+        <field  name        = "published"
+                type        = "list"
+                label       = "JSTATUS"
+                description = "JFIELD_PUBLISH_DESC"
+                class       = "inputbox"
+                filter      = "intval"
+                size        = "1"
+                default     = "1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

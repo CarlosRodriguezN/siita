@@ -1,0 +1,17 @@
+<?php
+// No direct access to this file
+defined('_JEXEC') or die('Restricted access');
+ 
+// import Joomla controllerform library
+jimport('joomla.application.component.controllerform');
+jimport('joomla.filesystem.file');
+ 
+/**
+ * 
+ *  Controlador Programas
+ * 
+ */
+class ActividadControllerActividad extends JControllerForm
+{
+    protected $view_list = 'actividad';
+}

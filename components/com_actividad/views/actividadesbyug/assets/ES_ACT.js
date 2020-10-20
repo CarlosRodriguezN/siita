@@ -1,0 +1,3 @@
+JSL_ECORAE = 'SIITA-ECORAE';
+JSL_SI = " SI ";
+JSL_NO = " NO ";

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <fieldset name="essential">
+        <!-- codigo de la categoria -->
+      <field  name            = "intCodigo_in"
+              type            = "hidden"
+              label           = "JGLOBAL_FIELD_ID_LABEL"
+              description     = "JGLOBAL_FIELD_ID_DESC"
+              size            = "10"
+              readonly        = "true"
+              class           = "readonly"
+        />
+        
+        <!-- codigo de la institucion -->
+      
+      <field  name            = "intCodigoTipo_ind"
+              type            = "tiposindicador"
+              extension       = "com_plannacional"
+              class           = "inputbox"
+              default         = ""
+              label           = "COM_PLANNACIONAL_FIELD_INDICADORNACIONAL_TIPOINDICADOR_LABEL"
+              description     = "COM_PLANNACIONAL_FIELD_INDICADORNACIONAL_TIPOINDICADOR_DESC"
+              required        = "true">
+         <option value="0">TIPO INDICADOR</option>
+      </field>
+        <!-- codigo de la institucion -->
+      
+      <field  name            = "idCodigo_mn"
+              type            = "metasnacionales"
+              extension       = "com_plannacional"
+              class           = "inputbox"
+              default         = ""
+              label           = "COM_PLANNACIONAL_FIELD_INDICADORNACIONAL_METANACIONAL_LABEL"
+              description     = "COM_PLANNACIONAL_FIELD_INDICADORNACIONAL_METANACIONAL_DESC"
+              required        = "true">
+         <option value="0">META NACIONAL</option>
+      </field>
+         
+         <!-- Descripción  />-->
+      <field  name              ="strDescripcion_in" 
+              type            ="textarea" 
+              default         ="Indicador Nacional" 
+              label           ="COM_PLANNACIONAL_FIELD_INDICADORNACIONAL_DESCRIPCION_LABEL" 
+              description     ="COM_PLANNACIONAL_FIELD_INDICADORNACIONAL_DESCRIPCION_DESC" 
+              rows            ="10" 
+              cols            ="5"
+         />
+        <!-- formula -->
+      <field  name              ="strFormula_in" 
+              type            ="textarea" 
+              default         ="Formula" 
+              label           ="COM_PLANNACIONAL_FIELD_INDICADORNACIONAL_FORMULA_LABEL" 
+              description     ="COM_PLANNACIONAL_FIELD_INDICADORNACIONAL_FORMULA_DESC" 
+              rows            ="10" 
+              cols            ="5"
+         />
+        <!-- Publicados -->
+      <field  name            ="published"
+              type            ="list"
+              label           ="JSTATUS"
+              description     ="JFIELD_PUBLISH_DESC"
+              class           ="inputbox"
+              filter          ="intval"
+              size            ="1"
+              default         ="1"
+      >
+         <option value="1"> JPUBLISHED </option>
+         <option value="0"> JUNPUBLISHED </option>
+      </field>
+   </fieldset>
+</form>

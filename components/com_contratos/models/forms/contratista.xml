@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="contratista">
+        <field  name            = "intIdContratista_cta"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "0"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        <!-- tipo contratista -->
+        <!-- Institución -->
+        <field  name        = "intIdTipoContratista_tpocta"
+                type        = "tiposContratista"
+                extension   = "com_agendas"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_CONTRATOS_FIELD_CONTRATISTA_TPCONTRATISTA_LABEL"
+                description = "COM_CONTRATOS_FIELD_CONTRATISTA_TPCONTRATISTA_DESC"
+                required    = "true">
+            <option value="0">SELECCIONE TIPO CONTRATISTA</option>
+        </field>
+                  
+        <!-- contratista -->
+        <field  name            ="strContratista_cta" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATISTA_CONTRATISTA_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATISTA_CONTRATISTA_DESC"
+                size            ="45"
+                required        ="true"
+        />
+        <!-- CODIGO UNICO DE REGISTRO -->
+        <field  name            ="strRUP" 
+                type            ="textarea" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATISTA_RUP_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATISTA_RUP_DESC"
+                rows            ="10" 
+                cols            ="5" 
+                required        ="true"
+        />
+        <!-- Fecha de registro -->
+      
+        <field  name            ="dteFechaRegistro_cta"
+                type            ="calendar" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATISTA_FECHAREGISTRO_LABEL" 
+                description     ="COM_CONTRATOS_FIELD_CONTRATISTA_FECHAREGISTRO_DESC" 
+                format          ="%d-%m-%Y"
+                required        ="true"
+        />
+        <!-- Publicados -->
+        <field  name            ="published"
+                    type            ="list"
+                    label           ="JSTATUS"
+                    description     ="JFIELD_PUBLISH_DESC"
+                    class           ="inputbox"
+                    filter          ="intval"
+                    size            ="1"
+                    default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

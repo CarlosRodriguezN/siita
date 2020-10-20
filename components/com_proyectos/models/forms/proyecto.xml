@@ -1,0 +1,1054 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <!-- DATOS GENERALES -->
+    <fieldset name="datosGenerales">
+        <!-- Codigo de Proyecto -->
+        <field  name            = "intCodigo_pry"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "0"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- Entidad de Proyecto -->
+        <field  name            = "intIdEntidad_ent"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "0"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        <!-- ORGANIGRAMA -->
+        <field  name            = "organigrama"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                class           = "readonly"
+        />
+        <!-- Entidad de Proyecto -->
+        <field  name            = "lstObjetivos"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "0"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- ID Sectores de Intervencion -->
+        <field  name            = "intIdStr_intervencion"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                class           = "readonly"
+        />
+        
+        <!-- ID SubSector -->
+        <field  name            = "inpCodigo_subsec"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                class           = "readonly"
+        />
+
+        <!-- Lista de Programas -->
+        <field  name        = "intCodigo_prg"
+                type        = "programas"
+                extension   = "com_proyectos"
+                required    = "true"
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_PROGRAMAS_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_PROGRAMAS_DESC">
+                
+            <option value="0">COM_PROYECTOS_FIELD_PROYECTO_PROGRAMAS_TITLE</option>
+        </field>
+        
+        <!-- Lista de SubProgramas Pertenecientes a un determinado Programa -->
+        <field  name        = "intCodigo_sprg" 
+                type        = "subprogramas"
+                extension   = "com_proyectos"
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_SUBPROGRAMAS_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_SUBPROGRAMAS_DESC">
+            <option value="0">COM_PROYECTOS_FIELD_PROYECTO_SUBPROGRAMAS_TITLE</option>
+        </field>
+        
+        <!-- Lista de Tipos de SubProgramas Pertenecientes a un determinado Sub Programa -->
+        <field  name        = "intCodigo_tsprg" 
+                type        = "tiposubprogramas"
+                extension   = "com_proyectos"
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_TPOSUBPROGRAMAS_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_TPOSUBPROGRAMAS_DESC">
+            <option value="0">COM_PROYECTOS_FIELD_PROYECTO_TPOSUBPROGRAMAS_TITLE</option>
+        </field>
+        
+        <!-- Tipo de Proyecto -->
+        <field  name        = "inpCodigotipo_inv" 
+                type        = "tiposproyectos"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                required    = "true"
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_TIPOPROYECTOS_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_TIPOPROYECTOS_DESC">
+            <option value="0">COM_PROYECTOS_FIELD_PROYECTO_TIPOPROYECTOS_TITLE</option>
+        </field>
+        
+        <!-- Nombre del Proyecto -->
+        <field  name        = "strNombre_pry" 
+                type        = "textarea" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_NOMBREPROYECTO_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_NOMBREPROYECTO_DESC"
+                required    = "true"
+                rows        = "3" 
+                cols        = "5" />
+
+        <!-- Fecha de Inicio -->
+        <field  name        = "dteFechaInicio_stmdoPry" 
+                type        = "calendar" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_FCHINICIO_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_FCHINICIO_DESC"
+                required    = "true" 
+                format      = "%Y-%m-%d"
+        />
+        
+        <!-- Fecha Fin -->
+        <field  name        = "dteFechaFin_stmdoPry" 
+                type        = "calendar" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_FCHFIN_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_FCHFIN_DESC" 
+                required    = "true"
+                format      = "%Y-%m-%d"
+        />
+    </fieldset>
+
+    <!-- MONTO TOTAL DEL PROYECTO -->    
+    <fieldset name="montoProyecto">
+        <!-- Monto Total del Proyecto -->
+        <field  name        = "dcmMonto_total_stmdoPry"
+                type        = "text"
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_MONTO_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_MONTO_DESC"
+                class       = "inputbox"
+                size        = "25"
+                maxlenght   = "3"
+                required    = "true"
+        />
+    </fieldset>
+
+    <!-- RESUMEN DESCRIPTIVO -->
+    <fieldset name="resumenDescriptivo">
+        
+        <!-- Estado de la entidad proyecto -->
+        <field  name        = "idEstadoEntidad"
+                type        = "estadoentidad"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                label       = "COM_PROYECTOS_FIELD_ESTADO_ENTIDAD_LABEL"
+                description = "COM_PROYECTOS_FIELD_ESTADO_ENTIDAD_DESC"
+                required    = "true">
+            <option value="0">COM_PROYECTOS_FIELD_ESTADO_ENTIDAD_TITLE</option>
+        </field>
+        
+        <!-- Codigo Interno -->
+        <field  name        = "strCodigoInterno_pry"
+                type        = "text"
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_CODIGOINTERNO_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_CODIGOINTERNO_DESC"
+                size        = "20"
+        />
+
+        <!-- CUP -->
+        <field  name        = "strcup_pry"
+                type        = "text"
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_CUP_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_CUP_DESC"
+                size        = "20"
+        />
+        
+        <!-- Cobertura -->
+        <field  name        = "inpCodigo_cb"
+                type        = "coberturas"
+                extension   = "com_proyectos"
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_COBERTURA_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_COBERTURA_DESC">
+            <option value="0">COM_PROYECTOS_FIELD_PROYECTO_COBERTURA_TITLE</option>
+        </field>
+
+        <!-- Descripcion del Proyecto -->
+        <field  name        = "strDescripcion_pry" 
+                type        = "textarea" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_DESCRIPCIONPRY_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_DESCRIPCIONPRY_DESC" 
+                rows        = "3" 
+                cols        = "5" />
+    </fieldset>
+    
+    <!-- SECTORES DE INTERVENCION -->
+    <fieldset name="sectoresIntervencion" >
+        
+        <!-- MacroSector -->
+        <field  name        = "macrosector"
+                type        = "macrosectores"
+                extension   = "com_proyectos"
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_MACROSECTOR_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_MACROSECTOR_DESC">
+            <option value="0">COM_PROYECTOS_FIELD_PROYECTO_MACROSECTOR_TITLE</option>
+        </field>
+        
+        <!-- Sector -->
+        <field  name        = "sector"
+                type        = "sectores"
+                extension   = "com_proyectos"
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_SECTOR_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_SECTOR_DESC">
+            <option value="0">COM_PROYECTOS_FIELD_PROYECTO_SECTOR_TITLE</option>
+        </field>
+
+        <!-- Sub Sector -->
+        <field  name        = "subsector"
+                type        = "subsectores"
+                extension   = "com_proyectos"
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_SUBSECTOR_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_SUBSECTOR_DESC">
+            <option value="0">COM_PROYECTOS_FIELD_PROYECTO_SUBSECTOR_TITLE</option>
+        </field>
+        
+    </fieldset>
+    
+    <!-- MARCO LOGICO -->
+    <fieldset name="marcoLogico">
+        <!-- FIN -->
+        <!-- Nombre FIN -->
+        <field  name        = "txtNombreFin"
+                type        = "textarea"
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_MLNOMBREFIN_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_MLNOMBREFIN_DESC"
+                rows        = "3" 
+                cols        = "5"
+                required    = "true"
+        />
+        
+        <!-- Descripcion de ML de tipo Fin -->
+        <field  name        = "strMLFin" 
+                type        = "textarea" 
+                default     = "" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_MLFIN_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_MLFIN_DESC" 
+                rows        = "3" 
+                cols        = "5" />
+        
+        <!-- PROPOSITO -->
+        <!-- Nombre Proposito -->
+        <field  name        = "txtNombreProposito"
+                type        = "textarea"
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_MLNOMBREPROPOSITO_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_MLNOMBREPROPOSITO_DESC"
+                rows        = "3" 
+                cols        = "5"
+                required    = "true"
+        />
+        
+        <!-- Proposito -->
+        <field  name        = "strMLProposito" 
+                type        = "textarea" 
+                default     = "" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_MLPROPOSITO_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_MLPROPOSITO_DESC"
+                rows        = "3" 
+                cols        = "5" />
+        
+        <!-- COMPONENTE -->
+        <!-- Nombre Componente -->
+        <field  name        = "txtNombreComponente"
+                type        = "textarea"
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_MLNOMBRECOMPONENTE_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_MLNOMBRECOMPONENTE_DESC"
+                rows        = "3" 
+                cols        = "5"
+                required    = "true"
+        />
+        
+        <!-- Descripcion de Componentes -->
+        <field  name        = "strMLComponente" 
+                type        = "textarea" 
+                default     = "" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_MLCOMPONENTE_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_MLCOMPONENTE_DESC" 
+                rows        = "3" 
+                cols        = "5" />
+
+        <!-- ACTIVIDAD -->
+        <!-- ComboBox de Marco Logico de tipo Componente -->
+        <field  name        = "cbMLComponente" 
+                type        = "list" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_CBCOMPONENTE_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_CBCOMPONENTE_DESC"
+                required    = "true">
+            <option value="0">COM_PROYECTOS_FIELD_PROYECTO_CBCOMPONENTE_TITLE</option>
+        </field>
+        
+        <!-- Nombre Actividad -->
+        <field  name        = "txtNombreActividad"
+                type        = "textarea"
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_MLNOMBREACTIVIDAD_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_MLNOMBREACTIVIDAD_DESC"
+                rows        = "3" 
+                cols        = "5"
+                required    = "true"
+        />
+
+        <!-- Descripcion Actividad -->
+        <field  name        = "strMLActividad" 
+                type        = "textarea" 
+                default     = "" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_MLACTIVIDAD_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_MLACTIVIDAD_DESC"
+                rows        = "3" 
+                cols        = "5" />
+        
+         <!-- Datos de un MarcoLogico -->
+        <field  name            = "dtaMarcoLogico"
+                type            = "hidden"
+                readonly        = "true"
+                class           = "readonly"/>
+    </fieldset>
+    
+    <!-- OBJETIVOS DE UN PROYECTO -->
+    <fieldset name="objetivosProyecto">
+        <!-- Objetivo General -->
+        <field  name        = "objGeneral" 
+                type        = "textarea" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_OBJGENERAL_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_OBJGENERAL_DESC" 
+                rows        = "3" 
+                cols        = "5" />
+        
+        <!-- Objetivo Especifico -->        
+        <field  name        = "objEspecifico" 
+                type        = "textarea" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_OBJESPECIFICO_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_OBJESPECIFICO_DESC" 
+                rows        = "3" 
+                cols        = "5" />
+        
+        <!-- Codigo de Proyecto -->
+        <field  name            = "dataObjetivos"
+                type            = "hidden"
+                readonly        = "true"
+                class           = "readonly"
+        />
+    </fieldset>
+   
+    <!-- UBICACION GEOGRAFICA -->
+    <fieldset name="ubicacionGeografica">
+        <!-- Provincia -->
+        <field  name        = "idProvincia"
+                type        = "provincias"
+                extension   = "com_proyectos"
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_PROVINCIA_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_PROVINCIA_DESC"
+                required    = "true">
+            <option value="0">COM_PROYECTOS_FIELD_PROYECTO_PROVINCIA_TITLE</option>
+        </field>
+        
+        <!-- Canton -->
+        <field  name        = "idCanton"
+                type        = "list"
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_CANTON_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_CANTON_DESC">
+            <option value="0">COM_PROYECTOS_FIELD_PROYECTO_CANTON_TITLE</option>
+        </field>
+        
+        <!-- Parroquia -->
+        <field  name        = "idParroquia"
+                type        = "list"
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_PARROQUIA_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_PARROQUIA_DESC">
+            <option value="0">COM_PROYECTOS_FIELD_PROYECTO_PARROQUIA_TITLE</option>
+        </field>
+        
+        <!-- Datos de Unidad Territorial -->
+        <field  name            = "dataUndTerritorial"
+                type            = "hidden"
+                readonly        = "true"
+        />
+    </fieldset>
+    
+    <!-- COORDENADAS GEOGRAFICAS -->
+    <fieldset name="coordenadasGeograficas">
+        <!-- Tipo de Graficos -->
+        <field  name        = "idTipoGrafico"
+                type        = "tiposgraficos"
+                extension   = "com_proyectos"
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_TPOGRAFICO_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_TPOGRAFICO_DESC"
+                required    = "true">
+            <option value="0">COM_PROYECTOS_FIELD_PROYECTO_TPOGRAFICO_TITLE</option>
+        </field>
+        <!-- Descripcion de una obra  -->
+        <field  name        = "strDescripcionObra" 
+                type        = "textarea" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_OBRADESCRIPCION_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_OBRADESCRIPCION_DESC"
+                rows        = "3"
+                cols        = "4" 
+        />
+        <!-- Informacion de Coordenadas -->
+        <field  name            = "dataCoordenadas"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+        />
+    </fieldset>
+    
+    <!-- Descripcion de una obra-->
+    <fieldset name="coordenadasObra">
+        
+        <!-- Latitud -->
+        <field  name        = "latitud"
+                type        = "text"
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_LATITUD_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_LATITUD_DESC"
+                size        = "25"
+                maxlenght   = "50"
+                required    = "true"
+        />
+        
+        <!-- Longitud -->
+        <field  name        = "longitud"
+                type        = "text"
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_LONGITUD_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_LONGITUD_DESC"
+                size        = "25"
+                maxlenght   = "50"
+                required    = "true"
+        />
+    </fieldset>
+    
+    <fieldset name="radioCirculo">
+        <!-- Radio -->
+        <field  name        = "Radio"
+            type        = "text"
+            label       = "COM_PROYECTOS_FIELD_PROYECTO_RADIO_LABEL"
+            description = "COM_PROYECTOS_FIELD_PROYECTO_RADIO_DESC"
+            size        = "25"
+            maxlenght   = "50"
+            required    = "true"
+        />
+    </fieldset>
+    
+    <!-- META DE UN PROYECTO -->
+    <fieldset name="metaProyecto">
+        <!-- Unidad de Analisis -->
+        <field  name        = "idUndAnalisisMeta"
+                type        = "unidadesanalisis"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_UNIDADANALISIS_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_UNIDADANALISIS_DESC"
+                required    = "true">
+            <option value="0">COM_PROYECTOS_FIELD_PROYECTO_UNIDADANALISIS_TITLE</option>
+        </field>
+        
+        <!-- Descripcion de la Meta -->
+        <field  name        = "descripcionMeta"
+                type        = "text"
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_DESCRIPCIONMETA_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_DESCRIPCIONMETA_DESC"
+                class       = "inputbox"
+                size        = "50"
+                maxlenght   = "3"
+                required    = "true"
+                default     = ""
+        />
+        
+        <!-- Valor de la Meta -->
+        <field  name        = "valorMeta"
+                type        = "text"
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_VALORMETA_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_VALORMETA_LABEL"
+                class       = "inputbox"
+                size        = "10"
+                maxlenght   = "3"
+                required    = "true"
+        />
+        
+        <!-- Unidad de Medida del valor de la Meta -->
+        <field  name        = "idUndMedidaMeta"
+                type        = "umcompleto"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_UMMETA_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_UMMETA_DESC"
+                required    = "true">
+            <option value="0">COM_PROYECTOS_FIELD_PROYECTO_UMMETA_TITLE</option>
+        </field>
+    </fieldset>
+    
+    <!-- RELACION DE UN PROYECTO, esta ligado a un Objetivo, Politica, Meta Nacional -->
+    <fieldset name="relacionProyecto">
+        <!-- Objetivo Nacional -->
+        <field  name        = "intcodigo_on"
+                type        = "objetivosnacionales"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_OBJNACIONAL_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_OBJNACIONAL_DESC"
+                required    = "true">
+            <option value="0">COM_PROYECTOS_FIELD_PROYECTO_OBJNACIONAL_TITLE</option>
+        </field>
+        
+        <!-- Politica Nacional -->
+        <field  name        = "intcodigo_pn"
+                type        = "list"
+                default     = ""
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_POLITICA_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_POLITICA_DESC"
+                required    = "true">
+            <option value="0">COM_PROYECTOS_FIELD_PROYECTO_POLITICA_TITLE</option>
+        </field>
+        
+        <!-- Meta Nacional -->
+        <field  name        = "idcodigo_mn"
+                type        = "list"
+                default     = ""
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_META_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_META_DESC"
+                required    = "true">
+            <option value="0">COM_PROYECTOS_FIELD_PROYECTO_META_TITLE</option>
+        </field>
+        
+        <!-- Datos Relacion de un Proyecto -->
+        <field  name    = "dataRelacionProyecto"
+                type    = "hidden"
+                value   = "0"
+                readonly= "true"
+        />
+    </fieldset>
+    
+    <!-- - -->
+    <!-- INDICADORES -->
+    <!-- - -->
+    
+    <!-- Indicadores Economicos -->
+    <fieldset name="indEconomicos">
+        <!-- Financiero -->
+        <!-- Tasa de Descuento -->
+        <field  name        = "intTasaDctoFin"
+                type        = "text" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_TASADESCUENTO_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_TASADESCUENTO_DESC" 
+                size        = "10"
+        />
+        
+        <!-- Valor Actual Neto -->
+        <field  name        = "intValActualNetoFin" 
+                type        = "text" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_VALORACTUALNETO_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_VALORACTUALNETO_DESC" 
+                size        = "10" />
+        
+        <!-- Tasa Interna de Retorno - TIR -->
+        <field  name        = "intTIRFin" 
+                type        = "text" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_TASAINTERNARETORNO_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_TASAINTERNARETORNO_DESC" 
+                size        = "10" />
+        
+        <!-- Economico -->
+        <!-- Tasa de Descuento -->
+        <field  name        = "intTasaDctoEco"
+                type        = "text" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_TASADESCUENTO_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_TASADESCUENTO_DESC" 
+                size        = "10" />
+        
+        <!-- Valor Actual Neto -->
+        <field  name        = "intValActualNetoEco" 
+                type        = "text" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_VALORACTUALNETO_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_VALORACTUALNETO_DESC" 
+                size        = "10" />
+        
+        <!-- Tasa Interna de Retorno - TIR -->
+        <field  name        = "intTIREco" 
+                type        = "text" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_TASAINTERNARETORNO_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_TASAINTERNARETORNO_DESC" 
+                size        = "10" />
+    </fieldset>
+    
+    <!-- LINEA BASE -->
+    <fieldset name="lineaBase">
+        <!-- Fuente -->
+        <field  name        = "idFuente"
+                type        = "fuentes"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_FUENTE_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_FUENTE_DESC"
+                required    = "true">
+            <option value="0">COM_PROYECTOS_FIELD_PROYECTO_FUENTE_TITLE</option>
+        </field>
+        
+        <!-- Periodicidad -->
+        <field  name        = "idPeriodicidad"
+                type        = "periodicidad"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_PERIODICIDAD_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_PERIODICIDAD_DESC"
+                required    = "true">
+            <option value="0">COM_PROYECTOS_FIELD_PROYECTO_PERIODICIDAD_TITLE</option>
+        </field>
+        
+        <!-- Descripcion Linea Base -->
+        <field  name        = "strDecripcionLB"
+                type        = "text"
+                label       = "COM_PROYECTOS_FIELD_INDICADOR_DESCLINEABASE_LABEL"
+                description = "COM_PROYECTOS_FIELD_INDICADOR_DESCLINEABASE_DESC"
+                class       = "inputbox"
+                size        = "50"
+                maxlenght   = "40"
+                required    = "true"/>
+
+        <!-- Valor Linea Base -->
+        <field  name        = "dcmValorLB"
+                type        = "text"
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_VALLINEABASE_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_VALLINEABASE_DESC"
+                class       = "inputbox"
+                size        = "10"
+                maxlenght   = "3"
+                required    = "true"
+        />
+
+        <!-- Fecha de Inicio -->
+        <field  name        = "dteFchInicio" 
+                type        = "calendar" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_FCHINICIO_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_FCHINICIO_DESC" 
+                format      = "%Y-%m-%d" />
+
+        <!-- Fecha Fin -->
+        <field  name        = "dteFchFin" 
+                type        = "calendar" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_FCHFIN_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_FCHFIN_DESC" 
+                format      = "%Y-%m-%d" />
+    </fieldset>
+    
+    <!-- BENEFICIARIOS -->
+    <fieldset name="beneficiarios">
+        <!-- Beneficiarios Directos Hombres -->
+        <field  name        = "intBenfDirectoHombre"
+                type        = "text" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_BENFDIRHOMBRES_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_BENFDIRHOMBRES_DESC" 
+                size        = "10" />
+        
+        <!-- Beneficiarios Directos Mujeres -->
+        <field  name        = "intBenfDirectoMujer" 
+                type        = "text" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_BENFDIRMUJERES_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_BENFDIRMUJERES_DESC" 
+                size        = "10" />
+        
+        <!-- Total Beneficiarios Directos -->
+        <field  name        = "intTotalBenfDirectos" 
+                type        = "text" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_TOTALBENFDIRECTOS_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_TOTALBENFDIRECTOS_DESC" 
+                size        = "10" />
+        
+        <!-- Beneficiarios Indirectos Hombres -->
+        <field  name        = "intBenfIndDirectoHombre"
+                type        = "text" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_BENFINDHOMBRES_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_BENFINDHOMBRES_DESC" 
+                size        = "10" />
+        
+        <!-- Beneficiarios Indirectos Mujeres -->
+        <field  name        = "intBenfIndDirectoMujer" 
+                type        = "text" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_BENFINDMUJERES_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_BENFINDMUJERES_DESC" 
+                size        = "10" />
+        
+        <!-- Total Beneficiarios Indirectos -->
+        <field  name        = "intTotalBenfIndDirectos" 
+                type        = "text" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_TOTALBENFINDIRECTOS_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_TOTALBENFINDIRECTOS_DESC" 
+                size        = "10" />
+    </fieldset>
+    
+    <!-- GRUPO DE ATENCION PRIORITARIO -->
+    <fieldset name="gpoAtencionPrioritario">
+        <!-- Identificador Registro de Indicador GAP -->
+        <field  name    = "idGAP"
+                type    = "hidden"
+                readonly= "true"
+                value   = '0'
+        />
+        
+        <!-- Grupo de Atencion Prioritario -->
+        <field   name        = "cbGpoAtencionPrioritario"
+                 type        = "atencionpriotarios"
+                 extension   = "com_proyectos"
+                 class       = "inputbox"
+                 label       = "COM_PROYECTOS_FIELD_PROYECTO_GPOATENCIONPRIO_LABEL"
+                 description = "COM_PROYECTOS_FIELD_PROYECTO_GPOATENCIONPRIO_DESC"
+                 required    = "true">
+            <option value="">COM_PROYECTOS_FIELD_PROYECTO_GPOATENCIONPRIO_TITLE</option>
+        </field>
+        
+        <!-- Beneficiarios Hombres -->
+        <field  name        = "intGAPMasculino"
+                type        = "text" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_GAPMASCULINO_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_GAPMASCULINO_DESC" 
+                size        = "10" 
+                required    = "true"/>
+        
+        <!-- Beneficiarios Mujeres -->
+        <field  name        = "intGAPFemenino" 
+                type        = "text" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_GAPFEMENINO_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_GAPFEMENINO_DESC" 
+                size        = "10" 
+                required    = "true"/>
+        
+        <!-- Total de Beneficiarios -->
+        <field  name        = "intGAPTotal" 
+                type        = "text" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_GAPTOTAL_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_GAPTOTAL_DESC" 
+                size        = "10" 
+                readonly    = "true"
+                required    = "true"/>
+        
+        <!-- Datos Relacion de un Proyecto -->
+        <field  name    = "dataGAP"
+                type    = "hidden"
+                readonly= "true"
+                value   = '0'
+        />
+    </fieldset>
+
+    <!-- OTROS INDICADORES -->
+    <fieldset name="otrosIndicadores">
+        <!-- Nombre del indicador -->
+        <field  name        = "strNombreIndicador" 
+                type        = "text" 
+                label       = "COM_PROYECTOS_FIELD_INDICADOR_NOMBREOTROIND_LABEL" 
+                description = "COM_PROYECTOS_FIELD_INDICADOR_NOMBREOTROIND_DESC" 
+                size        = "50"
+                required    = "true" />
+
+        <!-- Descripcion del indicador -->
+        <field  name        = "strDescripcionIndicador" 
+                type        = "textarea" 
+                label       = "COM_PROYECTOS_FIELD_INDICADOR_DESCOTROIND_LABEL"
+                description = "COM_PROYECTOS_FIELD_INDICADOR_DESCOTROIND_DESC"
+                rows        = "3"
+                cols        = "5" />
+       
+        <!-- Unidad de Analisis -->
+        <field  name        = "idUndAnalisisNewInd"
+                type        = "unidadesanalisis"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_UNIDADANALISIS_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_UNIDADANALISIS_DESC"
+                required    = "true">
+        </field>
+        
+        <!-- Valor de la Meta -->
+        <field  name        = "valorMetaNewInd"
+                type        = "text"
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_VALORMETA_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_VALORMETA_LABEL"
+                class       = "inputbox"
+                size        = "10"
+                maxlenght   = "3"
+                required    = "true"
+        />
+
+        <!-- Tipo de Unidad de Medida del valor de la Meta -->
+        <field  name        = "idTpoUndMedida"
+                type        = "tipounidadmedida"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_TUMMETA_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_TUMMETA_DESC"
+                required    = "true">
+            <option value="0">COM_PROYECTOS_FIELD_PROYECTO_TUMMETA_TITLE</option>
+        </field>
+
+        <!-- Unidad de Medida del valor de la Meta -->
+        <field  name        = "idUndMedidaMetaNewInd"
+                type        = "list"
+                class       = "inputbox"
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_UMMETA_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_UMMETA_DESC"
+                required    = "true">
+            <option value="0">COM_PROYECTOS_FIELD_PROYECTO_UMMETA_TITLE</option>
+        </field>
+        
+        <!-- Formula -->
+        <field  name        = "formulaMetaNewInd" 
+                type        = "textarea" 
+                label       = "COM_PROYECTOS_FIELD_INDICADOR_FORMULAOTROIND_LABLE" 
+                description = "COM_PROYECTOS_FIELD_INDICADOR_FORMULAOTROIND_DESC" 
+                rows        = "3" 
+                cols        = "5" />
+    </fieldset>
+    
+    <!-- Enfoque Indicador -->
+    <fieldset name="EnfoqueIndicador">
+        <!-- Tipos de Enfoque -->
+        <field  name        = "idTpoEnfoque"
+                type        = "tiposenfoque"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_TIPOSENFOQUE_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_TIPOSENFOQUE_DESC"
+                required    = "true">
+            <option value="0">COM_PROYECTOS_FIELD_PROYECTO_TIPOSENFOQUE_TITLE</option>
+        </field>
+        
+        <!-- Enfoque -->
+        <field  name        = "idEnfoque"
+                type        = "list"
+                class       = "inputbox"
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_ENFOQUE_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_ENFOQUE_DESC"
+                required    = "true">
+            <option value="0">COM_PROYECTOS_FIELD_PROYECTO_ENFOQUE_TITLE</option>
+        </field>
+    </fieldset>
+    
+    
+    <!-- ENFOQUE IGUALDAD -->
+    <fieldset name="enfoqueIgualdad">
+
+        <!-- Identificador Registro de Indicador de Enfoque de Igualdad -->
+        <field  name    = "idEnfIgualdad"
+                type    = "hidden"
+                readonly= "true"
+                value   = "0"
+        />
+
+        <!-- Tipos de Enfoque de Igualdad -->
+        <field   name        = "cbEnfoqueIgualdad"
+                 type        = "TiposEnfoqueIgualdad"
+                 extension   = "com_proyectos"
+                 class       = "inputbox"
+                 default     = ""
+                 label       = "COM_PROYECTOS_FIELD_PROYECTO_TIPOSENFOQUEIGUALDAD_LABEL"
+                 description = "COM_PROYECTOS_FIELD_PROYECTO_TIPOSENFOQUEIGUALDAD_DESC"
+                 required    = "true">
+            <option value="0">COM_PROYECTOS_FIELD_PROYECTO_TIPOSENFOQUEIGUALDAD_TITLE</option>
+        </field>
+        
+        <!-- Enfoque de Igualdad -->
+        <field  name        = "idEnfoqueIgualdad"
+                type        = "list"
+                class       = "inputbox"
+                label       = "COM_PROYECTOS_FIELD_INDICADOR_ENFOQUEIGUALDAD_LABEL"
+                description = "COM_PROYECTOS_FIELD_INDICADOR_ENFOQUEIGUALDAD_DESC"
+                required    = "true">
+            <option value="0">COM_PROYECTOS_FIELD_INDICADOR_ENFOQUEIGUALDADCB_TITLE</option>
+        </field>
+        
+        <!-- Beneficiarios Hombres -->
+        <field  name        = "intEIMasculino"
+                type        = "text" 
+                default     = "" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_EIMASCULINO_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_EIMASCULINO_DESC" 
+                size        = "10" 
+                required    = "true"/>
+        
+        <!-- Beneficiarios Mujeres -->
+        <field  name        = "intEIFemenino" 
+                type        = "text" 
+                default     = "" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_EIFEMENINO_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_EIFEMENINO_DESC" 
+                size        = "10" 
+                required    = "true"/>
+        
+        <!-- Total de Beneficiarios -->
+        <field  name        = "intEITotal" 
+                type        = "text" 
+                default     = "" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_EITOTAL_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_EITOTAL_DESC" 
+                size        = "10" 
+                required    = "true"/>
+        
+        <!-- Datos Relacion de un Proyecto -->
+        <field  name    = "dataEnfIgu"
+                type    = "hidden"
+                readonly= "true"
+                value   = '0'
+        />
+    </fieldset>
+    
+    <!-- ENFOQUE ECORAE -->
+    <fieldset name="enfoqueEcorae">
+        <!-- Identificador Registro de Indicador de Enfoque de Igualdad -->
+        <field  name    = "idEnfEcorae"
+                type    = "hidden"
+                readonly= "true"
+                value   = "0"
+        />
+        
+        <!-- Lista de Enfoque de Igualdad -->
+        <field   name        = "cbEnfoqueEcorae"
+                 type        = "enfoqueecorae"
+                 extension   = "com_proyectos"
+                 class       = "inputbox"
+                 default     = ""
+                 label       = "COM_PROYECTOS_FIELD_PROYECTO_ENFOQUEECORAE_LABEL"
+                 description = "COM_PROYECTOS_FIELD_PROYECTO_ENFOQUEECORAE_DESC"
+                 required    = "true">
+            <option value="0">COM_PROYECTOS_FIELD_PROYECTO_ENFOQUEECORAE_TITLE</option>
+        </field>
+        
+        <!-- Beneficiarios Hombres -->
+        <field  name        = "intEnfEcoMasculino"
+                type        = "text" 
+                default     = "" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_EEMASCULINO_LABEL" 
+                description = "COM_PROYECTOS_FIELD_PROYECTO_EEMASCULINO_DESC" 
+                size        = "10" 
+                required    = "true"/>
+        
+        <!-- Beneficiarios Mujeres -->
+        <field  name        = "intEnfEcoFemenino" 
+                type        = "text" 
+                default     = "" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_EEFEMENINO_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_EEFEMENINO_DESC" 
+                size        = "10" 
+                required    = "true"/>
+        
+        <!-- Total de Beneficiarios -->
+        <field  name        = "intEnfEcoTotal" 
+                type        = "text" 
+                default     = "" 
+                label       = "COM_PROYECTOS_FIELD_PROYECTO_EETOTAL_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROYECTO_EETOTAL_DESC" 
+                size        = "10" 
+                required    = "true"/>
+        
+        <!-- Datos Relacion de un Proyecto -->
+        <field  name    = "dataIndicadores"
+                type    = "hidden"
+                readonly= "true"
+                value   = '0'
+        />
+        
+        <!-- Datos Planificacion de un Proyecto -->
+        <field  name    = "dtaPlanificacion"
+                type    = "hidden"
+                readonly= "true"
+                value   = '0'
+        />
+    </fieldset>
+      
+    <!-- UNIDAD DE GESTION -->
+    <fieldset name="UnidadGestion">
+        <!-- Lista de Unidades de Gestion -->
+        <field  name        = "intIdUndGestion"
+                type        = "unidadesgestion"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PROYECTOS_FIELD_ATRIBUTO_UGESTION_LABLE"
+                description = "COM_PROYECTOS_FIELD_ATRIBUTO_UGESTION_DESC"
+                required    = "true">
+            <option value="0">COM_PROYECTOS_FIELD_ATRIBUTO_UGESTION_TITLE</option>
+        </field>
+        
+        <field  name        = "fchInicioPeriodoUG" 
+                type        = "calendar" 
+                label       = "COM_PROYECTOS_FIELD_ATRIBUTO_FIPUG_LABLE"
+                description = "COM_PROYECTOS_FIELD_ATRIBUTO_FIPUG_DESC"
+                format      ="%Y-%m-%d" />
+    </fieldset>
+    
+    <!-- RESPONSABLE -->
+    <fieldset name="Responsable">
+        <!-- Lista de Unidades de Gestion -->
+        <field  name        = "intIdUGResponsable"
+                type        = "unidadesgestion"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PROYECTOS_FIELD_ATRIBUTO_UGRESPONSABLE_LABLE"
+                description = "COM_PROYECTOS_FIELD_ATRIBUTO_UGRESPONSABLE_DESC"
+                required    = "true">
+            <option value="0">COM_PROYECTOS_FIELD_ATRIBUTO_UGRESPONSABLE_TITLE</option>
+        </field>
+
+        <field  name        = "idResponsable" 
+                type        = "funcionarios"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PROYECTOS_FIELD_ATRIBUTO_RESPONSABLE_LABLE" 
+                description = "COM_PROYECTOS_FIELD_ATRIBUTO_RESPONSABLE_DESC"
+                required    = "true">
+            <option value="0">COM_PROYECTOS_FIELD_ATRIBUTO_RESPONSABLE_TITLE</option>
+        </field>
+        
+        <field  name        = "fchInicioPeriodoFuncionario" 
+                type        = "calendar" 
+                label       = "COM_PROYECTOS_FIELD_ATRIBUTO_FIPFR_LABLE"
+                description = "COM_PROYECTOS_FIELD_ATRIBUTO_FIPFR_DESC"
+                format      ="%Y-%m-%d" />
+    </fieldset>
+    
+    <!-- Formulario de data general de un objetivo del PROYECTO -->
+    <fieldset name="objetivo">
+        <!-- Identificador del objetivo del pei -->
+        <field  name            = "intId_ob"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_OBJ_LABEL"
+                description     = "JGLOBAL_FIELD_ID_OBJ_DESC"
+                size            = "10"
+        />
+        
+        <!-- Descripción/NoMbre del PROYECTO -->
+        <field  name            = "strDescripcion_ob"
+                type            = "textarea"
+                label           = "COM_PROYECTO_FIELD_OBJETIVO_DESCRIPCION_LABEL"
+                description     = "COM_PROYECTO_FIELD_OBJETIVO_DESCRIPCION_DESC"
+                class           = "inputbox"
+                cols            = "5"
+                rows            = "3"
+                required        = "true"
+        />
+        
+    </fieldset>
+    
+</form>

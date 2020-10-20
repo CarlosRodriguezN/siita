@@ -1,0 +1,50 @@
+/*clases necesarias para el infowidos*/
+
+.tableContent{
+    top: -9px;
+    width:95%;
+    cellspacing:0px;
+    cellpadding:0px;
+}
+/*
+el tamaño de el contenido de los tab
+*/
+.contentTab{
+    overflow: auto; 
+    height: 160px;
+    width: 100%;
+}
+/*
+El tamaños de el div
+*/
+.tabdiv{
+    height: 230px;
+}
+
+/* Tamaño de las imgenes en el infowindow*/
+.imgCarrusel{
+    height:127px ;
+    width:200px
+}
+
+/******************estos son los mios *********************/
+div.tituloinfo {
+    /*    border: 1px solid red;*/
+    background-color: #283C52; /*shadow color*/ 
+    color: #FFFFFF;
+
+    position: absolute;
+    width: 370px;
+} 
+
+.infoProyecto {
+    width: 100%;
+    height: 100px
+
+}
+
+
+.tableImgLog{
+    width: 45px;
+    height: 45px
+}

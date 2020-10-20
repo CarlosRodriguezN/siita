@@ -1,0 +1,91 @@
+@charset "utf-8";
+/* CSS Document */
+
+html, body, form, fieldset, p, td, h1, h2, h3, input, label, ul, li, dd, dl {  
+    padding:0;  
+    margin:0;
+}
+
+img {
+    border: 0;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:11px;
+    color:#707173;
+}
+
+select, textarea, input{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 8pt !important;
+}
+
+
+a {
+    text-decoration:none;
+}
+
+/*Articulos*/
+
+.item-page h2>a {
+    font-size:18px;
+    color:#707173;
+    font-weight:normal;
+    padding-left:18px;
+    background-image:url(../images/bg_title_slide.jpg);
+    background-position:left top;
+    background-repeat:no-repeat;
+    border-bottom:1px dotted #cdcdcd;
+    padding-bottom:5px;
+    display:block;
+    margin-bottom:10px;
+}
+
+/*Fuente para componente Proyectos*/
+
+.ui-widget {
+    font-family: Arial,Helvetica,sans-serif !important;
+}
+
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+    background-color: #e6e6e6 !important;
+}
+
+
+
+.verGrafico{
+    background-image:url(../images/bg_title_slide.jpg);
+    background-repeat:no-repeat;
+}
+
+.updGrafico{
+    /*background-image:url(../images/siitaGestion/img_editar.png);*/
+    background-repeat:no-repeat;
+}
+
+.delGrafico{
+    /*background-image:url(../images/siitaGestion/img_eliminar_big.png);*/
+    background-repeat:no-repeat;
+}
+
+.showPunto{   
+    background-image:url(../images/bg_title_slide.jpg);
+    background-repeat:no-repeat;
+}
+.editPunto{ 
+    background-image:url(../images/siitaGestion/img_editar.png);
+    background-repeat:no-repeat;
+}
+.delPunto{   
+    background-image:url(../images/siitaGestion/img_eliminar_big.png);
+    background-repeat:no-repeat;
+}
+
+.conLineaBase{
+    background-image: url( '/media/com_proyectos/images/btnLineaBase/LB/lb_verde_small.png' );
+}
+
+.sinLineaBase{
+    background-image: url( '/media/com_proyectos/images/btnLineaBase/LB/lb_verde_small.png' );
+}

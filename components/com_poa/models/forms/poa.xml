@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <!-- Informacion General de un Plan Estratégico Institucional -->
+    <fieldset name="datosgeneralespoa">
+        <!-- Identificador del poa -->
+        <field  name            = "intId_pi"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_POA_LABEL"
+                description     = "JGLOBAL_FIELD_ID_POA_DESC"
+                size            = "10"
+        />
+        
+        <!-- Identificador del tipo de plan -->
+        <field  name            = "intId_tpoPlan"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_TPO_PLAN_LABEL"
+                description     = "JGLOBAL_FIELD_ID_TPO_PLAN_DESC"
+                size            = "10"
+                default         = "4" 
+        />
+        
+        <!-- Identificador de la institución -->
+        <field  name            = "intCodigo_ins"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_INSTITUCION_LABEL"
+                description     = "JGLOBAL_FIELD_ID_INSTITUCION_DESC"
+                size            = "10"
+                default         = "1"
+        />
+        
+        <!-- Descripción/Nobre del POA -->
+        <field  name            = "strDescripcion_pi"
+                type            = "text"
+                label           = "COM_POA_FIELD_PLAN_DESCRIPCION_LABEL"
+                description     = "COM_POA_FIELD_PLAN_DESCRIPCION_DESC"
+                class           = "inputbox"
+                size            = "50"
+                required        = "true"
+        />
+        
+        <!-- Fecha de Inicio -->
+        <field  name            = "dteFechainicio_pi"
+                type            = "calendar"
+                label           = "COM_POA_FIELD_PLAN_FECHA_INICIO_LABEL"
+                description     = "COM_POA_FIELD_PLAN_FECHA_INICIO_DESC"
+                format          = "%Y-%m-%d"
+                required        = "true"
+        />
+        
+        <!-- Fecha de Fin -->
+        <field  name            = "dteFechafin_pi"
+                type            = "calendar"
+                label           = "COM_POA_FIELD_PLAN_FECHA_FIN_LABEL"
+                description     = "COM_POA_FIELD_PLAN_FECHA_FIN_DESC"
+                format          = "%Y-%m-%d"
+                required        = "true"
+        />
+        
+        <!-- Alias del POA -->
+        <field  name            = "strAlias_pi"
+                type            = "text"
+                label           = "COM_POA_FIELD_PLAN_ALIAS_LABEL"
+                description     = "COM_POA_FIELD_PLAN_ALIAS_DESC"
+                class           = "inputbox"
+                size            = "50"
+        />
+        
+        <!-- Vigente -->
+        <field  name            = "blnVigente_pi"
+                type            = "list"
+                label           = "COM_POA_FIELD_PLAN_VIGENCIA_LABEL"
+                description     = "COM_POA_FIELD_PLAN_VIGENCIA_DESC"
+                class           = "inputbox"
+                filter          = "intval"
+                size            = "1"
+                default         = "1"
+        >
+            <option value="1"> SI </option>
+            <option value="0"> NO </option>
+        </field>
+        
+        <!-- Publicados -->
+        <field  name            ="published"
+                type            ="list"
+                label           ="JSTATUS"
+                description     ="JFIELD_PUBLISH_DESC"
+                class           ="inputbox"
+                filter          ="intval"
+                size            ="1"
+                default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+    
+    <fieldset name="objetivosPoa">
+        <!--Alineación objetivo Pei-->
+        <!--Tipo de objetivo-->
+        <field  name        = "intIdPadre_ob"
+                type        = "objetivospei"
+                extension   = "com_poa"
+                class       = "inputbox"
+                label       = "COM_POA_FIELD_PLAN_TIPO_FATH_OBJETIVO_LABEL"
+                description = "COM_POA_FIELD_PLAN_TIPO_FATH_OBJETIVO_DESC"
+                required    = "true">
+            <option value="0">SELECCIONE LA ALINEACIÓN PEI</option>
+        </field>
+        
+        <!--Tipo de objetivo-->
+        <field  name        = "intId_tpoObj"
+                type        = "tiposobjetivo"
+                extension   = "com_poa"
+                class       = "inputbox"
+                label       = "COM_POA_FIELD_PLAN_TIPO_OBJETIVO_LABEL"
+                description = "COM_POA_FIELD_PLAN_TIPO_OBJETIVO_DESC"
+                required    = "true">
+            <option value="0">SELECCIONE TIPO OBJETIVO</option>
+        </field>
+        
+        <!-- Vigente -->
+        <field  name            = "intPrioridad_ob"
+                type            = "prioridades"
+                extension       = "com_poa"
+                class           = "inputbox"
+                label           = "COM_POA_FIELD_PLAN_PRIORIDAD_LABEL"
+                description     = "COM_POA_FIELD_PLAN_PRIORIDAD_DESC"
+                filter          = "intval"
+                required        = "true" 
+                default         = "1"
+        >
+        </field>
+        
+        <!-- Descripción de objetivo-->
+        <field name="strDescripcion_ob" 
+               type="textarea" 
+               default="default" 
+               label="COM_POA_FIELD_PLAN_TIPO_DESCRIPCION_OBJETIVO_LABEL" 
+               description="COM_POA_FIELD_PLAN_TIPO_DESCRIPCION_OBJETIVO_DESC" 
+               rows="10" 
+               cols="5" 
+        >
+        </field>
+        
+    </fieldset>
+</form>

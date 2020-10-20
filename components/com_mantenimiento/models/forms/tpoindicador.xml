@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <fieldset name="tpoindicador">
+        <!-- id -->
+        <field  name            = "intCodigoTipo_ind"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "0"
+        />
+        
+        <!-- published -->
+        <field  name            = "published"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "1"
+        />
+        
+        <!-- Nombre del tipo de indicador -->
+        <field  name            = "strDescripcionTipo_ind"
+                type            = "text"
+                label           = "COM_MANTENIMIENTO_FIELD_TIPO_INDICADOR_DESCRIPCION_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_TIPO_INDICADOR_DESCRIPCION_DESC"
+                class           = "inputbox"
+                size            = "50"
+                required        = "true"
+        />
+        
+    </fieldset>
+</form>

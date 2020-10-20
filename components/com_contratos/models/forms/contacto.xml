@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="contacto">
+        <field  name            = "intIdContacto_cc"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "0"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        <!-- CARGO -->
+        <field  name        = "intIdCargo_cgo"
+                type        = "cargos"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_CONTRATOS_FIELD_CONTACTO_CARGO_LABEL"
+                description = "COM_CONTRATOS_FIELD_CONTACTO_CARGO_DESC"
+                required    = "true">
+            <option value="0">SELECCIONE TIPO CARGO</option>
+        </field>
+        <!-- CONTACTO -->
+        <field  name        = "intIdContratista_cta"
+                type        = "contratistas"
+                extension   = "com_contratos"
+                label       = "COM_CONTRATOS_FIELD_CONTACTO_CONTRATISTA_LABEL"
+                description = "COM_CONTRATOS_FIELD_CONTACTO_CONTRATISTA_DESC"
+                required    = "true">
+            <option value="0">SELECCIONE TIPO CONTRATISTA</option>
+        </field>
+          <!-- PERSONA -->        
+        <field  name        = "intIdPersona_pc"
+                type        = "personas"
+                extension   = "com_agendas"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_CONTRATOS_FIELD_CONTACTO_PERSONA_LABEL"
+                description = "COM_CONTRATOS_FIELD_CONTACTO_PERSONA_DESC"
+                required    = "true">
+            <option value="0">SELECCIONE TIPO PERSONA</option>
+        </field>
+                  
+        
+        
+        <!-- Publicados -->
+        <field  name            ="published"
+                    type            ="list"
+                    label           ="JSTATUS"
+                    description     ="JFIELD_PUBLISH_DESC"
+                    class           ="inputbox"
+                    filter          ="intval"
+                    size            ="1"
+                    default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

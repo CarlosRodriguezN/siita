@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <fieldset name="categoria">
+        <!-- codigo de la categoria -->
+        <field  name            = "strCodigoCategoria"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- codigo de la institucion -->
+      
+        <field  name            = "intCodigo_ins"
+                type            = "institucionescat"
+                extension       = "com_mantenimiento"
+                class           = "inputbox"
+                label           = "COM_MANTENIMIENTO_FIELD_CATEGORIA_INSTITUCION_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_CATEGORIA_INSTITUCION_DESC"
+                required        = "true">
+            <option value="0">COM_MANTENIMIENTO_FIELD_CATEGORIA_INSTITUCION_TITLE</option>
+        </field>
+         
+        
+        <!-- Descripción  -->
+        <field  name            ="strDescripcion_categoria" 
+                type            ="textarea" 
+                default         ="Descripción" 
+                label           ="COM_MANTENIMIENTO_FIELD_CATEGORIA_DESCRIPCION_LABEL" 
+                description     ="COM_MANTENIMIENTO_FIELD_CATEGORIA_DESCRIPCION_DESC" 
+                rows            ="5" 
+                cols            ="3"
+         /> 
+        
+        <!-- modulo siita -->
+        <field  name            = "strModuloSiita"
+                type            = "text"
+                label           = "COM_MANTENIMIENTO_FIELD_CATEGORIA_MODULOSIITA_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_CATEGORIA_MODULOSIITA_DESC"
+                class           = "inputbox"
+                size            = "11"
+                required        = "true"
+        />
+
+        <!-- sub modulo siita -->
+        <field  name            = "strSubModuloSiita"
+                type            = "text"
+                label           = "COM_MANTENIMIENTO_FIELD_CATEGORIA_SUBMODULOSIITA_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_CATEGORIA_SUBMODULOSIITA_DESC"
+                class           = "inputbox"
+                size            = "11"
+                required        = "true"
+        />
+         
+        <!-- Publicados -->
+        <field  name            ="published"
+                type            ="list"
+                label           ="JSTATUS"
+                description     ="JFIELD_PUBLISH_DESC"
+                class           ="inputbox"
+                filter          ="intval"
+                size            ="1"
+                default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+        
+        
+    </fieldset>
+</form>

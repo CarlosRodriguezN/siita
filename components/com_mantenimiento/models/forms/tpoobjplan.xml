@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <fieldset name="tipoobjetivoplan">
+        <!-- id del tipo de plan-->
+        <field  name            = "intId_tpoObj"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "0"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- Nombre del tipo de plan -->
+        <field  name            = "strDescripcion_tpoObj"
+                type            = "text"
+                label           = "COM_MANTENIMIENTO_FIELD_TIPO_OBJETIVO_PLAN_DESCRIPCION_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_TIPO_OBJETIVO_PLAN_DESCRIPCION_DESC"
+                class           = "inputbox"
+                size            = "50"
+                required        = "true"
+        />
+        
+        <!-- Alias del tipo de plan -->
+        <field  name            = "strAliastipo_tpoObj"
+                type            = "text"
+                class           = "inputbox"
+                label           = "COM_MANTENIMIENTO_FIELD_TIPO_OBJETIVO_PLAN_ALIAS_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_TIPO_OBJETIVO_PLAN_ALIAS_DESC"
+                size            = "50">
+            <option value="0">COM_MANTENIMIENTO_FIELD_TIPO_OBJETIVO_PLAN_ALIAS_TITLE</option>
+        </field>
+        
+        <!-- Publicados -->
+        <field  name            = "published"
+                type            = "list"
+                label           = "JSTATUS"
+                description     = "JFIELD_PUBLISH_DESC"
+                class           = "inputbox"
+                filter          = "intval"
+                size            = "1"
+                default         = "1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

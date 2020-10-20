@@ -1,0 +1,1465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="general">
+        <!--    Identificador del contrato-->
+        <field  name            = "intIdContrato_ctr"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                readonly        = "true"
+        />
+        
+        <!-- Lista de Objetivos -->
+        <field  name            = "lstObjetivos"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                readonly        = "true"
+        />
+        
+        <!-- ORGANIGRAMA-->
+        <field  name            = "organigrama"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                readonly        = "true"
+        />
+        
+        <!-- TIPO DE CONTRATO -->
+        <field  name        = "intIdTipoContrato_tc"
+                type        = "hidden"
+                label       = "JGLOBAL_FIELD_ID_LABEL"
+                description = "JGLOBAL_FIELD_ID_DESC"
+                default     = "1"
+                readonly    = "true"/>
+
+        <!--    Identificador de la entidad -->
+        <field  name            = "intIdentidad_ent"
+                type            = "hidden" 
+        />
+        
+        <!-- campo Url-->
+        <field  name        = "strURLtableU" 
+                type        = "hidden"
+                label       = "COM_CONTRATOS_FIELD_CONTRATO_URL_LABEL" 
+                description = "COM_CONTRATOS_FIELD_CONTRATO_URL_DESC" 
+                size        = "40" 
+        />
+        
+        <!-- CODIGO PROYECTO -->
+        <field  name        = "intidPrograma"
+                type        = "programas"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                label       = "COM_CONTRATOS_FIELD_CONTRATO_PROGRAMA_LABEL"
+                description = "COM_CONTRATOS_FIELD_CONTRATO_PROGRAMA_DESC"
+                required    = "flase">
+            <option value="0">COM_CONTRATOS_FIELD_CONTRATO_PROGRAMA_TITLE</option>
+        </field>
+        
+        <!-- CODIGO PROYECTO -->
+        <field  name        = "intCodigo_pry"
+                type        = "proyectos"
+                extension   = "com_contratos"
+                label       = "COM_CONTRATOS_FIELD_CONTRATO_CODPROYECTO_LABEL"
+                description = "COM_CONTRATOS_FIELD_CONTRATO_CODPROYECTO_DESC"
+                style       = "width:120px"
+                required    = "false">
+            <option value="0">COM_CONTRATOS_FIELD_CONTRATO_CODPROYECTO_TITLE</option>
+        </field>
+        
+        <!-- TIPO DE PARTIDA -->
+        <field  name        = "intIdPartida_pda"
+                type        = "partidas"
+                extension   = "com_contratos"
+                label       = "COM_CONTRATOS_FIELD_CONTRATO_PARTIDA_LABEL"
+                description = "COM_CONTRATOS_FIELD_CONTRATO_PARTIDA_DESC"
+                required    = "true">
+            <option value="0">COM_CONTRATOS_FIELD_CONTRATO_PARTIDA_TITLE</option>
+        </field>
+
+        <!-- CODIGO CONTRATO -->
+        <field  name            = "strCodigoContrato_ctr" 
+                type            = "text" 
+                label           = "COM_CONTRATOS_FIELD_CONTRATO_CODIGOCONTRATO_LABEL"
+                description     = "COM_CONTRATOS_FIELD_CONTRATO_CODIGOCONTRATO_DESC"
+                size            = "45"
+                required        = "true"
+        />
+        
+        <!-- NUMERO DE CONTRATO -->
+        <field  name            = "intNumContrato_ctr" 
+                type            = "text" 
+                label           = "COM_CONTRATOS_FIELD_CONTRATO_NUMCONTRATO_LABEL"
+                description     = "COM_CONTRATOS_FIELD_CONTRATO_NUMCONTRATO_DESC"
+                size            = "45"
+                required        = "true"
+        />
+        
+        <!-- CODIGO UNICO DE REGISTRO -->
+        <field  name            = "strCUR_ctr" 
+                type            = "text" 
+                label           = "COM_CONTRATOS_FIELD_CONTRATO_CUR_LABEL"
+                description     = "COM_CONTRATOS_FIELD_CONTRATO_CUR_DESC"
+                required        = "true"
+                size            = "20"
+        />
+        
+        <!-- MONTO -->
+        <field  name            = "dcmMonto_ctr" 
+                type            = "text"
+                default         = "" 
+                label           = "COM_CONTRATOS_FIELD_CONTRATO_MONTO_LABEL"
+                description     = "COM_CONTRATOS_FIELD_CONTRATO_MONTO_DESC"
+                required        = "true"
+                size            = "20"
+        />
+        <!-- DESCRIPCION  -->
+        <field  name            = "strDescripcion_ctr" 
+                type            = "textarea" 
+                label           = "COM_CONTRATOS_FIELD_CONTRATO_DESCRIPCION_LABEL"
+                description     = "COM_CONTRATOS_FIELD_CONTRATO_DESCRIPCION_DESC"
+                rows            = "5" 
+                cols            = "5"
+                required        = "true" 
+        />
+        <!-- OBSERVACION  -->
+        <field  name            = "strObservacion_ctr" 
+                type            = "textarea" 
+                label           = "COM_CONTRATOS_FIELD_CONTRATO_OBSERVACION_LABEL"
+                description     = "COM_CONTRATOS_FIELD_CONTRATO_OBSERVACION_DESC"
+                rows            = "5" 
+                cols            = "5" 
+        />
+        
+        <!-- Estado de la entidad contrato -->
+        <field  name        = "idEstadoEntidad"
+                type        = "estadoentidad"
+                extension   = "com_contatos"
+                class       = "inputbox"
+                label       = "COM_CONTRATOS_FIELD_ESTADO_ENTIDAD_LABEL"
+                description = "COM_CONTRATOS_FIELD_ESTADO_ENTIDAD_DESC"
+                required    = "false">
+            <option value="0">COM_CONTRATOS_FIELD_ESTADO_ENTIDAD_TITLE</option>
+        </field>
+    </fieldset>
+    
+    <!-- documento del contrato. -->
+    <fieldset name="docContrato">
+        <field name         ="uploadFather" 
+               type         ="file" 
+               label        ="COM_CONTRATOS_FIELD_DOC_DOCRESPALDO_LABEL" 
+               description  ="COM_CONTRATOS_FIELD_DOC_DOCRESPALDO_DESC" 
+               size         ="10" 
+               accept       ="*.*" 
+        />
+    </fieldset>
+    
+    <!-- Plazo del contrato -->
+    <fieldset name="plazoContrato">
+        <!-- FECHA DE INICIO DEL CONTRATO -->
+        <field  name            ="dteFechaInicio_ctr"
+                type            ="calendar" 
+                label           ="COM_CONTRATOS_FIELD_PLAZO_FECHADESDE_LABEL" 
+                description     ="COM_CONTRATOS_FIELD_PLAZO_FECHADESDE_DESC" 
+                format          ="%Y-%m-%d"
+                required        ="true"
+        />
+        <!--    FECHA HASTA -->
+        <field  name            ="dteFechaFin_ctr"
+                type            ="calendar" 
+                label           ="COM_CONTRATOS_FIELD_PLAZO_FECHAHASTA_LABEL" 
+                description     ="COM_CONTRATOS_FIELD_PLAZO_FECHAHASTA_DESC" 
+                format          ="%Y-%m-%d"
+                required        ="true"
+        />
+        <!-- tipo garantia -->
+        <!-- type            = "UnidadesTiempo" -->
+        <field  name            = "intcodigo_unimed"
+                type            = "hidden"
+                extension       = "com_contratos"
+                class           = "inputbox"
+                label           = "COM_CONTRATOS_FIELD_PLAZO_UNIDADTIEMPO_LABEL"
+                description     = "COM_CONTRATOS_FIELD_PLAZO_UNIDADTIEMPO_DESC"
+                required        = "true"
+        >
+            <option value="0">COM_CONTRATOS_FIELD_PLAZO_UNIDADTIEMPO_TITLE</option>
+        </field>
+        
+        <!--Codigo-->
+        <field  name            ="intPlazo_ctr" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_PLAZO_PLAZO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_PLAZO_PLAZO_DESC"
+                size            ="45"
+                required        = "true"
+        />
+    </fieldset>
+    
+    <!--Atributo-->
+    <fieldset name="atributo">
+        
+        <!--Codigo-->
+        <field  name            ="attrCodigo" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_ATTRCODIGO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_ATTRCODIGO_DESC"
+                size            ="45"
+        />
+        <!-- Nombre -->
+        <field  name            ="attrNombre" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_ATTRNOMBRE_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_ATTRNOMBRE_DESC"
+                size            ="45"
+        />
+        <!-- Valor -->
+        <field  name            ="attrValor" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_ATTRVALOR_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_ATTRVALOR_DESC"
+                size            ="45"
+        />
+        <!-- DataAtributo -->
+        <field  name            = "dataAtributo"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "0"
+        />
+    </fieldset>
+    
+    <!-- Garantia -->
+    <fieldset name="garantia">
+        
+        <!-- tipo garantia -->
+        <field  name        = "intIdTpoGarantia_tg"
+                type        = "tiposgarantia"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                label       = "COM_CONTRATOS_FIELD_GARANTIA_TIPOGARANTIA_LABEL"
+                description = "COM_CONTRATOS_FIELD_GARANTIA_TIPOGARANTIA_DESC"
+                required    = "true">
+            <option value="0">COM_CONTRATOS_FIELD_GARANTIA_TIPOGARANTIA_TITTLE</option>
+        </field>
+        
+        <!-- forma garantia -->
+        <field  name        = "intIdFrmGarantia_fg"
+                type        = "formasgarantia"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                label       = "COM_CONTRATOS_FIELD_GARANTIA_FORMAGARANTIA_LABEL"
+                description = "COM_CONTRATOS_FIELD_GARANTIA_FORMAGARANTIA_DESC"
+                required    = "true">
+            <option value="0">COM_CONTRATOS_FIELD_GARANTIA_FORMAGARANTIA_TITLE</option>
+        </field>
+        
+        <!-- CODIGO GARANTIA -->
+        <field  name            ="intCodGarantia_gta" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_GARANTIA_CODIGOGARANTIA_LABEL"
+                description     ="COM_CONTRATOS_FIELD_GARANTIA_CODIGOGARANTIA_DESC"
+                required        ="true"
+                size            ="20"
+        />
+        
+        <!-- MONTO -->
+        <field  name            ="dcmMonto_gta" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_GARANTIA_MONTO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_GARANTIA_MONTO_DESC"
+                required        ="true"
+                size            ="20"
+        />
+        <!--    FECHA DESDE -->
+        <field  name            ="dteFechaDesde_gta"
+                type            ="calendar" 
+                label           ="COM_CONTRATOS_FIELD_GARANTIA_FECHADESDE_LABEL" 
+                description     ="COM_CONTRATOS_FIELD_GARANTIA_FECHADESDE_DESC" 
+                format          ="%Y-%m-%d"
+                required        ="true"
+        />
+        
+        <!--    FECHA HASTA -->
+        <field  name            ="dteFechaHasta_gta"
+                type            ="calendar" 
+                label           ="COM_CONTRATOS_FIELD_GARANTIA_FECHAHASTA_LABEL" 
+                description     ="COM_CONTRATOS_FIELD_GARANTIA_FECHAHASTA_DESC" 
+                format          ="%Y-%m-%d"
+                required        ="true"
+        />
+    </fieldset>
+    
+    <!--Estado de Garantia-->
+    <fieldset name="estadoGarantiaGarantia">
+        <!-- Estado Garantia -->
+        <field  name        = "intIdGarantia_sele_eg"
+                type        = "garantiascontrato"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                label       = "COM_CONTRATOS_FIELD_GARANTIA_CODIGOGARANTIA_EST_LABEL"
+                description = "COM_CONTRATOS_FIELD_GARANTIA_CODIGOGARANTIA_DESC"
+                required    = "false">
+            <option value="0">COM_CONTRATOS_FIELD_GARANTIA_CODIGOGARANTIA_EST_TITLE</option>
+        </field>
+    </fieldset>
+    
+    <!-- Estado de garantía -->
+    <fieldset name="estadoGarantia">
+        
+        <!-- Estado -->
+        <field  name        = "intIdEstadoGarantia_eg"
+                type        = "estadosgarantia"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                label       = "COM_CONTRATOS_FIELD_GARANTIA_ESTADOGARANTIA_LABEL"
+                description = "COM_CONTRATOS_FIELD_GARANTIA_ESTADOGARANTIA_DESC"
+                required    = "true">
+            <option value="0">COM_CONTRATOS_FIELD_GARANTIA_ESTADOGARANTIA_TITLE</option>
+        </field>
+    
+        <!-- Observacion -->
+        <field  name            ="strObservasion_ge" 
+                type            ="textarea" 
+                label           ="COM_CONTRATOS_FIELD_GARANTIA_OBSERVACION_STD_GARANTIA_LABEL"
+                description     ="COM_CONTRATOS_FIELD_GARANTIA_OBSERVACION_STD_GARANTIA_DESC"
+                size            ="20"
+        />
+    </fieldset>
+    
+    <!-- multas -->
+    <fieldset name="multas">
+        <!--> tipo garantia -->
+        <field  name            ="intCodMulta_mta" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_MULTA_CODIGOMULTA_LABEL"
+                description     ="COM_CONTRATOS_FIELD_MULTA_CODIGOMULTA_DESC"
+                required        ="true"
+                size            ="20"
+        />
+        
+        <!-- tipo garantia -->
+        <field  name            ="dcmMonto_mta" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_MULTA_MONTO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_MULTA_MONTO_DESC"
+                required        ="true"
+                size            ="20"
+        />
+        
+        <!-- tipo garantia -->
+        <field  name            ="strObservacioin_mta" 
+                type            ="textarea" 
+                label           ="COM_CONTRATOS_FIELD_MULTA_OBSERVACION_LABEL"
+                description     ="COM_CONTRATOS_FIELD_MULTA_OBSERVACION_DESC"
+                required        ="true"
+                size            ="20"
+        />
+    </fieldset>
+    
+    <!--CONTRATISTA-->
+    <fieldset name="contratista">
+        
+        <!-- Contratista -->
+        <field  name        = "strContratista_cta"
+                type        = "contratistas"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                label       = "COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_DESCONTRATISTA_LABEL"
+                description = "COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_DESCONTRATISTA_DESC"
+                required    = "true">
+            <option value="0">COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_DESCONTRATISTA_TITLE</option>
+        </field>
+        
+        <!--    FECHA DESDE -->
+        <field  name            ="dteFechaInicio_cctr"
+                type            ="calendar" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_FECHADESDE_LABEL" 
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_FECHADESDE_DESC" 
+                required        ="true"
+        />
+        
+        <!--    FECHA HASTA -->
+        <field  name            ="dteFechaFin_cctr"
+                type            ="calendar" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_FECHAHASTA_LABEL" 
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_FECHAHASTA_DESC" 
+                required        ="true"
+        />
+        <!--    FECHA HASTA -->
+           
+        <field  name            ="dteFechaRegistro_cctr" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_FECHAREGISTO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_FECHAREGISTO_DESC"
+                size            ="20"
+        />
+        <!-- tipo garantia -->
+        <field  name            ="strObservacion_cctr" 
+                type            ="textarea" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_OBBSERVACION_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_OBBSERVACION_DESC"
+                size            ="20"
+        />
+        
+    </fieldset>
+    
+    <!-- FILTRO CONTRATISTA-->
+    <fieldset name="contratistaFiltro">
+        <!-- Contratista -->
+        <field  name        = "strContratistaContacto_cta"
+                type        = "vacios"
+                extension   = "com_contratos"
+                label       = "COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_DESCONTRATISTA_LABEL"
+                description = "COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_DESCONTRATISTA_DESC"
+                required    = "true">
+            <option value="0">SELECCIONE UN CONTRATISTA</option>
+        </field>
+    </fieldset >
+    
+    <!-- Contacto -->
+    <fieldset name="contacto">
+        <!-- idCargo -->
+        <field  name        = "intIdCargo_cgo"
+                type        = "cargos"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                label       = "COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_CARGO_LABEL"
+                description = "COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_CARGO_DESC"
+                required    = "true">
+            <option value="0">COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_CARGO_TITLE</option>
+        </field>
+        <!-- idCargo -->
+        <field  name        = "intIdPersonasCargo_cgo"
+                type        = "personas"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                label       = "COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_CONTACTO_LABEL"
+                description = "COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_CONTACTO_DESC"
+                required    = "true">
+            <option value="0">COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_CONTACTO_TITLE</option>
+        </field>
+        
+        <!-- Cedula -->
+        <field  name            ="strCedula_pc" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_CEDULA_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_CEDULA_DESC"
+                required        ="true"
+                size            ="20"
+        />
+        
+        <!-- Apellidos -->
+        <field  name            ="strApellidos_pc" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_APELLIDOS_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_APELLIDOS_DESC"
+                required        ="true"
+                size            ="20"
+        />
+        
+        <!-- Nombre -->
+        <field  name            ="strNombres_pc" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_NOMBRES_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_NOMBRES_DESC"
+                required        ="true"
+                size            ="20"
+        />
+        
+        <!-- Correo Electronico -->
+        <field  name            ="strCorreoElectronico_pc" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_CORRELECTRONICO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_CORRELECTRONICO_DESC"
+                required        ="true"
+                size            ="20"
+        />
+        
+        <!-- Telefono -->
+        <field  name            ="strTelefono_pc" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_TELEFONO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_TELEFONO_DESC"
+                required        ="true"
+                size            ="20"
+        />
+        <!-- Celular -->
+        <field  name            ="strCelular_pc" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_CELULAR_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_CONTRATISTA_CELULAR_DESC"
+                required        ="true"
+                size            ="20"
+        />
+    </fieldset>
+    
+    <!-- FISCALIZADOR -->
+    <fieldset name="fiscalizador">
+        <!-- fICALIZADOR -->
+        <field  name        = "intIdPersonasFiscalizador_cgo"
+                type        = "fiscalizadores"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                label       = "COM_CONTRATOS_FIELD_CONTRATO_FISCALIZADOR_FISCALIZADOR_LABEL"
+                description = "COM_CONTRATOS_FIELD_CONTRATO_FISCALIZADOR_FISCALIZADOR_DESC"
+                required    = "true">
+            <option value="0">COM_CONTRATOS_FIELD_CONTRATO_FISCALIZADOR_FISCALIZADOR_TITLE</option>
+        </field>
+        <!--    FECHA DESDE -->
+        <field  name            ="dteFiscFechaDesde_gta"
+                type            ="calendar" 
+                label           ="COM_CONTRATOS_FIELD_FISCALIZADOR_FECHADESDE_LABEL" 
+                description     ="COM_CONTRATOS_FIELD_FISCALIZADOR_FECHADESDE_DESC" 
+                format          ="%Y-%m-%d"
+                required        ="true"
+        />
+        
+        <!--    FECHA HASTA -->
+        <field  name            ="dteFiscFechaHasta_gta"
+                type            ="calendar" 
+                label           ="COM_CONTRATOS_FIELD_GARANTIA_FECHAHASTA_LABEL" 
+                description     ="COM_CONTRATOS_FIELD_GARANTIA_FECHAHASTA_DESC" 
+                format          ="%Y-%m-%d"
+                required        ="true"
+        />
+    </fieldset>
+    
+    
+    <!-- Resona Fiscalizador -->
+    <fieldset name="personafiscalizador">
+        <!-- Cedula -->
+        <field  name            ="strFiscaCedula_pc" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_FISCALIZADOR_CEDULA_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_FISCALIZADOR_CEDULA_DESC"
+                required        ="true"
+                readonly        = "true"
+                size            ="20"
+        />
+        <!-- ruc -->
+        <field  name            ="strFiscaRuc_fs" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_FISCALIZADOR_RUC_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_FISCALIZADOR_RUC_DESC"
+                required        ="true"
+                readonly        = "true"
+                size            ="20"
+        />
+        
+        
+        
+        <!-- Apellidos -->
+        <field  name            ="strFiscaApellidos_pc" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_FISCALIZADOR_APELLIDOS_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_FISCALIZADOR_APELLIDOS_DESC"
+                required        ="true"
+                readonly        = "true"
+                size            ="20"
+        />
+        
+        <!-- Nombre -->
+        <field  name            ="strFiscaNombres_pc" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_FISCALIZADOR_NOMBRES_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_FISCALIZADOR_NOMBRES_DESC"
+                required        ="true"
+                readonly        = "true"
+                size            ="20"
+        />
+        
+        <!-- Correo Electronico -->
+        <field  name            ="strFiscaCorreoElectronico_pc" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_FISCALIZADOR_CORRELECTRONICO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_FISCALIZADOR_CORRELECTRONICO_DESC"
+                required        ="true"
+                readonly        = "true"
+                size            ="20"
+        />
+        
+        <!-- Telefono -->
+        <field  name            ="strFiscaTelefono_pc" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_FISCALIZADOR_TELEFONO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_FISCALIZADOR_TELEFONO_DESC"
+                required        ="true"
+                readonly        = "true"
+                size            ="20"
+        />
+        <!-- Celular -->
+        <field  name            ="strFiscaCelular_pc" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_FISCALIZADOR_CELULAR_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_FISCALIZADOR_CELULAR_DESC"
+                required        ="true"
+                readonly        = "true"
+                size            ="20"
+        />
+    </fieldset>
+    
+    <!-- Prorroga -->
+    <fieldset name="prorroga">
+        <!--CODIGO-->
+        <field  name            ="intCodProroga_prrga" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_PRORROGA_CODIGO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_PRORROGA_CODIGO_DESC"
+                required        ="true"
+                readonly        = "false"
+                size            ="20"
+        />
+        <!--MORA-->
+        <field  name            ="dcmMora_prrga" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_PRORROGA_MORA_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_PRORROGA_MORA_DESC"
+                required        ="true"
+                readonly        ="false"
+                size            ="20"
+        />
+        <!-- PLAZO -->
+        <field  name            ="intPlazo_prrga" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_PRORROGA_PLAZO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_PRORROGA_PLAZO_DESC"
+                required        ="true"
+                readonly        = "false"
+                size            ="20"
+        />
+        <!-- DOCUMENTO -->
+        <field  name            ="strDocumento_prrga" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_PRORROGA_DOCUMENTO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_PRORROGA_DOCUMENTO_DESC"
+                required        ="true"
+                readonly        = "false"
+                size            ="20"
+        />
+        <!-- OBSERVACION -->
+        <field  name            ="strObservacion_prrga" 
+                type            ="textarea" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_PRORROGA_OBSERVACION_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_PRORROGA_OBSERVACION_DESC"
+                required        ="true"
+                readonly        = "false"
+        />
+    </fieldset>
+    
+    <!-- FACTURA -->
+    <fieldset name="facturaPendiente">
+        <!-- NUMERO -->
+        <field  name            ="strNumero_fac" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_FACTURA_PENDIENTE_NUMERO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_FACTURA_PENDIENTE_NUMERO_DESC"
+                required        ="true"
+                readonly        = "false"
+                size            ="20"
+        />
+        <!-- CODIGO -->
+        <field  name            ="intCodFactura_fac" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_FACTURA_PENDIENTE_CODIGO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_FACTURA_PENDIENTE_CODIGO_DESC"
+                required        ="true"
+                readonly        = "false"
+                size            ="20"
+        />
+        
+        <!-- MONTO -->
+        <field  name            ="dcmMonto_fac" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_FACTURA_PENDIENTE_MONTO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_FACTURA_PENDIENTE_MONTO_DESC"
+                required        ="true"
+                readonly        = "false"
+                size            ="20"
+        />
+        <!-- FECHA -->
+          
+        <field  name            ="dteFechaFactura_fac"
+                type            ="calendar" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_FACTURA_PENDIENTE_FECHA_LABEL" 
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_FACTURA_PENDIENTE_FECHA_DESC" 
+                format          ="%Y-%m-%d"
+                required        ="true"
+        />
+    </fieldset>
+    
+    
+    <!--   PAGO -->
+    <fieldset name="pago">
+        <!-- numero de la factura -->
+        <field  name            ="numFacturaPago" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_PAGO_FACTURANUMERO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_PAGO_FACTURANUMERO_DESC"
+                readonly        = "true"
+                size            ="20"
+        />   
+        <!-- TIPOPAGO -->
+        <field  name        = "inpCodigo_tp"
+                type        = "tipospago"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                label       = "COM_CONTRATOS_FIELD_CONTRATO_PAGO_TIPOPAGO_LABEL"
+                description = "COM_CONTRATOS_FIELD_CONTRATO_PAGO_TIPOPAGO_DESC"
+                required    = "true">
+            <option value="0">COM_CONTRATOS_FIELD_CONTRATO_PAGO_TIPOPAGO_TITLE</option>
+        </field>
+        
+        <!--MONTO-->
+        <field  name            ="intCodPago_pgo" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_PAGO_CODIGO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_PAGO_CODIGO_DESC"
+                required        ="true"
+                readonly        = "false"
+                size            ="20"
+        />
+        <!-- CUR -->
+        <field  name            ="strCUR_pgo" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_PAGO_CUR_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_PAGO_CUR_DESC"
+                required        ="true"
+                readonly        = "false"
+                size            ="20"
+        />
+        <!-- CUR -->
+        <field  name            ="dcmMonto_pgo" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_PAGO_MONTO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_PAGO_MONTO_DESC"
+                required        ="true"
+                readonly        = "false"
+                size            ="20"
+        />
+        <!-- CUR 
+        <field  name            ="strDocumento_pgo" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_PAGO_DOCUEMENTO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_PAGO_DOCUEMENTO_DESC"
+                required        ="true"
+                readonly        = "false"
+                size            ="20"
+        />-->
+    </fieldset>
+    <fieldset name="unidadTerritorial">
+        <!-- Provincia -->
+        <field  name        = "intIDProvincia_dpa"
+                type        = "provincias"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                label       = "COM_CONTRATOS_FIELD_CONTRATO_UNIDAD_TERRITORIAL_PROVINCIA_LABEL"
+                description = "COM_CONTRATOS_FIELD_CONTRATO_UNIDAD_TERRITORIAL_PROVINCIA_DESC"
+                required    = "true">
+            <option value="0">COM_CONTRATOS_FIELD_CONTRATO_UNIDAD_TERRITORIAL_PROVINCIA_TITLE</option>
+        </field>
+        <!-- CANTON -->
+        <field  name        = "intIDCanton_dpa"
+                type        = "list"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                label       = "COM_CONTRATOS_FIELD_CONTRATO_UNIDAD_TERRITORIAL_CANTON_LABEL"
+                description = "COM_CONTRATOS_FIELD_CONTRATO_UNIDAD_TERRITORIAL_CANTON_DESC"
+        >
+           <option value="0">COM_CONTRATOS_FIELD_CONTRATO_UNIDAD_TERRITORIAL_CANTON_TITLE</option>
+        </field>
+        <!-- PARROQUIA -->
+        <field  name        = "intIDParroquia_dpa"
+                type        = "list"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                label       = "COM_CONTRATOS_FIELD_CONTRATO_UNIDAD_TERRITORIAL_PARRQUIA_LABEL"
+                description = "COM_CONTRATOS_FIELD_CONTRATO_UNIDAD_TERRITORIAL_PARRQUIA_DESC"
+        >
+        <option value="0">COM_CONTRATOS_FIELD_CONTRATO_UNIDAD_TERRITORIAL_PARRQUIA_TITLE</option>
+        </field>
+     
+        
+    </fieldset>
+    <!-- PLAN DE PAGO -->
+    <fieldset name="planPago">
+        <!-- CODIGO -->
+        <field  name            ="intCodPlanPago_pgo" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_PLANPAGO_CODIGO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_PLANPAGO_CODIGO_DESC"
+                readonly        = "false"
+                size            ="20"
+        />   
+        <!-- PRODUCTO -->
+        <field  name            ="strPlanProducto_pgo" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_PLANPAGO_PRODUCTO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_PLANPAGO_PRODUCTO_DESC"
+                readonly        = "false"
+                size            ="20"
+        />   
+        <!-- MONTO -->
+        <field  name            ="dcmPlanPagoMonto_pgo" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_PLANPAGO_MONTO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_PLANPAGO_MONTO_DESC"
+                readonly        = "false"
+                size            ="20"
+        />   
+        <!-- PORCIENTO -->
+        <field  name            ="inpPorCiento_pgo" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_PLANPAGO_PORCIENTO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_PLANPAGO_PORCIENTO_DESC"
+                readonly        = "false"
+                size            ="20"
+        />   
+        <!-- FECHA PAGO -->
+        <field  name            ="dteFechaPago_pgo"
+                type            ="calendar" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_PLANPAGO_FCHPAGO_LABEL" 
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_PLANPAGO_FCHPAGO_DESC" 
+                format          ="%Y-%m-%d"
+                required        ="true"
+        />
+    </fieldset>
+    
+    <!-- PLANILLLA-->
+    <fieldset name="planilla">
+        <!-- CODIGO -->
+        <field  name            ="intCodPlantilla_ptlla" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_PLANILLA_CODIGO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_PLANILLA_CODIGO_DESC"
+                readonly        = "false"
+                size            ="20"
+        />   
+        <!-- MONTO -->
+        <field  name            ="dcmMonto_ptlla" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_PLANILLA_MONTO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_PLANILLA_MONTO_DESC"
+                readonly        = "false"
+                size            ="20"
+        />   
+        <!-- MES -->
+        <field  name        = "inpMes_ptlla"
+                type        = "meses"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                label       = "COM_CONTRATOS_FIELD_CONTRATO_PLANILLA_MES_LABEL"
+                description = "COM_CONTRATOS_FIELD_CONTRATO_PLANILLA_MES_DESC"
+                required    = "true">
+            <option value="0">SELECCIONE MES</option>
+        </field>
+   
+        <!-- FECHA ENTREGA -->
+        <field  name            ="dteFechaEntrega_ptlla"
+                type            ="calendar" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_PLANILLA_FCHENTREGA_LABEL" 
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_PLANILLA_FCHENTREGA_DESC" 
+                format          ="%Y-%m-%d"
+                required        ="true"
+        />
+    </fieldset>
+    
+    <!--   Adelanto -->
+    <fieldset name="adelanto">
+        <!-- numero de la factura -->
+        <field  name            ="numFacturaPago_adl" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_ADELANTO_FACTURANUMERO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_ADELANTO_FACTURANUMERO_DESC"
+                readonly        = "true"
+                class           = "readonly"
+                size            ="20"
+        />   
+        <!--MONTO-->
+        <field  name            ="intCodPago_pgo_adl" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_ADELANTO_CODIGO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_ADELANTO_CODIGO_DESC"
+                required        ="true"
+                readonly        = "false"
+                size            ="20"
+        />
+        <!-- CUR -->
+        <field  name            ="strCUR_pgo_adl" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_ADELANTO_CUR_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_ADELANTO_CUR_DESC"
+                required        ="true"
+                readonly        = "false"
+                size            ="20"
+        />
+        <!-- CUR -->
+        <field  name            ="dcmMonto_pgo_adl" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_ADELANTO_MONTO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_ADELANTO_MONTO_DESC"
+                required        ="true"
+                readonly        = "false"
+                size            ="20"
+        />
+        <!-- CUR -->
+        <field  name            ="strDocumento_pgo_adl" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_ADELANTO_DOCUEMENTO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_ADELANTO_DOCUEMENTO_DESC"
+                required        ="true"
+                readonly        = "false"
+                size            ="20"
+        />
+    </fieldset>
+    
+    <!-- FACTURA ADELANTO -->
+    <fieldset name="adelantoFactura">
+        <!-- NUMERO -->
+        <field  name            ="strNumero_fac_adl" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_FACTURA_ADELANTO_NUMERO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_FACTURA_ADELANTO_NUMERO_DESC"
+                required        ="true"
+                readonly        = "false"
+                size            ="20"
+        />
+        <!-- CODIGO -->
+        <field  name            ="intCodFactura_fac_adl" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_FACTURA_ADELANTO_CODIGO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_FACTURA_ADELANTO_CODIGO_DESC"
+                required        ="true"
+                readonly        = "false"
+                size            ="20"
+        />
+        
+        <!-- MONTO -->
+        <field  name            ="dcmMonto_fac_adl" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_FACTURA_ADELANTO_MONTO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_FACTURA_ADELANTO_MONTO_DESC"
+                required        ="true"
+                readonly        = "false"
+                size            ="20"
+        />
+        <!-- FECHA -->
+        <field  name            ="dteFechaFactura_fac_adl"
+                type            ="calendar" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_FACTURA_ADELANTO_FECHA_LABEL" 
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_FACTURA_ADELANTO_FECHA_DESC" 
+                format          ="%Y-%m-%d"
+                required        ="true"
+        />
+    </fieldset>
+    
+    <!-- GRAFICO DE UN CONTRATO -->
+    <fieldset name="graficoContrato">
+        <!-- TIPO DE GRAFICO -->
+        <field  name        = "intId_tg"
+                type        = "tiposgraficos"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                label       = "COM_CONTRATOS_FIELD_CONTRATO_UBICACION_TIPOGRAFICO_LABEL"
+                description = "COM_CONTRATOS_FIELD_CONTRATO_UBICACION_TIPOGRAFICO_DESC"
+                required    = "true">
+            <option value="0">COM_CONTRATOS_FIELD_CONTRATO_UBICACION_TIPOGRAFICO_TITLE</option>
+        </field>
+        <!-- DESCICRIPCION DEL GRAFICO -->
+        <field  name            ="strDescripcionGrafico_crtg" 
+                type            ="textarea" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_UBICACION_DESCRIPCION_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_UBICACION_DESCRIPCION_DESC"
+                rows            ="3" 
+                cols            ="2"
+                required        = "true" 
+        />
+    </fieldset>
+    
+    <!-- GRAFICO DE UN CONTRATO -->
+    <fieldset name="coordenadas">
+        <!-- LATITUD -->
+        <field  name            ="dcmLatitud_coor" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_COORDENADAS_LATITUD_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_COORDENADAS_LATITUD_DESC"
+                required        ="true"
+                readonly        = "false"
+                size            ="15"
+        />
+        <!-- lONGITUD -->
+        <field  name            ="dcmLlong_coor" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_COORDENADAS_LONGITUD_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_COORDENADAS_LONGITUD_DESC"
+                required        ="true"
+                readonly        = "false"
+                size            ="15"
+        />
+    </fieldset>
+    
+    <!-- GRAFICO DE UN CONTRATO -->
+    <fieldset name="coordenadasCirculo">
+        <!-- LATITUD -->
+        <field  name            ="dcmLatitud_coorCir" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_COORDENADAS_LATITUD_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_COORDENADAS_LATITUD_DESC"
+                required        ="true"
+                readonly        = "false"
+                size            ="15"
+        />
+        <!-- lONGITUD -->
+        <field  name            ="dcmLongitud_coorCir" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_COORDENADAS_LONGITUD_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_COORDENADAS_LONGITUD_DESC"
+                required        ="true"
+                readonly        = "false"
+                size            ="15"
+        />
+        <!-- lONGITUD -->
+        <field  name            ="dcmRadio_coorCir" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_CONTRATO_COORDENADAS_RADIO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_CONTRATO_COORDENADAS_RADIO_DESC"
+                required        ="true"
+                readonly        = "false"
+                size            ="15"
+        />
+    </fieldset>
+    <!-- - -->
+    <!-- INDICADORES -->
+    <!-- - -->
+    
+    <!-- Indicadores Economicos -->
+    <fieldset name="indEconomicos">
+        <!-- Financiero -->
+        <!-- Tasa de Descuento -->
+        <field  name        = "intTasaDctoFin"
+                type        = "text" 
+                label       = "COM_CONTRATOS_FIELD_PROYECTO_TASADESCUENTO_LABEL" 
+                description = "COM_CONTRATOS_FIELD_PROYECTO_TASADESCUENTO_DESC" 
+                size        = "10" />
+        
+        <!-- Valor Actual Neto -->
+        <field  name        = "intValActualNetoFin" 
+                type        = "text" 
+                label       = "COM_CONTRATOS_FIELD_PROYECTO_VALORACTUALNETO_LABEL" 
+                description = "COM_CONTRATOS_FIELD_PROYECTO_VALORACTUALNETO_DESC" 
+                size        = "10" />
+        
+        <!-- Tasa Interna de Retorno - TIR -->
+        <field  name        = "intTIRFin" 
+                type        = "text" 
+                label       = "COM_CONTRATOS_FIELD_PROYECTO_TASAINTERNARETORNO_LABEL" 
+                description = "COM_CONTRATOS_FIELD_PROYECTO_TASAINTERNARETORNO_DESC" 
+                size        = "10" />
+        
+        <!-- Economico -->
+        <!-- Tasa de Descuento -->
+        <field  name        = "intTasaDctoEco"
+                type        = "text" 
+                label       = "COM_CONTRATOS_FIELD_PROYECTO_TASADESCUENTO_LABEL" 
+                description = "COM_CONTRATOS_FIELD_PROYECTO_TASADESCUENTO_DESC" 
+                size        = "10" />
+        
+        <!-- Valor Actual Neto -->
+        <field  name        = "intValActualNetoEco" 
+                type        = "text" 
+                label       = "COM_CONTRATOS_FIELD_PROYECTO_VALORACTUALNETO_LABEL" 
+                description = "COM_CONTRATOS_FIELD_PROYECTO_VALORACTUALNETO_DESC" 
+                size        = "10" />
+        
+        <!-- Tasa Interna de Retorno - TIR -->
+        <field  name        = "intTIREco" 
+                type        = "text" 
+                label       = "COM_CONTRATOS_FIELD_PROYECTO_TASAINTERNARETORNO_LABEL" 
+                description = "COM_CONTRATOS_FIELD_PROYECTO_TASAINTERNARETORNO_DESC" 
+                size        = "10" />
+    </fieldset>
+    
+    <!-- BENEFICIARIOS -->
+    <fieldset name="beneficiarios">
+        <!-- Beneficiarios Directos Hombres -->
+        <field  name        = "intBenfDirectoHombre"
+                type        = "text" 
+                label       = "COM_CONTRATOS_FIELD_PROYECTO_BENFDIRHOMBRES_LABEL" 
+                description = "COM_CONTRATOS_FIELD_PROYECTO_BENFDIRHOMBRES_DESC" 
+                size        = "10" />
+        
+        <!-- Beneficiarios Directos Mujeres -->
+        <field  name        = "intBenfDirectoMujer" 
+                type        = "text" 
+                label       = "COM_CONTRATOS_FIELD_PROYECTO_BENFDIRMUJERES_LABEL" 
+                description = "COM_CONTRATOS_FIELD_PROYECTO_BENFDIRMUJERES_DESC" 
+                size        = "10" />
+        
+        <!-- Total Beneficiarios Directos -->
+        <field  name        = "intTotalBenfDirectos" 
+                type        = "text" 
+                label       = "COM_CONTRATOS_FIELD_PROYECTO_TOTALBENFDIRECTOS_LABEL" 
+                description = "COM_CONTRATOS_FIELD_PROYECTO_TOTALBENFDIRECTOS_DESC" 
+                size        = "10" />
+        
+        <!-- Beneficiarios Indirectos Hombres -->
+        <field  name        = "intBenfIndDirectoHombre"
+                type        = "text" 
+                label       = "COM_CONTRATOS_FIELD_PROYECTO_BENFINDHOMBRES_LABEL" 
+                description = "COM_CONTRATOS_FIELD_PROYECTO_BENFINDHOMBRES_DESC" 
+                size        = "10" />
+        
+        <!-- Beneficiarios Indirectos Mujeres -->
+        <field  name        = "intBenfIndDirectoMujer" 
+                type        = "text" 
+                label       = "COM_CONTRATOS_FIELD_PROYECTO_BENFINDMUJERES_LABEL" 
+                description = "COM_CONTRATOS_FIELD_PROYECTO_BENFINDMUJERES_DESC" 
+                size        = "10" />
+        
+        <!-- Total Beneficiarios Indirectos -->
+        <field  name        = "intTotalBenfIndDirectos" 
+                type        = "text" 
+                label       = "COM_CONTRATOS_FIELD_PROYECTO_TOTALBENFINDIRECTOS_LABEL" 
+                description = "COM_CONTRATOS_FIELD_PROYECTO_TOTALBENFINDIRECTOS_DESC" 
+                size        = "10" />
+    </fieldset>
+    
+    <!-- GRUPO DE ATENCION PRIORITARIO -->
+    <fieldset name="gpoAtencionPrioritario">
+        <!-- Identificador Registro de Indicador GAP -->
+        <field  name    = "idGAP"
+                type    = "hidden"
+                readonly= "true"
+                value   = '0'
+        />
+        
+        <!-- Grupo de Atencion Prioritario -->
+        <field   name        = "cbGpoAtencionPrioritario"
+                 type        = "atencionpriotarios"
+                 extension   = "com_contratos"
+                 class       = "inputbox"
+                 default     = ""
+                 label       = "COM_CONTRATOS_FIELD_PROYECTO_GPOATENCIONPRIO_LABEL"
+                 description = "COM_CONTRATOS_FIELD_PROYECTO_GPOATENCIONPRIO_DESC"
+                 required    = "true">
+            <option value="0">COM_CONTRATOS_FIELD_PROYECTO_GPOATENCIONPRIO_TITLE</option>
+        </field>
+        
+        <!-- Beneficiarios Hombres -->
+        <field  name        = "intGAPMasculino"
+                type        = "text" 
+                default     = "" 
+                label       = "COM_CONTRATOS_FIELD_PROYECTO_GAPMASCULINO_LABEL" 
+                description = "COM_CONTRATOS_FIELD_PROYECTO_GAPMASCULINO_DESC" 
+                size        = "10" />
+        
+        <!-- Beneficiarios Mujeres -->
+        <field  name        = "intGAPFemenino" 
+                type        = "text" 
+                default     = "" 
+                label       = "COM_CONTRATOS_FIELD_PROYECTO_GAPFEMENINO_LABEL"
+                description = "COM_CONTRATOS_FIELD_PROYECTO_GAPFEMENINO_DESC" 
+                size        = "10" />
+        
+        <!-- Total de Beneficiarios -->
+        <field  name        = "intGAPTotal" 
+                type        = "text" 
+                default     = "" 
+                label       = "COM_CONTRATOS_FIELD_PROYECTO_GAPTOTAL_LABEL"
+                description = "COM_CONTRATOS_FIELD_PROYECTO_GAPTOTAL_DESC" 
+                size        = "10" />
+        
+        <!-- Datos Relacion de un Proyecto -->
+        <field  name    = "dataGAP"
+                type    = "hidden"
+                readonly= "true"
+                value   = '0'
+        />
+    </fieldset>
+    
+    <!-- ENFOQUE IGUALDAD -->
+    <fieldset name="enfoqueIgualdad">
+        <!-- Identificador Registro de Indicador de Enfoque de Igualdad -->
+        <field  name    = "idEnfIgualdad"
+                type    = "hidden"
+                readonly= "true"
+                value   = "0"
+        />
+
+        <!-- Tipos de Enfoque de Igualdad -->
+        <field   name        = "cbEnfoqueIgualdad"
+                 type        = "TiposEnfoqueIgualdad"
+                 extension   = "com_contratos"
+                 class       = "inputbox"
+                 default     = ""
+                 label       = "COM_CONTRATOS_FIELD_PROYECTO_TIPOSENFOQUEIGUALDAD_LABEL"
+                 description = "COM_CONTRATOS_FIELD_PROYECTO_TIPOSENFOQUEIGUALDAD_DESC"
+                 required    = "true">
+            <option value="0">COM_CONTRATOS_FIELD_PROYECTO_TIPOSENFOQUEIGUALDAD_TITLE</option>
+        </field>
+        
+        <!-- Enfoque de Igualdad -->
+        <field  name        = "idEnfoqueIgualdad"
+                type        = "list"
+                class       = "inputbox"
+                label       = "COM_CONTRATOS_FIELD_INDICADOR_ENFOQUEIGUALDAD_LABEL"
+                description = "COM_CONTRATOS_FIELD_INDICADOR_ENFOQUEIGUALDAD_DESC"
+                required    = "true">
+            <option value="0">COM_CONTRATOS_FIELD_INDICADOR_ENFOQUEIGUALDADCB_TITLE</option>
+        </field>
+        
+        <!-- Beneficiarios Hombres -->
+        <field  name        = "intEIMasculino"
+                type        = "text" 
+                default     = "" 
+                label       = "COM_CONTRATOS_FIELD_PROYECTO_EIMASCULINO_LABEL" 
+                description = "COM_CONTRATOS_FIELD_PROYECTO_EIMASCULINO_DESC" 
+                size        = "10" />
+        
+        <!-- Beneficiarios Mujeres -->
+        <field  name        = "intEIFemenino" 
+                type        = "text" 
+                default     = "" 
+                label       = "COM_CONTRATOS_FIELD_PROYECTO_EIFEMENINO_LABEL"
+                description = "COM_CONTRATOS_FIELD_PROYECTO_EIFEMENINO_DESC" 
+                size        = "10" />
+        
+        <!-- Total de Beneficiarios -->
+        <field  name        = "intEITotal" 
+                type        = "text" 
+                default     = "" 
+                label       = "COM_CONTRATOS_FIELD_PROYECTO_EITOTAL_LABEL"
+                description = "COM_CONTRATOS_FIELD_PROYECTO_EITOTAL_DESC" 
+                size        = "10" />
+        
+        <!-- Datos Relacion de un Proyecto -->
+        <field  name    = "dataEnfIgu"
+                type    = "hidden"
+                readonly= "true"
+                value   = '0'
+        />
+    </fieldset>
+    
+    <!-- ENFOQUE ECORAE -->
+    <fieldset name="enfoqueEcorae">
+        <!-- Identificador Registro de Indicador de Enfoque de Igualdad -->
+        <field  name    = "idEnfEcorae"
+                type    = "hidden"
+                readonly= "true"
+                value   = "0"
+        />
+        
+        <!-- Lista de Enfoque de Igualdad -->
+        <field   name        = "cbEnfoqueEcorae"
+                 type        = "enfoqueecorae"
+                 extension   = "com_contratos"
+                 class       = "inputbox"
+                 default     = ""
+                 label       = "COM_CONTRATOS_FIELD_PROYECTO_ENFOQUEECORAE_LABEL"
+                 description = "COM_CONTRATOS_FIELD_PROYECTO_ENFOQUEECORAE_DESC"
+                 required    = "true">
+            <option value="0">COM_CONTRATOS_FIELD_PROYECTO_ENFOQUEECORAE_TITLE</option>
+        </field>
+        
+        <!-- Beneficiarios Hombres -->
+        <field  name        = "intEnfEcoMasculino"
+                type        = "text" 
+                default     = "" 
+                label       = "COM_CONTRATOS_FIELD_PROYECTO_EEMASCULINO_LABEL" 
+                description = "COM_CONTRATOS_FIELD_PROYECTO_EEMASCULINO_DESC" 
+                size        = "10" />
+        
+        <!-- Beneficiarios Mujeres -->
+        <field  name        = "intEnfEcoFemenino" 
+                type        = "text" 
+                default     = "" 
+                label       = "COM_CONTRATOS_FIELD_PROYECTO_EEFEMENINO_LABEL"
+                description = "COM_CONTRATOS_FIELD_PROYECTO_EEFEMENINO_DESC" 
+                size        = "10" />
+        
+        <!-- Total de Beneficiarios -->
+        <field  name        = "intEnfEcoTotal" 
+                type        = "text" 
+                default     = "" 
+                label       = "COM_CONTRATOS_FIELD_PROYECTO_EETOTAL_LABEL"
+                description = "COM_CONTRATOS_FIELD_PROYECTO_EETOTAL_DESC" 
+                size        = "10" />
+        
+        <!-- Datos Relacion de un Proyecto -->
+        <field  name    = "dataIndicadores"
+                type    = "hidden"
+                readonly= "true"
+                value   = '0'
+        />
+        
+        <!-- Datos Relacion de un Proyecto -->
+        <field  name    = "dtaPlanificacion"
+                type    = "hidden"
+                readonly= "true"
+                value   = '0'
+        />
+    </fieldset>
+
+    <!-- OTROS INDICADORES -->
+    <fieldset name="otrosIndicadores">
+        <!-- Nombre del indicador -->
+        <field  name        = "strNombreIndicador" 
+                type        = "text" 
+                label       = "COM_CONTRATOS_FIELD_INDICADOR_NOMBREOTROIND_LABEL" 
+                description = "COM_CONTRATOS_FIELD_INDICADOR_NOMBREOTROIND_DESC" 
+                size        = "50"
+                required    = "true" />
+
+        <!-- Descripcion del indicador -->
+        <field  name        = "strDescripcionIndicador" 
+                type        = "textarea" 
+                label       = "COM_CONTRATOS_FIELD_INDICADOR_DESCOTROIND_LABEL"
+                description = "COM_CONTRATOS_FIELD_INDICADOR_DESCOTROIND_DESC"
+                rows        = "3"
+                cols        = "5" />
+       
+        <!-- Unidad de Analisis -->
+        <field  name        = "idUndAnalisisNewInd"
+                type        = "unidadesanalisis"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_CONTRATOS_FIELD_INDICADOR_UNDANALOTROIND_TITLE"
+                description = "COM_CONTRATOS_FIELD_INDICADOR_UNDANALOTROIND_DESC"
+                required    = "true">
+        </field>
+        
+        <!-- Valor de la Meta -->
+        <field  name        = "valorMetaNewInd"
+                type        = "text"
+                label       = "COM_CONTRATOS_FIELD_PROYECTO_VALORMETA_LABEL"
+                description = "COM_CONTRATOS_FIELD_PROYECTO_VALORMETA_DESC"
+                class       = "inputbox"
+                size        = "10"
+                maxlenght   = "3"
+                required    = "true"
+        />
+
+        <!-- Tipo de Unidad de Medida del valor de la Meta -->
+        <field  name        = "idTpoUndMedida"
+                type        = "tipounidadmedida"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_CONTRATOS_FIELD_PROYECTO_TUMMETA_LABEL"
+                description = "COM_CONTRATOS_FIELD_PROYECTO_TUMMETA_DESC"
+                required    = "true">
+            <option value="0">COM_CONTRATOS_FIELD_PROYECTO_TUMMETA_TITLE</option>
+        </field>
+        
+        <!-- Unidad de Medida del valor de la Meta -->
+        <field  name        = "idUndMedidaMetaNewInd"
+                type        = "list"
+                class       = "inputbox"
+                label       = "COM_CONTRATOS_FIELD_PROYECTO_UMMETA_LABEL"
+                description = "COM_CONTRATOS_FIELD_PROYECTO_UMMETA_DESC"
+                required    = "true">
+            <option value="0">COM_CONTRATOS_FIELD_PROYECTO_UMMETA_TITLE</option>
+        </field>
+        
+        <!-- Formula -->
+        <field  name        = "formulaMetaNewInd" 
+                type        = "textarea" 
+                label       = "COM_CONTRATOS_FIELD_INDICADOR_FORMULAOTROIND_LABLE" 
+                description = "COM_CONTRATOS_FIELD_INDICADOR_FORMULAOTROIND_DESC" 
+                rows        = "3" 
+                cols        = "5" />
+        <!-- Datos Relacion de un Proyecto -->
+        <field  name    = "dataIndicadores"
+                type    = "hidden"
+                readonly= "true"
+                value   = '0'
+        />
+    </fieldset>
+    
+    
+    
+    <!-- UNIDAD DE GESTION -->
+    <fieldset name="UnidadGestion">
+        <!-- Lista de Unidades de Gestion -->
+        <field  name        = "intIdUndGestion"
+                type        = "unidadesgestion"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_CONTRATOS_FIELD_ATRIBUTO_UGESTION_LABLE"
+                description = "COM_CONTRATOS_FIELD_ATRIBUTO_UGESTION_DESC"
+                required    = "true">
+            <option value="0">COM_CONTRATOS_FIELD_ATRIBUTO_UGESTION_TITLE</option>
+        </field>
+        
+        <field  name        = "fchInicioPeriodoUG" 
+                type        = "calendar" 
+                label       = "COM_CONTRATOS_FIELD_ATRIBUTO_FIPUG_LABLE"
+                description = "COM_CONTRATOS_FIELD_ATRIBUTO_FIPUG_DESC"
+                format      ="%Y-%m-%d" />
+    </fieldset>
+    
+    <!-- RESPONSABLE -->
+    <fieldset name="Responsable">
+        <!-- Lista de Unidades de Gestion -->
+        <field  name        = "intIdUGResponsable"
+                type        = "unidadesgestion"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_CONTRATOS_FIELD_ATRIBUTO_UGRESPONSABLE_LABLE"
+                description = "COM_CONTRATOS_FIELD_ATRIBUTO_UGRESPONSABLE_DESC"
+                required    = "true">
+            <option value="0">COM_CONTRATOS_FIELD_ATRIBUTO_UGRESPONSABLE_TITLE</option>
+        </field>
+        
+        <field  name        = "idResponsable" 
+                type        = "funcionarios"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_CONTRATOS_FIELD_ATRIBUTO_RESPONSABLE_LABLE" 
+                description = "COM_CONTRATOS_FIELD_ATRIBUTO_RESPONSABLE_DESC"
+                required    = "true">
+            <option value="0">COM_CONTRATOS_FIELD_ATRIBUTO_RESPONSABLE_TITLE</option>
+        </field>
+        
+        <field  name        = "fchInicioPeriodoFuncionario" 
+                type        = "calendar" 
+                label       = "COM_CONTRATOS_FIELD_ATRIBUTO_FIPFR_LABLE"
+                description = "COM_CONTRATOS_FIELD_ATRIBUTO_FIPFR_DESC"
+                format      ="%Y-%m-%d" />
+    </fieldset>
+        <!-- Formulario de data general de un objetivo del PROYECTO -->
+    <fieldset name="objetivo">
+        <!-- Identificador del objetivo del pei -->
+        <field  name            = "intId_ob"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_OBJ_LABEL"
+                description     = "JGLOBAL_FIELD_ID_OBJ_DESC"
+                size            = "10"
+        />
+        
+        <!-- Descripción/NoMbre del PROYECTO -->
+        <field  name            = "strDescripcion_ob"
+                type            = "textarea"
+                label           = "COM_CONTRATO_FIELD_OBJETIVO_DESCRIPCION_LABEL"
+                description     = "COM_CONTRATO_FIELD_OBJETIVO_DESCRIPCION_DESC"
+                cols            = "5"
+                rows            = "3"
+                required        = "true"
+        />
+        
+        <field  name        = "objGeneral" 
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "0"
+                readonly        = "true"
+                class           = "readonly" />
+    </fieldset>
+
+</form>

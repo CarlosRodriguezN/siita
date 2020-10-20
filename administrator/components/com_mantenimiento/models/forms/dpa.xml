@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="essential">
+        <!-- codigo de la beneficiario -->
+        <field  name            = "inpID_dpa"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- Descripción  />-->
+        <field  name            ="strDescripcion_dpa" 
+                type            ="textarea" 
+                default         ="" 
+                label           ="COM_MANTENIMIENTO_FIELD_BENEFICIARIO_DPA_LABEL" 
+                description     ="COM_MANTENIMIENTO_FIELD_BENEFICIARIO_DPA_DESC" 
+                rows            ="10" 
+                cols            ="5"
+         />
+         
+        <!-- Publicados -->
+        <field  name            ="published"
+                type            ="list"
+                label           ="JSTATUS"
+                description     ="JFIELD_PUBLISH_DESC"
+                class           ="inputbox"
+                filter          ="intval"
+                size            ="1"
+                default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

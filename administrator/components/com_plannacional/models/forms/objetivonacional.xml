@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="essential">
+        <field  name="INTCODIGO_ON"
+                type="hidden"
+                label="JGLOBAL_FIELD_ID_LABEL"
+                description="JGLOBAL_FIELD_ID_DESC"
+                size="10"
+                default="0"
+                readonly="true"
+                class="readonly"
+        />
+        
+        <!-- Plan Nacional -->
+        <field  name        = "INTCODIGO_PN"
+                type        = "planesnacionales"
+                extension   = "com_plannacional"
+                class       = "inputbox"
+                label       = "COM_PLANNACIONAL_FIELD_OBJETIVONACIONAL_PLANNACIONAL_LABEL"
+                description = "COM_PLANNACIONAL_FIELD_OBJETIVONACIONAL_PLANNACIONAL_DESC"
+                required    = "true">
+            <option value="0">SELECCIONE CATEGORIA</option>
+        </field>
+        
+        <!-- Estatus -->
+        <field  name="published"
+                type="list"
+                label="JSTATUS"
+                description="JFIELD_PUBLISH_DESC"
+                class="inputbox"
+                filter="intval"
+                size="1"
+                default="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+    
+    
+    <fieldset name="editor">
+	<field  name="STRDESCRIPCION_ON"
+                type="editor"
+                label="COM_PLANNACIONAL_FIELD_OBJETIVONACIONAL_DESCRIPCION_LABEL"
+                description="COM_PLANNACIONAL_FIELD_OBJETIVONACIONAL_DESCRIPCION_DESC"
+                filter="safehtml"
+                class="inputbox"
+	/>
+    </fieldset>
+</form>

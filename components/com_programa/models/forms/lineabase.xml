@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <fieldset name="essential">
+        <!-- Codigo de Linea Base -->
+        <field  name            = "intCodigo_lbind"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "0"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- Lista de Fuentes -->
+        <field  name        = "intCodigo_fuente"
+                type        = "fuentes"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PROGRAMA_FIELD_LINEABASE_FUENTE_LABEL"
+                description = "COM_PROGRAMA_FIELD_LINEABASE_FUENTE_DESC"
+                required    = "true">
+                <option value="0">COM_PROGRAMA_FIELD_LINEABASE_FUENTE_TITLE</option>
+        </field>
+        
+        <!-- Periodicidad -->
+        <field  name        = "intCodigo_per"
+                type        = "periodicidad"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PROGRAMA_FIELD_LINEABASE_PERIODICIDAD_LABEL"
+                description = "COM_PROGRAMA_FIELD_LINEABASE_PERIODICIDAD_DESC"
+                required    = "true">
+                <option value="0">COM_PROGRAMA_FIELD_LINEABASE_PERIODICIDAD_TITLE</option>
+        </field>
+        
+        <!-- Descripcion de Linea Base -->
+        <field  name        = "strDescripcion_lbind"
+                type        = "textarea"
+                label       = "COM_PROGRAMA_FIELD_LINEABASE_DESCRIPCION_LABEL"
+                description = "COM_PROGRAMA_FIELD_LINEABASE_DESCRIPCION_DESC"
+                rows        = "10"
+                cols        = "5"
+                required    = "true"
+        />
+        
+        <!-- Valor de la linea Base -->
+        <field  name        = "dcmValor_lbind"
+                type        = "text"
+                label       = "COM_PROGRAMA_FIELD_LINEABASE_VALOR_LABEL"
+                description = "COM_PROGRAMA_FIELD_LINEABASE_VALOR_DESC"
+                size        = "10" />
+
+        <!-- Fecha de Inicio -->
+        <field  name        = "dteFechaInicio_lbind"
+                type        = "calendar"
+                label       = "COM_PROGRAMA_FIELD_LINEABASE_FCHINICIO_LABEL"
+                description = "COM_PROGRAMA_FIELD_LINEABASE_FCHINICIO_DESC"
+                format      = "%Y-%m-%d" />
+
+        <!-- Fecha de Fin -->
+        <field  name        = "dteFechaFin_lbind"
+                type        = "calendar"
+                label       = "COM_PROGRAMA_FIELD_LINEABASE_FCHFIN_LABEL"
+                description = "COM_PROGRAMA_FIELD_LINEABASE_FCHFIN_DESC"
+                format      = "%Y-%m-%d" />
+                
+        <!-- Publicados -->
+        <field  name="published"
+                type="list"
+                label="JSTATUS"
+                description="JFIELD_PUBLISH_DESC"
+                class="inputbox"
+                filter="intval"
+                size="1"
+                default="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

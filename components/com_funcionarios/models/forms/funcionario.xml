@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <!-- Informacion General de Unidad de Gestion -->
+    <fieldset name="funcionario">
+        <!-- Identificador del funcionario -->
+        <field  name            = "intIdUser_fnc"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_FUNCIONARIO_LABEL"
+                description     = "JGLOBAL_FIELD_ID_FUNCIONARIO_DESC"
+                size            = "10"
+                default         = "0"
+        />
+        
+        <!-- Identificador del funcionario -->
+        <field  name            = "intCodigo_fnc"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_FUNCIONARIO_LABEL"
+                description     = "JGLOBAL_FIELD_ID_FUNCIONARIO_DESC"
+                size            = "10"
+                default         = "0"
+        />
+        
+        <!-- Identificador de la entidad con tipo funcionario -->
+        <field  name            = "intIdentidad_ent"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_UG_ENTIDAD_LABEL"
+                description     = "JGLOBAL_FIELD_ID_UG_ENTIDAD_DESC"
+                size            = "10"
+        />
+        
+        <!-- Identificador del funcionario -->
+        <field  name            = "lstGruposFnc"
+                type            = "hidden"
+        />
+        
+        <!-- Identificador del funcionario -->
+        <field  name            = "lstOpsAddsUG"
+                type            = "hidden"
+        />
+        
+        <!-- Cedula del funcionario -->
+        <field  name            = "strCI_fnc"
+                type            = "text"
+                label           = "COM_FUNCIONARIOS_FIELD_FNC_CI_LABEL"
+                description     = "COM_FUNCIONARIOS_FIELD_FNC_CI_DESC"
+                size            = "10"
+                required        = "true"
+        />
+        
+        <!-- Descripción/Apellidos del Funcionario -->
+        <field  name            = "strApellido_fnc"
+                type            = "text"
+                label           = "COM_FUNCIONARIOS_FIELD_FNC_APELLIDOS_LABEL"
+                description     = "COM_FUNCIONARIOS_FIELD_FNC_APELLIDOS_DESC"
+                size            = "30"
+                required        = "true"
+        />
+        
+        <!-- Descripción/Nobres del Funcionario -->
+        <field  name            = "strNombre_fnc"
+                type            = "text"
+                label           = "COM_FUNCIONARIOS_FIELD_FNC_NOMBRES_LABEL"
+                description     = "COM_FUNCIONARIOS_FIELD_FNC_NOMBRES_DESC"
+                size            = "30"
+                required        = "true"
+        />
+        
+        <!-- DescripciónCorreo electronico del Funcionario-->
+        <field  name            = "strCorreoElectronico_fnc"
+                type            = "text"
+                label           = "COM_FUNCIONARIOS_FIELD_FNC_EMAIL_LABEL"
+                description     = "COM_FUNCIONARIOS_FIELD_FNC_EMAIL_DESC"
+                size            = "30"
+                required        = "true"
+        />
+        
+        <!-- Descripción/Teléfono del Funcionario -->
+        <field  name            = "strTelefono_fnc"
+                type            = "text"
+                label           = "COM_FUNCIONARIOS_FIELD_FNC_TELEFONO_LABEL"
+                description     = "COM_FUNCIONARIOS_FIELD_FNC_TELEFONO_DESC"
+                size            = "15"
+        />
+        
+        <!-- Descripción/Celular del Funcionario -->
+        <field  name            = "strCelular_fnc"
+                type            = "text"
+                label           = "COM_FUNCIONARIOS_FIELD_FNC_CELULAR_LABEL"
+                description     = "COM_FUNCIONARIOS_FIELD_FNC_CELULAR_DESC"
+                size            = "15"
+        />
+        
+    </fieldset>
+    
+    <!-- formulario de funcionario con l aunidad de gestion -->
+    <fieldset name="password">
+        
+        <!-- Descripción/Celular del Funcionario -->
+        <field  name            = "password"
+                type            = "password"
+                label           = "COM_FUNCIONARIOS_FIELD_FNC_PASSWORD_LABEL"
+                description     = "COM_FUNCIONARIOS_FIELD_FNC_PASSWORD_DESC"
+                size            = "20"
+                required        = "true"
+        />
+        
+        <!-- Descripción/Celular del Funcionario -->
+        <field  name            = "passwordConfirm"
+                type            = "password"
+                label           = "COM_FUNCIONARIOS_FIELD_FNC_PASSWORD_CONFIRM_LABEL"
+                description     = "COM_FUNCIONARIOS_FIELD_FNC_PASSWORD_CONFIRM_DESC"
+                size            = "20"
+                required        = "true"
+        />
+        
+    </fieldset>
+    
+    <!-- formulario de funcionario con l aunidad de gestion -->
+    <fieldset name="unidadgestion">
+        
+        <!-- Identificador del funcionario -->
+        <field  name            = "intId_ugf"
+                type            = "hidden"
+                default         = "0"
+                label           = "JGLOBAL_FIELD_ID_FNC_UG_LABEL"
+                description     = "JGLOBAL_FIELD_ID_FNC_UG_DESC"
+                size            = "10"
+        />
+        
+        <!-- Identificador del cargo por unidad de gestion -->
+        <field  name            = "idCargoUG"
+                type            = "hidden"
+                default         = "0"
+                label           = "JGLOBAL_FIELD_ID_CARGO_UG_LABEL"
+                description     = "JGLOBAL_FIELD_ID_CARGO_UG_DESC"
+        />
+        
+        <!-- Identificador de la unidad de gestion -->
+        <field  name            = "intCodigo_ug"
+                type            = "unidadesgestion"
+                extension       = "com_funcionarios"
+                label           = "COM_FUNCIONARIOS_FIELD_UNIDAD_GESTION_LABEL"
+                description     = "COM_FUNCIONARIOS_FIELD_UNIDAD_GESTION_DESC"
+                default         = "0"
+                class           = "inputbox"
+                required        = "true">
+            <option value="0">COM_FUNCIONARIOS_FIELD_UNIDAD_GESTION_TITLE</option>
+        </field>
+        
+        <!-- Identificador del cargo del funcionario -->
+        <field  name            = "intId_ugc"
+                type            = "list"
+                class           = "inputbox"
+                label           = "COM_FUNCIONARIOS_FIELD_CARGO_FUNCIONARIO_LABEL"
+                description     = "COM_FUNCIONARIOS_FIELD_CARGO_FUNCIONARIO_DESC"
+                required        = "true">
+            <option value="0">COM_FUNCIONARIOS_FIELD_CARGO_FUNCIONARIO_TITLE</option>
+        </field>
+        
+        <!-- Fecha de inicio del cargo del funcionario -->
+        <field  name            = "dteFechaInicio_ugf"
+                type            = "calendar"
+                label           = "COM_FUNCIONARIOS_FIELD_FECHA_INICIO_LABEL"
+                description     = "COM_FUNCIONARIOS_FIELD_FECHA_INICIO_DESC"
+                class           = "inputbox"
+                size            = "20"
+                required        = "true"
+        />
+        
+        <!-- Fecha de fin del cargo del funcionario -->
+        <field  name            = "dteFechaFin_ugf"
+                type            = "calendar"
+                label           = "COM_FUNCIONARIOS_FIELD_FECHA_FIN_LABEL"
+                description     = "COM_FUNCIONARIOS_FIELD_FECHA_FIN_DESC"
+                class           = "inputbox"
+                size            = "20"
+                required        = "true"
+        />
+    </fieldset>
+    
+    
+</form>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <!-- PLAN NACIONAL DEL BUEN VIVIR -->
+    <fieldset name="operativa">
+         <field  name            = "idAlineacion"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "0"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        <!-- Lista de Objetivos PNBV -->
+        <field  name        = "Alineacion"
+                type        = "operativos"
+                extension   = "com_alineacion"
+                class       = "inputbox"
+                default     = "3"
+                label       = "COM_ALINEACION_FIELD_ALINEACION_ALINEACION_LABEL"
+                description = "COM_ALINEACION_FIELD_ALINEACION_ALINEACION_DESC">
+            <option value="0">COM_ALINEACION_FIELD_ATRIBUTO_AGENDA_TITLE</option>
+        </field>
+        
+        <field  name        = "Objetivo"
+                type        = "operativos"
+                extension   = "com_alineacion"
+                class       = "inputbox"
+                default     = "3"
+                required    = "true"
+                label       = "COM_ALINEACION_FIELD_ALINEACION_OBJETIVO_LABEL"
+                description = "COM_ALINEACION_FIELD_ALINEACION_OBJETIVO_LABEL">
+            <option value="0">COM_ALINEACION_SELECT_OBJETIVO_TITLE</option>
+        </field>
+        
+    </fieldset>    
+</form>

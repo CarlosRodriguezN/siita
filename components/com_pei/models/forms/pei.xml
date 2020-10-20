@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <!-- Informacion General de un Plan Estratégico Institucional -->
+    <fieldset name="datosgeneralespei">
+        <!-- Identificador del pei -->
+        <field  name            = "intId_pi"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_PEI_LABEL"
+                description     = "JGLOBAL_FIELD_ID_PEI_DESC"
+                size            = "10"
+        />
+        
+        <!-- Identificador del pei -->
+        <field  name            = "organigrama"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_PEI_LABEL"
+                description     = "JGLOBAL_FIELD_ID_PEI_DESC"
+                size            = "10"
+        />
+        
+        <!-- Bandera que muestra el cambio de fecha General del PEI -->
+        <field  name            = "banFecha"
+                type            = "hidden"
+                size            = "10"
+                default         = "0" 
+        />
+        
+        <!-- Vigente -->
+        <field  name            = "blnVigente_pi"
+                type            = "hidden"
+                size            = "10"
+                default         = "0"
+        />
+        
+        <!-- Identificador del tipo de plan, por defecto 1 que es el id de tipo PEI-->
+        <field  name            = "intId_tpoPlan"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_TPO_PLAN_LABEL"
+                description     = "JGLOBAL_FIELD_ID_TPO_PLAN_DESC"
+                size            = "10"
+                default         = "1" 
+        />
+        
+        <!-- Identificador de la institución  por defecto 1 que es el id de ECORAE-->
+        <field  name            = "intCodigo_ins"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_INSTITUCION_LABEL"
+                description     = "JGLOBAL_FIELD_ID_INSTITUCION_DESC"
+                size            = "10"
+                default         = "1"
+        />
+        
+        <!-- Identificador de la institución  por defecto 1 que es el id de ECORAE-->
+        <!-- 282 id de entida ecorae -->
+        <field  name            = "intIdentidad_ent"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_ENTIDAD_LABEL"
+                description     = "JGLOBAL_FIELD_ID_ENTIDAD_DESC"
+                size            = "10" 
+        />
+        
+        <!-- Descripción/Nobre del PEI -->
+        <field  name            = "strDescripcion_pi"
+                type            = "text"
+                label           = "COM_PEI_FIELD_PLAN_DESCRIPCION_LABEL"
+                description     = "COM_PEI_FIELD_PLAN_DESCRIPCION_DESC"
+                class           = "inputbox"
+                size            = "50"
+                required        = "true"
+        />
+        
+        <!-- Fecha de Inicio -->
+        <field  name            = "dteFechainicio_pi"
+                type            = "calendar"
+                label           = "COM_PEI_FIELD_PLAN_FECHA_INICIO_LABEL"
+                description     = "COM_PEI_FIELD_PLAN_FECHA_INICIO_DESC"
+                format          = "%Y-%m-%d"
+                required        = "true"
+        />
+        
+        <!-- Fecha de Fin -->
+        <field  name            = "dteFechafin_pi"
+                type            = "calendar"
+                label           = "COM_PEI_FIELD_PLAN_FECHA_FIN_LABEL"
+                description     = "COM_PEI_FIELD_PLAN_FECHA_FIN_DESC"
+                format          = "%Y-%m-%d"
+                required        = "true"
+        />
+        
+        <!-- Alias del PEI -->
+        <field  name            = "strAlias_pi"
+                type            = "text"
+                label           = "COM_PEI_FIELD_PLAN_ALIAS_LABEL"
+                description     = "COM_PEI_FIELD_PLAN_ALIAS_DESC"
+                class           = "inputbox"
+                size            = "50"
+        />
+        
+    </fieldset>
+    
+    <!-- Formulario de data general de un objetivo del PEI -->
+    <fieldset name="objetivo">
+        <!-- Identificador del objetivo del pei -->
+        <field  name            = "intId_ob"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_OBJ_LABEL"
+                description     = "JGLOBAL_FIELD_ID_OBJ_DESC"
+                size            = "10"
+        />
+        
+        <!-- Identificador del tipo de objetivo -->
+        <field  name            = "intId_tpoObj"
+                type            = "hidden"
+                extension       = "com_pei"
+                class           = "inputbox"
+                label           = "COM_PEI_FIELD_OBJETIVO_TPO_OBJETIVO_LABEL"
+                description     = "COM_PEI_FIELD_OBJETIVO_TPO_OBJETIVO_DESC"
+                default         = "1">
+        </field>
+        
+        <!-- prioridad del objetivo -->
+        <field  name            = "intPrioridad_ob"
+                type            = "prioridadesobj"
+                extension       = "com_pei"
+                class           = "inputbox"
+                label           = "COM_PEI_FIELD_OBJETIVO_PRIORIDAD_LABEL"
+                description     = "COM_PEI_FIELD_OBJETIVO_PRIORIDAD_DESC"
+                required        = "true">
+            <option value="0">COM_PEI_FIELD_OBJETIVO_PRIORIDAD_TITLE</option>
+        </field>
+        
+        <!-- Descripción/NoMbre del PEI -->
+        <field  name            = "strDescripcion_ob"
+                type            = "textarea"
+                label           = "COM_PEI_FIELD_OBJETIVO_DESCRIPCION_LABEL"
+                description     = "COM_PEI_FIELD_OBJETIVO_DESCRIPCION_DESC"
+                class           = "inputbox"
+                cols            = "7"
+                rows            = "8"
+                required        = "true"
+        />
+        
+    </fieldset>
+
+
+    <!-- Formulario de gestion de contextos -->
+    <fieldset name="dtaContextos">
+
+        <!-- Nombre de un contexto -->        
+        <field  name        = "strNombreContexto" 
+                type        = "text"
+                label       = "COM_PEI_FIELD_CONTEXTO_NOMBRE_LABEL"
+                description = "COM_PEI_FIELD_CONTEXTO_NOMBRE_DESC" 
+                class       = "inputbox"
+                required    = "true"
+                size        = "50" />
+        
+        <!-- Descripción de un Contexto -->
+        <field  name            = "strDescripcionContexto"
+                type            = "textarea"
+                label           = "COM_PEI_FIELD_CONTEXTO_DESCRIPCION_LABEL"
+                description     = "COM_PEI_FIELD_CONTEXTO_DESCRIPCION_DESC"
+                class           = "inputbox"
+                cols            = "5"
+                rows            = "3"
+        />
+
+    </fieldset>
+
+
+</form>

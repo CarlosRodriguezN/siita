@@ -1,0 +1,570 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <fieldset name="programa">
+        <!-- Codigo de Programa -->
+        <field  name            = "intCodigo_prg"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "0"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- Codigo de Programa -->
+        <field  name            = "intIdEntidad_ent"
+                type            = "hidden"
+                readonly        = "true"
+                class           = "readonly"
+        />
+         
+        <!-- Nombre del Programa -->
+        <field  name        = "strNombre_prg" 
+                type        = "text" 
+                default     = "" 
+                label       = "COM_PROGRAMA_FIELD_PROGRAMA_NOMBRE_LABEL" 
+                description = "COM_PROGRAMA_FIELD_PROGRAMA_NOMBRE_DESC" 
+                size        = "40" />
+        
+        <!-- Nombre del Programa -->
+        <field  name        = "strAlias_prg" 
+                type        = "text" 
+                default     = "" 
+                label       = "COM_PROGRAMA_FIELD_PROGRAMA_ALIAS_LABEL" 
+                description = "COM_PROGRAMA_FIELD_PROGRAMA_ALIAS_DESC" 
+                size        = "40" />
+        
+        <!-- Descripcion del programa -->
+        <field  name        = "strDescripcion_prg" 
+                type        = "textarea" 
+                default     = ""
+                label       = "COM_PROGRAMA_FIELD_PROGRAMA_DESCRIPCION_LABEL" 
+                description = "COM_PROGRAMA_FIELD_PROGRAMA_DESCRIPCION_DESC" 
+                rows        = "5" 
+                cols        = "40" />
+        
+        <!-- campo Url-->
+        <field  name        = "strURLtableU" 
+                type        = "text" 
+                default     = ""
+                label       = "COM_PROGRAMA_FIELD_PROGRAMA_URL_LABEL" 
+                description = "COM_PROGRAMA_FIELD_PROGRAMA_URL_DESC" 
+                size        = "40" />
+        
+        <!-- Publicados -->
+        <field  name        = "published"
+                type        = "list"
+                label       = "JSTATUS"
+                description = "JFIELD_PUBLISH_DESC"
+                class       = "inputbox"
+                filter      = "intval"
+                size        = "1"
+                default     = "1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+    
+    <!--SUB PROGRAMA-->
+    <fieldset name="subPrograma">
+        <!-- ID de Programa -->
+        <field  name            = "intId_SubPrograma"
+                type            = "hidden"
+                size            = "10"
+                default         = "0"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        <!-- CODIGO del Programa -->
+        <field  name        = "strCodigoSubPrograma" 
+                type        = "text" 
+                default     = "" 
+                required    = "true"
+                label       = "COM_PROGRAMA_FIELD_SUB_PROGRAMA_CODIGO_LABEL" 
+                description = "COM_PROGRAMA_FIELD_SUB_PROGRAMA_CODIGO_DESC" 
+                size        = "25" />
+        
+        <!-- DESCRIPCION del programa -->
+        <field  name        = "strDescripcion" 
+                type        = "textarea" 
+                default     = ""
+                label       = "COM_PROGRAMA_FIELD_SUB_PROGRAMA_DESCRIPCION_LABEL" 
+                description = "COM_PROGRAMA_FIELD_SUB_PROGRAMA_DESCRIPCION_DESC" 
+                required    = "true"
+                rows        = "5" 
+                cols        = "10" />
+        
+        <!-- CODIGO del Programa -->
+        <field  name        = "strAlias" 
+                type        = "text" 
+                required    = "true"
+                label       = "COM_PROGRAMA_FIELD_SUB_PROGRAMA_ALIAS_LABEL" 
+                description = "COM_PROGRAMA_FIELD_SUB_PROGRAMA_ALIAS_DESC" 
+                size        = "25" />
+        
+        
+        <field  name            = "dataPrograma"
+                type            = "hidden"
+                default         = "0"
+                readonly        = "true"
+        />
+    </fieldset>
+    
+    <!--Tipo Sub programa-->
+    <fieldset name="tipoSubPrograma">
+        <!-- ID de tipo sub Programa -->
+        <field  name            = "intIdTipoSubPrograma"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "0"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- CODIGO del tipo del sub Programa -->
+        <field  name        = "strCodigoTipoSubPrograma" 
+                type        = "text" 
+                default     = "" 
+                label       = "COM_PROGRAMA_FIELD_TIPO_SUB_PROGRAMA_CODIGOTIPOSUBPROGRAMA_LABEL" 
+                description = "COM_PROGRAMA_FIELD_TIPO_SUB_PROGRAMA_CODIGOTIPOSUBPROGRAMA_DESC" 
+                size        = "25" 
+                required        = "true"
+        />
+        
+        <!-- DESCRIPCION del programa -->
+        <field  name        = "strDescripcionTipoPrograma" 
+                type        = "textarea" 
+                default     = ""
+                label       = "COM_PROGRAMA_FIELD_TIPO_SUB_PROGRAMA_DESCRIPCION_LABEL" 
+                description = "COM_PROGRAMA_FIELD_TIPO_SUB_PROGRAMA_DESCRIPCION_DESC" 
+                required    = "true"
+                rows        = "5" 
+                cols        = "10" 
+        />
+    </fieldset>
+
+
+    <!-- - -->
+    <!-- INDICADORES -->
+    <!-- - -->
+    
+    <!-- Indicadores Economicos -->
+    <fieldset name="indEconomicos">
+        <!-- Financiero -->
+        <!-- Tasa de Descuento -->
+        <field  name        = "intTasaDctoFin"
+                type        = "text" 
+                label       = "COM_PROGRAMA_FIELD_PROYECTO_TASADESCUENTO_LABEL" 
+                description = "COM_PROGRAMA_FIELD_PROYECTO_TASADESCUENTO_DESC" 
+                size        = "10" />
+        
+        <!-- Valor Actual Neto -->
+        <field  name        = "intValActualNetoFin" 
+                type        = "text" 
+                label       = "COM_PROGRAMA_FIELD_PROYECTO_VALORACTUALNETO_LABEL" 
+                description = "COM_PROGRAMA_FIELD_PROYECTO_VALORACTUALNETO_DESC" 
+                size        = "10" />
+        
+        <!-- Tasa Interna de Retorno - TIR -->
+        <field  name        = "intTIRFin" 
+                type        = "text" 
+                label       = "COM_PROGRAMA_FIELD_PROYECTO_TASAINTERNARETORNO_LABEL" 
+                description = "COM_PROGRAMA_FIELD_PROYECTO_TASAINTERNARETORNO_DESC" 
+                size        = "10" />
+        
+        <!-- Economico -->
+        <!-- Tasa de Descuento -->
+        <field  name        = "intTasaDctoEco"
+                type        = "text" 
+                label       = "COM_PROGRAMA_FIELD_PROYECTO_TASADESCUENTO_LABEL" 
+                description = "COM_PROGRAMA_FIELD_PROYECTO_TASADESCUENTO_DESC" 
+                size        = "10" />
+        
+        <!-- Valor Actual Neto -->
+        <field  name        = "intValActualNetoEco" 
+                type        = "text" 
+                label       = "COM_PROGRAMA_FIELD_PROYECTO_VALORACTUALNETO_LABEL" 
+                description = "COM_PROGRAMA_FIELD_PROYECTO_VALORACTUALNETO_DESC" 
+                size        = "10" />
+        
+        <!-- Tasa Interna de Retorno - TIR -->
+        <field  name        = "intTIREco" 
+                type        = "text" 
+                label       = "COM_PROGRAMA_FIELD_PROYECTO_TASAINTERNARETORNO_LABEL" 
+                description = "COM_PROGRAMA_FIELD_PROYECTO_TASAINTERNARETORNO_DESC" 
+                size        = "10" />
+    </fieldset>
+    
+    <!-- BENEFICIARIOS -->
+    <fieldset name="beneficiarios">
+        <!-- Beneficiarios Directos Hombres -->
+        <field  name        = "intBenfDirectoHombre"
+                type        = "text" 
+                label       = "COM_PROGRAMA_FIELD_PROYECTO_BENFDIRHOMBRES_LABEL" 
+                description = "COM_PROGRAMA_FIELD_PROYECTO_BENFDIRHOMBRES_DESC" 
+                size        = "10" />
+        
+        <!-- Beneficiarios Directos Mujeres -->
+        <field  name        = "intBenfDirectoMujer" 
+                type        = "text" 
+                label       = "COM_PROGRAMA_FIELD_PROYECTO_BENFDIRMUJERES_LABEL" 
+                description = "COM_PROGRAMA_FIELD_PROYECTO_BENFDIRMUJERES_DESC" 
+                size        = "10" />
+        
+        <!-- Total Beneficiarios Directos -->
+        <field  name        = "intTotalBenfDirectos" 
+                type        = "text" 
+                label       = "COM_PROGRAMA_FIELD_PROYECTO_TOTALBENFDIRECTOS_LABEL" 
+                description = "COM_PROGRAMA_FIELD_PROYECTO_TOTALBENFDIRECTOS_DESC" 
+                size        = "10" />
+        
+        <!-- Beneficiarios Indirectos Hombres -->
+        <field  name        = "intBenfIndDirectoHombre"
+                type        = "text" 
+                label       = "COM_PROGRAMA_FIELD_PROYECTO_BENFINDHOMBRES_LABEL" 
+                description = "COM_PROGRAMA_FIELD_PROYECTO_BENFINDHOMBRES_DESC" 
+                size        = "10" />
+        
+        <!-- Beneficiarios Indirectos Mujeres -->
+        <field  name        = "intBenfIndDirectoMujer" 
+                type        = "text" 
+                label       = "COM_PROGRAMA_FIELD_PROYECTO_BENFINDMUJERES_LABEL" 
+                description = "COM_PROGRAMA_FIELD_PROYECTO_BENFINDMUJERES_DESC" 
+                size        = "10" />
+        
+        <!-- Total Beneficiarios Indirectos -->
+        <field  name        = "intTotalBenfIndDirectos" 
+                type        = "text" 
+                label       = "COM_PROGRAMA_FIELD_PROYECTO_TOTALBENFINDIRECTOS_LABEL" 
+                description = "COM_PROGRAMA_FIELD_PROYECTO_TOTALBENFINDIRECTOS_DESC" 
+                size        = "10" />
+    </fieldset>
+    
+    <!-- GRUPO DE ATENCION PRIORITARIO -->
+    <fieldset name="gpoAtencionPrioritario">
+        <!-- Identificador Registro de Indicador GAP -->
+        <field  name    = "idGAP"
+                type    = "hidden"
+                readonly= "true"
+                value   = '0'
+        />
+        
+        <!-- Grupo de Atencion Prioritario -->
+        <field   name        = "cbGpoAtencionPrioritario"
+                 type        = "atencionpriotarios"
+                 extension   = "com_programa"
+                 class       = "inputbox"
+                 default     = ""
+                 label       = "COM_PROGRAMA_FIELD_PROYECTO_GPOATENCIONPRIO_LABEL"
+                 description = "COM_PROGRAMA_FIELD_PROYECTO_GPOATENCIONPRIO_DESC"
+                 required    = "true">
+            <option value="0">COM_PROGRAMA_FIELD_PROYECTO_GPOATENCIONPRIO_TITLE</option>
+        </field>
+        
+        <!-- Beneficiarios Hombres -->
+        <field  name        = "intGAPMasculino"
+                type        = "text" 
+                default     = "" 
+                label       = "COM_PROGRAMA_FIELD_PROYECTO_GAPMASCULINO_LABEL" 
+                description = "COM_PROGRAMA_FIELD_PROYECTO_GAPMASCULINO_DESC" 
+                size        = "10" />
+        
+        <!-- Beneficiarios Mujeres -->
+        <field  name        = "intGAPFemenino" 
+                type        = "text" 
+                default     = "" 
+                label       = "COM_PROGRAMA_FIELD_PROYECTO_GAPFEMENINO_LABEL"
+                description = "COM_PROGRAMA_FIELD_PROYECTO_GAPFEMENINO_DESC" 
+                size        = "10" />
+        
+        <!-- Total de Beneficiarios -->
+        <field  name        = "intGAPTotal" 
+                type        = "text" 
+                default     = "" 
+                label       = "COM_PROGRAMA_FIELD_PROYECTO_GAPTOTAL_LABEL"
+                description = "COM_PROGRAMA_FIELD_PROYECTO_GAPTOTAL_DESC" 
+                size        = "10" />
+        
+        <!-- Datos Relacion de un Proyecto -->
+        <field  name    = "dataGAP"
+                type    = "hidden"
+                readonly= "true"
+                value   = '0'
+        />
+    </fieldset>
+    
+    <!-- ENFOQUE IGUALDAD -->
+    <fieldset name="enfoqueIgualdad">
+        <!-- Identificador Registro de Indicador de Enfoque de Igualdad -->
+        <field  name    = "idEnfIgualdad"
+                type    = "hidden"
+                readonly= "true"
+                value   = "0"
+        />
+
+        <!-- Tipos de Enfoque de Igualdad -->
+        <field   name        = "cbEnfoqueIgualdad"
+                 type        = "TiposEnfoqueIgualdad"
+                 extension   = "com_programa"
+                 class       = "inputbox"
+                 default     = ""
+                 label       = "COM_PROGRAMA_FIELD_PROYECTO_TIPOSENFOQUEIGUALDAD_LABEL"
+                 description = "COM_PROGRAMA_FIELD_PROYECTO_TIPOSENFOQUEIGUALDAD_DESC"
+                 required    = "true">
+            <option value="0">COM_PROGRAMA_FIELD_PROYECTO_TIPOSENFOQUEIGUALDAD_TITLE</option>
+        </field>
+        
+        <!-- Enfoque de Igualdad -->
+        <field  name        = "idEnfoqueIgualdad"
+                type        = "list"
+                class       = "inputbox"
+                label       = "COM_PROGRAMA_FIELD_INDICADOR_ENFOQUEIGUALDAD_LABEL"
+                description = "COM_PROGRAMA_FIELD_INDICADOR_ENFOQUEIGUALDAD_DESC"
+                required    = "true">
+            <option value="0">COM_PROGRAMA_FIELD_INDICADOR_ENFOQUEIGUALDADCB_TITLE</option>
+        </field>
+        
+        <!-- Beneficiarios Hombres -->
+        <field  name        = "intEIMasculino"
+                type        = "text" 
+                default     = "" 
+                label       = "COM_PROGRAMA_FIELD_PROYECTO_EIMASCULINO_LABEL" 
+                description = "COM_PROGRAMA_FIELD_PROYECTO_EIMASCULINO_DESC" 
+                size        = "10" />
+        
+        <!-- Beneficiarios Mujeres -->
+        <field  name        = "intEIFemenino" 
+                type        = "text" 
+                default     = "" 
+                label       = "COM_PROGRAMA_FIELD_PROYECTO_EIFEMENINO_LABEL"
+                description = "COM_PROGRAMA_FIELD_PROYECTO_EIFEMENINO_DESC" 
+                size        = "10" />
+        
+        <!-- Total de Beneficiarios -->
+        <field  name        = "intEITotal" 
+                type        = "text" 
+                default     = "" 
+                label       = "COM_PROGRAMA_FIELD_PROYECTO_EITOTAL_LABEL"
+                description = "COM_PROGRAMA_FIELD_PROYECTO_EITOTAL_DESC" 
+                size        = "10" />
+        
+        <!-- Datos Relacion de un Proyecto -->
+        <field  name    = "dataEnfIgu"
+                type    = "hidden"
+                readonly= "true"
+                value   = '0'
+        />
+    </fieldset>
+    
+    <!-- ENFOQUE ECORAE -->
+    <fieldset name="enfoqueEcorae">
+        <!-- Identificador Registro de Indicador de Enfoque de Igualdad -->
+        <field  name    = "idEnfEcorae"
+                type    = "hidden"
+                readonly= "true"
+                value   = "0"
+        />
+        
+        <!-- Lista de Enfoque de Igualdad -->
+        <field   name        = "cbEnfoqueEcorae"
+                 type        = "enfoqueecorae"
+                 extension   = "com_programa"
+                 class       = "inputbox"
+                 default     = ""
+                 label       = "COM_PROGRAMA_FIELD_PROYECTO_ENFOQUEECORAE_LABEL"
+                 description = "COM_PROGRAMA_FIELD_PROYECTO_ENFOQUEECORAE_DESC"
+                 required    = "true">
+            <option value="0">COM_PROGRAMA_FIELD_PROYECTO_ENFOQUEECORAE_TITLE</option>
+        </field>
+        
+        <!-- Beneficiarios Hombres -->
+        <field  name        = "intEnfEcoMasculino"
+                type        = "text" 
+                default     = "" 
+                label       = "COM_PROGRAMA_FIELD_PROYECTO_EEMASCULINO_LABEL" 
+                description = "COM_PROGRAMA_FIELD_PROYECTO_EEMASCULINO_DESC" 
+                size        = "10" />
+        
+        <!-- Beneficiarios Mujeres -->
+        <field  name        = "intEnfEcoFemenino" 
+                type        = "text" 
+                default     = "" 
+                label       = "COM_PROGRAMA_FIELD_PROYECTO_EEFEMENINO_LABEL"
+                description = "COM_PROGRAMA_FIELD_PROYECTO_EEFEMENINO_DESC" 
+                size        = "10" />
+        
+        <!-- Total de Beneficiarios -->
+        <field  name        = "intEnfEcoTotal" 
+                type        = "text" 
+                default     = "" 
+                label       = "COM_PROGRAMA_FIELD_PROYECTO_EETOTAL_LABEL"
+                description = "COM_PROGRAMA_FIELD_PROYECTO_EETOTAL_DESC" 
+                size        = "10" />
+        
+        <!-- Datos Relacion de un Proyecto -->
+        <field  name    = "dataIndicadores"
+                type    = "hidden"
+                readonly= "true"
+                value   = '0'
+        />
+    </fieldset>
+
+    <!-- OTROS INDICADORES -->
+    <fieldset name="otrosIndicadores">
+        <!-- Nombre del indicador -->
+        <field  name        = "strNombreIndicador" 
+                type        = "text" 
+                label       = "COM_PROGRAMA_FIELD_INDICADOR_NOMBREOTROIND_LABEL" 
+                description = "COM_PROGRAMA_FIELD_INDICADOR_NOMBREOTROIND_DESC" 
+                size        = "50"
+                required    = "true" />
+
+        <!-- Descripcion del indicador -->
+        <field  name        = "strDescripcionIndicador" 
+                type        = "textarea" 
+                label       = "COM_PROGRAMA_FIELD_INDICADOR_DESCOTROIND_LABEL"
+                description = "COM_PROGRAMA_FIELD_INDICADOR_DESCOTROIND_DESC"
+                rows        = "3"
+                cols        = "5" />
+       
+        <!-- Unidad de Analisis -->
+        <field  name        = "idUndAnalisisNewInd"
+                type        = "unidadesanalisis"
+                extension   = "com_programa"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PROGRAMA_FIELD_INDICADOR_UNDANALOTROIND_TITLE"
+                description = "COM_PROGRAMA_FIELD_INDICADOR_UNDANALOTROIND_DESC"
+                required    = "true">
+        </field>
+        
+        <!-- Valor de la Meta -->
+        <field  name        = "valorMetaNewInd"
+                type        = "text"
+                label       = "COM_PROGRAMA_FIELD_PROYECTO_VALORMETA_LABEL"
+                description = "COM_PROGRAMA_FIELD_PROYECTO_VALORMETA_DESC"
+                class       = "inputbox"
+                size        = "10"
+                maxlenght   = "3"
+                required    = "true"
+        />
+
+        <!-- Tipo de Unidad de Medida del valor de la Meta -->
+        <field  name        = "idTpoUndMedida"
+                type        = "tipounidadmedida"
+                extension   = "com_programa"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PROGRAMA_FIELD_PROYECTO_TUMMETA_LABEL"
+                description = "COM_PROGRAMA_FIELD_PROYECTO_TUMMETA_DESC"
+                required    = "true">
+            <option value="0">COM_PROGRAMA_FIELD_PROYECTO_TUMMETA_TITLE</option>
+        </field>
+
+        <!-- Unidad de Medida del valor de la Meta -->
+        <field  name        = "idUndMedidaMetaNewInd"
+                type        = "list"
+                class       = "inputbox"
+                label       = "COM_PROGRAMA_FIELD_PROYECTO_UMMETA_LABEL"
+                description = "COM_PROGRAMA_FIELD_PROYECTO_UMMETA_DESC"
+                required    = "true">
+            <option value="0">COM_PROGRAMA_FIELD_PROYECTO_UMMETA_TITLE</option>
+        </field>
+        
+        <!-- Formula -->
+        <field  name        = "formulaMetaNewInd" 
+                type        = "textarea" 
+                label       = "COM_PROGRAMA_FIELD_INDICADOR_FORMULAOTROIND_LABLE" 
+                description = "COM_PROGRAMA_FIELD_INDICADOR_FORMULAOTROIND_DESC" 
+                rows        = "3" 
+                cols        = "5" />
+    </fieldset>
+ 
+    <!-- UNIDAD DE GESTION -->
+    <fieldset name="UnidadGestion">
+        <!-- Lista de Unidades de Gestion -->
+        <field  name        = "intIdUndGestion"
+                type        = "unidadesgestion"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_CONTRATOS_FIELD_ATRIBUTO_UGESTION_LABLE"
+                description = "COM_CONTRATOS_FIELD_ATRIBUTO_UGESTION_DESC"
+                required    = "true">
+            <option value="0">COM_CONTRATOS_FIELD_ATRIBUTO_UGESTION_TITLE</option>
+        </field>
+        
+        <field  name        = "fchInicioPeriodoUG" 
+                type        = "calendar" 
+                label       = "COM_CONTRATOS_FIELD_ATRIBUTO_FIPUG_LABLE"
+                description = "COM_CONTRATOS_FIELD_ATRIBUTO_FIPUG_DESC"
+                format      ="%Y-%m-%d" />
+    </fieldset>
+    
+    <!-- RESPONSABLE -->
+    <fieldset name="Responsable">
+        <!-- Lista de Unidades de Gestion -->
+        <field  name        = "intIdUGResponsable"
+                type        = "unidadesgestion"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_CONTRATOS_FIELD_ATRIBUTO_UGRESPONSABLE_LABLE"
+                description = "COM_CONTRATOS_FIELD_ATRIBUTO_UGRESPONSABLE_DESC"
+                required    = "true">
+            <option value="0">COM_CONTRATOS_FIELD_ATRIBUTO_UGRESPONSABLE_TITLE</option>
+        </field>
+        
+        <field  name        = "idResponsable" 
+                type        = "funcionarios"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_CONTRATOS_FIELD_ATRIBUTO_RESPONSABLE_LABLE" 
+                description = "COM_CONTRATOS_FIELD_ATRIBUTO_RESPONSABLE_DESC"
+                required    = "true">
+            <option value="0">COM_CONTRATOS_FIELD_ATRIBUTO_RESPONSABLE_TITLE</option>
+        </field>
+        
+        <field  name        = "fchInicioPeriodoFuncionario" 
+                type        = "calendar" 
+                label       = "COM_CONTRATOS_FIELD_ATRIBUTO_FIPFR_LABLE"
+                description = "COM_CONTRATOS_FIELD_ATRIBUTO_FIPFR_DESC"
+                format      ="%Y-%m-%d" />
+    </fieldset>
+       <!-- Formulario de data general de un objetivo del PROYECTO -->
+    <fieldset name="objetivo">
+        <!-- Identificador del objetivo del pei -->
+        <field  name            = "intId_ob"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_OBJ_LABEL"
+                description     = "JGLOBAL_FIELD_ID_OBJ_DESC"
+                size            = "10"
+        />
+        
+        <!-- Descripción/NoMbre del PROYECTO -->
+        <field  name            = "strDescripcion_ob"
+                type            = "textarea"
+                label           = "COM_CONTRATO_FIELD_OBJETIVO_DESCRIPCION_LABEL"
+                description     = "COM_CONTRATO_FIELD_OBJETIVO_DESCRIPCION_DESC"
+                class           = "inputbox"
+                cols            = "5"
+                rows            = "3"
+                required        = "true"
+        />
+        
+        <field  name        = "objGeneral" 
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "0"
+                readonly        = "true"
+                class           = "readonly" />
+    </fieldset>
+</form>

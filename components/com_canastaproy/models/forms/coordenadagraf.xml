@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="coordenadagraf">
+        <!-- codigo de coordenada de grafico cp -->
+        <field  name            = "intId_cgcp"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- codigo del grafico cp -->
+        <field  name            = "intId_gcp"
+                type            = "text"
+                default         = "Proyecto"
+                label           = "COM_CANASTAPROY_FIELD_COORDENADA_GRAF_CODGCP_LABEL"
+                description     = "COM_CANASTAPROY_FIELD_COORDENADA_GRAF_CODGCP_DESC"
+                class           = "inputbox"
+                size            = "50"
+                required        = "true"
+        />
+        
+        <!-- latitud de la coordenada del grafico cp -->
+        <field  name            = "fltLatitud_cord"
+                type            = "text"
+                default         = "Proyecto"
+                label           = "COM_CANASTAPROY_FIELD_COORDENADA_GRAF_LATGCP_LABEL"
+                description     = "COM_CANASTAPROY_FIELD_COORDENADA_GRAF_LATGCP_DESC"
+                class           = "inputbox"
+                size            = "50"
+                disabled        = "true"
+        />
+        
+        <!-- longtitud de la coordenada del grafico cp -->
+        <field  name            = "fltLongitud_cord"
+                type            = "text"
+                default         = "Proyecto"
+                label           = "COM_CANASTAPROY_FIELD_COORDENADA_GRAF_LONGCP_LABEL"
+                description     = "COM_CANASTAPROY_FIELD_COORDENADA_GRAF_LONGCP_DESC"
+                class           = "inputbox"
+                size            = "50"
+                disabled        = "true"
+        />
+       
+    </fieldset>
+</form>

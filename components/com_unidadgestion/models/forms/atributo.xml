@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <!-- GESTION DE ATRIBUTOS GENERALES DE UN INDICADOR -->
+    <fieldset name="InformacionGeneral">
+        
+        <!-- Lista de Tipos de Indicador -->
+        <field  name        = "idTpoIndicador"
+                type        = "tipoindicador"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                default     = "3"
+                label       = "COM_PEI_FIELD_ATRIBUTO_TPOINDICADOR_LABLE"
+                description = "COM_PEI_FIELD_ATRIBUTO_TPOINDICADOR_DESC">
+            <option value="0">COM_PEI_FIELD_ATRIBUTO_TPOINDICADOR_TITLE</option>
+        </field>
+        
+        <!-- Nombre del Indicador -->
+        <field  name        = "nombreIndicador" 
+                type        = "text" 
+                label       = "COM_PEI_FIELD_ATRIBUTO_NOMBRE_LABLE" 
+                description = "COM_PEI_FIELD_ATRIBUTO_NOMBRE_DESC" 
+                size        = "35"
+                required    = "true"/>
+        
+        <!-- Umbral del Indicador -->
+        <field  name        = "umbralIndicador" 
+                type        = "text" 
+                label       = "COM_PEI_FIELD_ATRIBUTO_UMBRAL_LABLE" 
+                description = "COM_PEI_FIELD_ATRIBUTO_UMBRAL_DESC" 
+                size        = "10"
+                required    = "true"/>
+
+        <!-- Descripcion del Indicador -->
+        <field  name        = "descripcionIndicador" 
+                type        = "textarea" 
+                label       = "COM_PEI_FIELD_ATRIBUTO_DESCRIPCION_LABLE" 
+                description = "COM_PEI_FIELD_ATRIBUTO_DESCRIPCION_DESC" 
+                rows        = "5" 
+                cols        = "3" />
+
+        <!-- Clase de Indicador -->
+        <field  name        = "idClaseIndicador"
+                type        = "claseindicador"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                label       = "COM_PEI_FIELD_ATRIBUTO_CLASEINDICADOR_LABLE"
+                description = "COM_PEI_FIELD_ATRIBUTO_CLASEINDICADOR_DESC">
+            <option value="0">COM_PEI_FIELD_ATRIBUTO_CLASEINDICADOR_TITLE</option>
+        </field>
+        
+        <!-- Lista de Unidad de Analisis -->
+        <field  name        = "intIdUndAnalisis"
+                type        = "unidadesanalisis"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PEI_FIELD_ATRIBUTO_UNDANALISIS_LABLE"
+                description = "COM_PEI_FIELD_ATRIBUTO_UNDANALISIS_DESC"
+                required    = "true">
+            <option value="0">COM_PEI_FIELD_ATRIBUTO_UNDANALISIS_TITLE</option>
+        </field>
+        
+        <!-- Lista de Tipos de Unidad de Medida -->
+        <field  name        = "intIdTpoUndMedida"
+                type        = "tipounidadmedida"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PEI_FIELD_ATRIBUTO_TPOUNDMEDIDA_LABLE"
+                description = "COM_PEI_FIELD_ATRIBUTO_TPOUNDMEDIDA_DESC"
+                required    = "true">
+            <option value="0">COM_PEI_FIELD_ATRIBUTO_TPOUNDMEDIDA_TITLE</option>
+        </field>
+        
+        <!-- Unidades de Medida -->
+        <field  name        = "idUndMedida"
+                type        = "list" 
+                label       = "COM_PEI_FIELD_ATRIBUTO_UNDMEDIDA_LABLE" 
+                description = "COM_PEI_FIELD_ATRIBUTO_UNDMEDIDA_DESC"
+                required    = "true">
+            <option value="0">COM_PEI_FIELD_ATRIBUTO_UNDMEDIDA_TITLE</option>
+        </field>
+        
+        <!-- Formula del Indicador -->
+        <field  name        = "strFormulaIndicador" 
+                type        = "textarea" 
+                label       = "COM_PEI_FIELD_ATRIBUTO_FORMULA_LABLE" 
+                description = "COM_PEI_FIELD_ATRIBUTO_FORMULA_DESC" 
+                rows        = "5" 
+                cols        = "3" />
+    </fieldset>
+
+    <!-- UNIDAD DE GESTION -->
+    <fieldset name="UnidadGestion">
+        <!-- Lista de Unidades de Gestion -->
+        <field  name        = "intIdUndGestion"
+                type        = "unidadesgestion"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PEI_FIELD_ATRIBUTO_UGESTION_LABLE"
+                description = "COM_PEI_FIELD_ATRIBUTO_UGESTION_DESC"
+                required    = "true">
+            <option value="0">COM_PEI_FIELD_ATRIBUTO_UGESTION_TITLE</option>
+        </field>
+        
+    </fieldset>
+    
+    <!-- RESPONSABLE -->
+    <fieldset name="Responsable">
+        <!-- Lista de Unidades de Gestion -->
+        <field  name        = "intIdUGResponsable"
+                type        = "unidadesgestion"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PEI_FIELD_ATRIBUTO_UGRESPONSABLE_LABLE"
+                description = "COM_PEI_FIELD_ATRIBUTO_UGRESPONSABLE_DESC"
+                required    = "true">
+            <option value="0">COM_PEI_FIELD_ATRIBUTO_UGRESPONSABLE_TITLE</option>
+        </field>
+        
+        <field  name        = "idResponsable" 
+                type        = "list" 
+                label       = "COM_PEI_FIELD_ATRIBUTO_RESPONSABLE_LABLE" 
+                description = "COM_PEI_FIELD_ATRIBUTO_RESPONSABLE_DESC"
+                required    = "true">
+            <option value="0">COM_PEI_FIELD_ATRIBUTO_RESPONSABLE_TITLE</option>
+        </field>
+    </fieldset>
+    
+    <!-- HORIZONTE -->
+    <fieldset name="horizonte">
+        
+        <!-- Lista de Tipos de Frecuencia de Medicion -->
+        <field  name        = "intIdFrcMonitoreo"
+                type        = "frecuencias"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PEI_FIELD_ATRIBUTO_FRECUENCIA_LABLE"
+                description = "COM_PEI_FIELD_ATRIBUTO_FRECUENCIA_DESC"
+                required    = "true">
+            <option value="0">COM_PEI_FIELD_ATRIBUTO_FRECUENCIA_TITLE</option>
+        </field>
+        
+        <field  name        = "hzFchInicio" 
+                type        = "calendar" 
+                label       = "COM_PEI_FIELD_HORIZONTE_FCHINICIO_LABEL" 
+                description = "COM_PEI_FIELD_HORIZONTE_FCHINICIO_DESC" 
+                format      = "%Y-%m-%d"/>
+        
+        <field  name        = "hzFchFin" 
+                type        = "calendar" 
+                label       = "COM_PEI_FIELD_HORIZONTE_FCHFIN_LABEL" 
+                description = "COM_PEI_FIELD_HORIZONTE_FCHFIN_DESC" 
+                format      = "%Y-%m-%d"/>
+        
+        
+    </fieldset>
+    
+    <!-- RANGOS -->
+    <fieldset name="rangos">
+
+        <field  name        = "valMinimo" 
+                type        = "text" 
+                label       = "COM_PEI_FIELD_ATRIBUTO_VALMINIMO_LABLE" 
+                description = "COM_PEI_FIELD_ATRIBUTO_VALMINIMO_DESC" 
+                size        = "15"
+                required    = "true"/>
+        
+        <field  name        = "valMaximo" 
+                type        = "text" 
+                label       = "COM_PEI_FIELD_ATRIBUTO_VALMAXIMO_LABLE" 
+                description = "COM_PEI_FIELD_ATRIBUTO_VALMAXIMO_DESC" 
+                size        = "15"
+                required    = "true"/>
+
+        <!-- Tendencia -->
+        <field  name        = "idTendencia"
+                type        = "list" 
+                default     = "1"
+                label       = "COM_PEI_FIELD_ATRIBUTO_TENDENCIA_LABLE" 
+                description = "COM_PEI_FIELD_ATRIBUTO_TENDENCIA_DESC">
+            <option value="0">COM_PEI_FIELD_ATRIBUTO_TENDENCIA_TITLE</option>
+            <option value="1">COM_PEI_FIELD_ATRIBUTO_TENDENCIA_POSITIVA</option>
+            <option value="2">COM_PEI_FIELD_ATRIBUTO_TENDENCIA_NEGATIVA</option>
+            
+        </field>
+        
+    </fieldset>
+
+    <!-- UNIDAD TERRITORIAL -->
+    <fieldset name="unidadterritorial">
+        <!-- Lista de Provincias -->
+        <field  name        = "idProvincia"
+                type        = "provincias"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                required    = "true"
+                label       = "COM_PEI_INDICADOR_PROVINCIA_LABEL"
+                description = "COM_PEI_INDICADOR_PROVINCIA_DESC">
+            <option value="0">COM_PEI_INDICADOR_PROVINCIA_TITLE</option>
+        </field>
+        
+        <!-- Lista de Cantones -->
+        <field  name        = "idCanton"
+                type        = "list"
+                label       = "COM_PEI_INDICADOR_CANTON_LABEL"
+                description = "COM_PEI_INDICADOR_CANTON_DESC"
+                class       = "inputbox">
+            <option value="0"> COM_PEI_INDICADOR_CANTON_TITLE </option>
+        </field>
+        
+        <!-- Lista de Parroquias -->
+        <field  name        = "idParroquia"
+                type        = "list"
+                label       = "COM_PEI_INDICADOR_PARROQUIA_LABEL"
+                description = "COM_PEI_INDICADOR_PARROQUIA_DESC"
+                class       = "inputbox">
+            <option value="0"> COM_PEI_INDICADOR_PARROQUIA_TITLE </option>
+        </field>
+    </fieldset>
+
+    <!-- LINEAS BASE -->
+    <fieldset name="lineasBase">
+        <!-- Lista de Unidades de Gestion -->
+        <field  name        = "idFuente"
+                type        = "fuentes"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PEI_FIELD_ATRIBUTO_FUENTE_LABLE"
+                description = "COM_PEI_FIELD_ATRIBUTO_FUENTE_DESC"
+                required    = "true">
+            <option value="0">COM_PEI_FIELD_ATRIBUTO_FUENTE_TITLE</option>
+        </field>
+        
+        <field  name        = "idLineaBase" 
+                type        = "list" 
+                label       = "COM_PEI_FIELD_ATRIBUTO_LINEABASE_LABLE" 
+                description = "COM_PEI_FIELD_ATRIBUTO_LINEABASE_DESC"
+                default     = "0"
+                required    = "true">
+            <option value="0">COM_PEI_FIELD_ATRIBUTO_LINEABASE_TITLE</option>
+        </field>
+        
+        <field  name        = "valorLineaBase" 
+                type        = "text" 
+                label       = "COM_PEI_FIELD_ATRIBUTO_VALLINEABASE_LABLE" 
+                description = "COM_PEI_FIELD_ATRIBUTO_VALLINEABASE_DESC"
+                readonly    = "true" 
+                size        = "15"/>
+    </fieldset>
+    
+    <!-- RANGOS DE GESTION -->
+    <fieldset name="rangosGestion">
+        <field  name        = "rgValMinimo" 
+                type        = "text" 
+                label       = "COM_PEI_FIELD_ATRIBUTO_RGVALMINIMO_LABLE" 
+                description = "COM_PEI_FIELD_ATRIBUTO_RGVALMINIMO_DESC" 
+                size        = "15"
+                required    = "true"/>
+        
+        <field  name        = "rgValMaximo" 
+                type        = "text" 
+                label       = "COM_PEI_FIELD_ATRIBUTO_RGVALMAXIMO_LABLE" 
+                description = "COM_PEI_FIELD_ATRIBUTO_RGVALMAXIMO_DESC" 
+                size        = "15"
+                required    = "true"/>
+        
+        <field  name        = "rgColor" 
+                type        = "color" 
+                label       = "COM_PEI_FIELD_ATRIBUTO_RGCOLOR_LABLE" 
+                description = "COM_PEI_FIELD_ATRIBUTO_RGCOLOR_DESC" 
+                size        = "15"
+                required    = "true"/>
+    </fieldset>
+    
+    <!-- INDICADORES -->
+    <fieldset name="indicador">
+
+        <!-- Filtro por Tipo de Entidad -->
+        <field  name        = "idTpoEntidad"
+                type        = "tipoentidad"
+                extension   = "com_pei"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PEI_FIELD_ATRIBUTO_INDTPOENTIDAD_LABLE"
+                description = "COM_PEI_FIELD_ATRIBUTO_INDTPOENTIDAD_DESC"
+                required    = "true">
+            <option value="0">COM_PEI_FIELD_ATRIBUTO_INDTPOENTIDAD_TITLE</option>
+        </field>
+
+        <!-- Lista de Entidades -->
+        <field  name        = "idEntidad" 
+                type        = "list" 
+                label       = "COM_PEI_FIELD_ATRIBUTO_INDENTIDAD_LABLE" 
+                description = "COM_PEI_FIELD_ATRIBUTO_INDENTIDAD_DESC"
+                default     = "0"
+                required    = "true">
+            <option value="0">COM_PEI_FIELD_ATRIBUTO_INDENTIDAD_TITLE</option>
+        </field>
+
+        <!-- Filtro por Tipo de Unidad de Medida -->
+        <field  name        = "idIndTpoUndMedida"
+                type        = "tipounidadmedida"
+                extension   = "com_pei"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PEI_FIELD_ATRIBUTO_INDTPOUNDMEDIDA_LABLE"
+                description = "COM_PEI_FIELD_ATRIBUTO_INDTPOUNDMEDIDA_DESC"
+                required    = "true">
+            <option value="0">COM_PEI_FIELD_ATRIBUTO_INDTPOUNDMEDIDA_TITLE</option>
+        </field>
+
+        <!-- Unidad de Medida -->
+        <field  name        = "idIndUndMedida" 
+                type        = "list" 
+                label       = "COM_PEI_FIELD_ATRIBUTO_INDUNDMEDIDA_LABLE" 
+                description = "COM_PEI_FIELD_ATRIBUTO_INDUNDMEDIDA_DESC"
+                default     = "0"
+                required    = "true">
+            <option value="0">COM_PEI_FIELD_ATRIBUTO_INDUNDMEDIDA_TITLE</option>
+        </field>
+        
+        <!-- Indicador -->
+        <field  name        = "idIndicador" 
+                type        = "list" 
+                label       = "COM_PEI_FIELD_ATRIBUTO_LSTINDICADOR_LABLE" 
+                description = "COM_PEI_FIELD_ATRIBUTO_LSTINDICADOR_DESC"
+                default     = "0"
+                required    = "true">
+            <option value="0">COM_PEI_FIELD_ATRIBUTO_LSTINDICADOR_TITLE</option>
+        </field>
+        
+    </fieldset>
+    
+    <!-- Unidad de Gestion Responsable -->    
+    <fieldset name="indUGResponsable">
+        <field  name        = "UGResponsable"
+                type        = "text" 
+                label       = "COM_PEI_FIELD_LSTINDICADOR_UGRESPONSABLE_LABLE" 
+                description = "COM_PEI_FIELD_LSTINDICADOR_UGRESPONSABLE_DESC" 
+                readonly    = "true"
+                size        = "40"/>
+    </fieldset>
+    
+    <!-- Funcionario Responsable -->    
+    <fieldset name="indFuncionarioUG">
+        <field  name        = "ResponsableUG"
+                type        = "text" 
+                label       = "COM_PEI_FIELD_LSTINDICADOR_FUNCIONARIOUG_LABLE" 
+                description = "COM_PEI_FIELD_LSTINDICADOR_FUNCIONARIOUG_DESC" 
+                readonly    = "true"
+                size        = "40"/>
+        
+        <field  name        = "funcionario"
+                type        = "text" 
+                label       = "COM_PEI_FIELD_LSTINDICADOR_FUNCIONARIO_LABLE" 
+                description = "COM_PEI_FIELD_LSTINDICADOR_FUNCIONARIO_DESC" 
+                readonly    = "true"
+                size        = "40"/>
+    </fieldset>
+
+    <!-- NUEVA VARIABLE -->
+    <fieldset name="nuevaVariable">
+        <!-- Nombre de la variable -->
+        <field  name        = "nombreNV"
+                type        = "text" 
+                label       = "COM_PEI_FIELD_ATRIBUTO_OTRAVARIABLE_LABLE" 
+                description = "COM_PEI_FIELD_ATRIBUTO_OTRAVARIABLE_DESC" 
+                size        = "40"/>
+
+        <!-- Descripcion del Indicador -->
+        <field  name        = "descripcionNV"
+                type        = "textarea" 
+                label       = "COM_PEI_FIELD_ATRIBUTO_DESCRIPCION_OV_LABLE" 
+                description = "COM_PEI_FIELD_ATRIBUTO_DESCRIPCION_OV_DESC" 
+                rows        = "5" 
+                cols        = "3" />
+
+        <!-- Unidad de Analisis de una nueva Variable -->
+        <field  name        = "idUndAnalisisNV"
+                type        = "unidadesanalisis"
+                extension   = "com_pei"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PEI_FIELD_ATRIBUTO_VARUNDANALISIS_LABLE"
+                description = "COM_PEI_FIELD_ATRIBUTO_VARUNDANALISIS_DESC"
+                required    = "true">
+            <option value="0">COM_PEI_FIELD_ATRIBUTO_VARUNDANALISIS_TITLE</option>
+        </field>
+
+        <!-- Filtro por Tipo de Unidad de Medida -->
+        <field  name        = "idTpoUndMedidaNV"
+                type        = "tipounidadmedida"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PEI_FIELD_ATRIBUTO_VARTPOUNDMEDIDA_LABLE"
+                description = "COM_PEI_FIELD_ATRIBUTO_VARTPOUNDMEDIDA_DESC"
+                required    = "true">
+            <option value="0">COM_PEI_FIELD_ATRIBUTO_VARTPOUNDMEDIDA_TITLE</option>
+        </field>
+
+        <!-- Unidad de Medida -->
+        <field  name        = "idVarUndMedidaNV"
+                type        = "list" 
+                label       = "COM_PEI_FIELD_ATRIBUTO_VARUNDMEDIDA_LABLE" 
+                description = "COM_PEI_FIELD_ATRIBUTO_VARUNDMEDIDA_DESC"
+                default     = "0"
+                required    = "true">
+            <option value="0">COM_PEI_FIELD_ATRIBUTO_VARUNDMEDIDA_TITLE</option>
+        </field>
+    </fieldset>
+    
+    <!-- UNIDAD DE GESTION RESPONSABLE - VARIABLE -->
+    <fieldset name="VarUGResponsable">
+        <!-- Lista de Unidades de Gestion -->
+        <field  name        = "idUGResponsableVar"
+                type        = "unidadesgestion"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PEI_FIELD_ATRIBUTO_UGESTION_LABLE"
+                description = "COM_PEI_FIELD_ATRIBUTO_UGESTION_DESC"
+                required    = "true">
+            <option value="0">COM_PEI_FIELD_ATRIBUTO_UGESTION_TITLE</option>
+        </field>
+    </fieldset>
+    
+    <!-- FUNCIONARIO RESPONSABLE - VARIABLE -->
+    <fieldset name="varFunResponsable">
+        <!-- Lista de Unidades de Gestion -->
+        <field  name        = "idUGFuncionarioVar"
+                type        = "unidadesgestion"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PEI_FIELD_ATRIBUTO_UGRESPONSABLE_LABLE"
+                description = "COM_PEI_FIELD_ATRIBUTO_UGRESPONSABLE_DESC"
+                required    = "true">
+            <option value="0">COM_PEI_FIELD_ATRIBUTO_UGRESPONSABLE_TITLE</option>
+        </field>
+        
+        <field  name        = "idFunResponsableVar"
+                type        = "list" 
+                label       = "COM_PEI_FIELD_ATRIBUTO_RESPONSABLE_LABLE" 
+                description = "COM_PEI_FIELD_ATRIBUTO_RESPONSABLE_DESC"
+                required    = "true">
+            <option value="0">COM_PEI_FIELD_ATRIBUTO_RESPONSABLE_TITLE</option>
+        </field>
+    </fieldset>
+    
+    <!-- ENFOQUE -->
+    <fieldset name="enfoque">
+        <!-- Lista de Enfoque -->
+        <field  name        = "idEnfoque"
+                type        = "tiposenfoque"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                required    = "true"
+                label       = "COM_PEI_INDICADOR_ENFOQUE_LABEL"
+                description = "COM_PEI_INDICADOR_ENFOQUE_DESC">
+            <option value="0">COM_PEI_INDICADOR_ENFOQUE_TITLE</option>
+        </field>
+        
+        <!-- Lista de Dimensiones -->
+        <field  name        = "idDimension"
+                type        = "list"
+                label       = "COM_PEI_INDICADOR_DIMENSION_LABEL"
+                description = "COM_PEI_INDICADOR_DIMENSION_DESC"
+                class       = "inputbox">
+            <option value="0"> COM_PEI_INDICADOR_DIMENSION_TITLE </option>
+        </field>
+    </fieldset>
+    
+    <!-- PLANTILLA -->
+    <fieldset name="plantilla">
+        <!-- Lista de Enfoque -->
+        <field  name        = "idPlantilla"
+                type        = "indplantilla"
+                extension   = "com_pei"
+                class       = "inputbox"
+                required    = "true"
+                label       = "COM_PEI_INDICADOR_ENFOQUE_LABEL"
+                description = "COM_PEI_INDICADOR_ENFOQUE_DESC">
+            <option value="0">COM_PEI_INDICADOR_ENFOQUE_TITLE</option>
+        </field>
+    </fieldset>
+</form>

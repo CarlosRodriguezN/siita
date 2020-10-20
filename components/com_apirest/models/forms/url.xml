@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <!-- Informacion General de un Plan Estratégico Institucional -->
+    <fieldset name="url">
+        <!--Identificador de la actividad-->
+        <field  name        = "intIdApiUrl"
+                type        = "hidden"
+                label       = "JGLOBAL_FIELD_ACTIVIDAD_ID_LABEL"
+                description = "JGLOBAL_FIELD_ACTIVIDAD_ID_DESC"
+                size        = "10"
+        />
+        
+        <!-- Institucion -->
+        <field  name        = "intCodigo_ins"
+                type        = "instituciones"
+                extension   = "com_apirest"
+                class       = "inputbox"
+                label       = "COM_APIREST_INSTITUCION_LABEL"
+                description = "COM_APIREST_INSTITUCION_DESC"
+                required    = "true">
+            <option value="0"> COM_APIREST_INSTITUCION_TITLE </option>
+        </field>
+        
+        <!-- Nombre del Funcionario -->
+        <field  name        = "strNombres_api" 
+                type        = "text" 
+                label       = "COM_APIREST_NOMBRE_LABLE" 
+                description = "COM_APIREST_NOMBRE_DESC" 
+                size        = "35"
+                required    = "true"/>
+        
+        <!-- Correo Electronico del Funcionario -->
+        <field  name        = "strCorreo_api" 
+                type        = "text" 
+                label       = "COM_APIREST_CORREO_LABLE" 
+                description = "COM_APIREST_CORREO_DESC" 
+                size        = "35"
+                required    = "true"/>
+        
+        <!-- IP's Asociadas a la institucion -->
+        <field  name            ="strIPInstitucion_api" 
+                type            ="textarea" 
+                label           ="COM_APIREST_IPS_LABEL" 
+                description     ="COM_APIREST_IPS_DESC" 
+                rows            ="5" 
+                cols            ="2">
+        </field>
+        
+        <!-- Fecha de Inicio -->
+        <field  name            = "dteFechaInicio_api"
+                type            = "calendar"
+                label           = "COM_APIREST_FECHA_INICIO_LABEL"
+                description     = "COM_APIREST_FECHA_INICIO_DESC"
+                format          = "%Y-%m-%d"
+                required        = "true"
+        />
+        
+        <!-- Fecha de Fin -->
+        <field  name            = "dteFechaFin_api"
+                type            = "calendar"
+                label           = "COM_APIREST_FECHA_FIN_LABEL"
+                description     = "COM_APIREST_FECHA_FIN_DESC"
+                format          = "%Y-%m-%d"
+                required        = "true"
+        />
+    </fieldset>
+
+</form>

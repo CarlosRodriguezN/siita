@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <fieldset name="essential">
+        <!-- Codigo de Programa -->
+        <field  name            = "intcodigo_prg"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "0"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- Lista de Tipos de Entidades Disponibles -->
+        <field  name        = "intIdEntidad_ent"
+                type        = "tiposentidades"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                default     = ""
+                label       = "COM_PROYECTOS_FIELD_PROGRAMA_TIPOENTIDAD_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROGRAMA_TIPOENTIDAD_DESC"
+                required    = "true">
+                <option value="0">COM_PROYECTOS_FIELD_PROGRAMA_TIPOENTIDAD_TITLE</option>
+        </field>
+        
+        <!-- Descripcion de Coberturas -->
+        <field  name        = "strDescripcion_prg"
+                type        = "text"
+                label       = "COM_PROYECTOS_FIELD_PROGRAMA_DESCRIPCION_LABEL"
+                description = "COM_PROYECTOS_FIELD_PROGRAMA_DESCRIPCION_DESC"
+                class       = "inputbox"
+                size        = "25"
+                required    = "true"
+        />
+        
+        <!-- Publicados -->
+        <field  name="published"
+                type="list"
+                label="JSTATUS"
+                description="JFIELD_PUBLISH_DESC"
+                class="inputbox"
+                filter="intval"
+                size="1"
+                default="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="essential">
+        <field  name="INTCODIGOTIPO_IND"
+                type="hidden"
+                label="JGLOBAL_FIELD_ID_LABEL"
+                description="JGLOBAL_FIELD_ID_DESC"
+                size="10"
+                default="0"
+                readonly="true"
+                class="readonly"
+        />
+        
+        <!-- Categorias -->
+        <field  name        = "STRCODIGOCATEGORIA"
+                type        = "categorias"
+                extension   = "com_plannacional"
+                class       = "inputbox"
+                label       = "COM_PLANNACIONAL_FIELD_TIPOINDICADOR_CATEGORIA_LABEL"
+                description = "COM_PLANNACIONAL_FIELD_TIPOINDICADOR_CATEGORIA_DESC"
+                required    = "true">
+            <option value="0">SELECCIONE CATEGORIA</option>
+        </field>
+        
+        <!-- Descripcion Indicador -->
+        <field  name="STRDESCRIPCIONTIPO_IND"
+                type="text"
+                label="COM_PLANNACIONAL_FIELD_TIPOINDICADOR_DESCRIPCION_LABEL"
+                description="COM_PROYECTO_FIELD_TIPOINDICADOR_DESCRIPCION_DESC"
+                class="inputbox"
+                size="30"
+                required="true"
+        />
+        
+        <field  name="published"
+                type="list"
+                label="JSTATUS"
+                description="JFIELD_PUBLISH_DESC"
+                class="inputbox"
+                filter="intval"
+                size="1"
+                default="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+    
+</form>

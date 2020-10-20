@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="tipovariable">
+        <!-- codigo de la categoria -->
+        <field  name            = "inpCodigo_tipovar"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        <!-- TIPO VARIABLE />-->
+        <field  name            ="strDescripcion_tipovar" 
+                type            ="textarea" 
+                default         ="Tipo Variable" 
+                label           ="COM_MANTENIMIENTO_FIELD_TIPOVARIABLE_DESCRIPCION_LABEL" 
+                description     ="COM_MANTENIMIENTO_FIELD_TIPOVARIABLE_DESCRIPCION_DESC" 
+         />
+        <!-- Publicados -->
+        <field  name            ="published"
+                type            ="list"
+                label           ="JSTATUS"
+                description     ="JFIELD_PUBLISH_DESC"
+                class           ="inputbox"
+                filter          ="intval"
+                size            ="1"
+                default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

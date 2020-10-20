@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="garantia">
+        <field  name            = "intIdGarantia_gta"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "0"
+                readonly        = "true"
+                class           = "readonly"
+        />
+       
+        <!-- tipo garantia -->
+        <field  name        = "intIdTpoGarantia_tg"
+                type        = "tiposgarantia"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                label       = "COM_CONTRATOS_FIELD_GARANTIA_TIPOGARANTIA_LABEL"
+                description = "COM_CONTRATOS_FIELD_GARANTIA_TIPOGARANTIA_DESC"
+                required    = "true">
+            <option value="0">TIPO DE GARANTIA</option>
+        </field>
+        
+        <!-- forma garantia -->
+        <field  name        = "intIdFrmGarantia_fg"
+                type        = "formasgarantia"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                label       = "COM_CONTRATOS_FIELD_GARANTIA_FORMAGARANTIA_LABEL"
+                description = "COM_CONTRATOS_FIELD_GARANTIA_FORMAGARANTIA_DESC"
+                required    = "true">
+            <option value="0">FORMA DE GARANTIA</option>
+        </field>
+        
+        <!-- CONTRATO -->
+        <field  name        = "intIdContrato_ctr"
+                type        = "contratos"
+                extension   = "com_contratos"
+                class       = "inputbox"
+                label       = "COM_CONTRATOS_FIELD_GARANTIA_CONTRATO_LABEL"
+                description = "COM_CONTRATOS_FIELD_GARANTIA_CONTRATO_DESC"
+                required    = "true">
+            <option value="0">CONTRATO</option>
+        </field>
+        
+        <!-- CODIGO GARANTIA -->
+        <field  name            ="intCodGarantia_gta" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_GARANTIA_CODIGOGARANTIA_LABEL"
+                description     ="COM_CONTRATOS_FIELD_GARANTIA_CODIGOGARANTIA_DESC"
+                required        ="true"
+                size            ="20"
+        />
+
+        <!-- MONTO -->
+        <field  name            ="dcmMonto_gta" 
+                type            ="text" 
+                label           ="COM_CONTRATOS_FIELD_GARANTIA_MONTO_LABEL"
+                description     ="COM_CONTRATOS_FIELD_GARANTIA_MONTO_DESC"
+                required        ="true"
+                size            ="20"
+        />
+        <!--    FECHA DESDE -->
+        <field  name            ="dteFechaDesde_gta"
+                type            ="calendar" 
+                label           ="COM_CONTRATOS_FIELD_GARANTIA_FECHADESDE_LABEL" 
+                description     ="COM_CONTRATOS_FIELD_GARANTIA_FECHADESDE_DESC" 
+                format          ="%d-%m-%Y"
+                required        ="true"
+        />
+        <!--    FECHA DESDE -->
+        <field  name            ="dteFechaHasta_gta"
+                type            ="calendar" 
+                label           ="COM_CONTRATOS_FIELD_GARANTIA_FECHAHASTA_LABEL" 
+                description     ="COM_CONTRATOS_FIELD_GARANTIA_FECHAHASTA_DESC" 
+                format          ="%d-%m-%Y"
+                required        ="true"
+        />
+        <!-- Publicados -->
+        <field  name            ="published"
+                type            ="list"
+                label           ="JSTATUS"
+                description     ="JFIELD_PUBLISH_DESC"
+                class           ="inputbox"
+                filter          ="intval"
+                size            ="1"
+                default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

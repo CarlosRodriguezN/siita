@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- $Id: helloworld.xml 60 2010-11-27 18:45:40Z chdemko $ -->
+<form>
+    <fieldset name="accesscontrol">
+        <field  name    = "asset_id" 
+                type    = "hidden" 
+                filter  = "unset" />
+        
+        <field name             = "rules"
+               type             = "rules"
+               label            = "JFIELD_RULES_LABEL"
+               translate_label  = "false"
+               filter           = "rules"
+               validate         = "rules"
+               class            = "inputbox"
+               component        = "com_panel"
+               section          = "message"
+        />
+    </fieldset>
+</form>
+

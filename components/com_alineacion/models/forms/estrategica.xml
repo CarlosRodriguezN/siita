@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <!-- PLAN NACIONAL DEL BUEN VIVIR -->
+    <fieldset name="agenda">
+        <!-- Lista de Objetivos PNBV -->
+        <field  name        = "idAgenda"
+                type        = "agendas"
+                extension   = "com_alineacion"
+                class       = "inputbox"
+                default     = "3"
+                label       = "COM_ALINEACION_FIELD_ATRIBUTO_AGENDA_LABEL"
+                description = "COM_ALINEACION_FIELD_ATRIBUTO_AGENDA_DESC"
+                required    = "true">
+            <option value="0">COM_ALINEACION_FIELD_ATRIBUTO_AGENDA_TITLE</option>
+        </field>
+    </fieldset>    
+</form>

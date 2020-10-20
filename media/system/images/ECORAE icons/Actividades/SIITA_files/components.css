@@ -1,0 +1,123 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*Estilos componente proyectos*/
+/*Cuerpo del componente*/
+#system-tot div#element-box div.m {
+    overflow:hidden;
+}
+
+#system-tot fieldset.adminform {
+    margin:0px 10px !important;
+    padding:10px !important;
+}
+
+/*Barra de botones*/
+#system-tot div#toolbar-box div.m {
+    overflow:hidden !important;
+    padding:5px 0px !important;
+}
+
+#system-tot div.toolbar-list li {
+    height:60px !important;
+}
+
+#system-tot div.toolbar-list span {
+    height:44px !important;
+    width: 44px !important;
+}
+
+
+#system-tot div.pagetitle{
+    padding: 7px 0px 5px 60px !important;
+}
+
+
+#system-tot .icon-32-new {
+    background-image:url(../images/btn_nuevo.png) !important;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+#system-tot .icon-32-edit {
+    background-image:url(../images/btn_edit.png) !important;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+#system-tot .icon-32-publish {
+    background-image:url(../images/btn_publish.png) !important;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+#system-tot .icon-32-unpublish {
+    background-image:url(../images/btn_unpublish.png) !important;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+#system-tot .icon-32-pdf {
+    background-image:url(../images/btn_pdf.png) !important;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+#system-tot .icon-32-excel {
+    background-image:url(../images/btn_excel.png) !important;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+#system-tot .icon-32-save {
+    background-image:url(../images/btn_save.png) !important;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+#system-tot .icon-32-cancel {
+    background-image:url(../images/btn_cancel.png) !important;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+#system-tot .icon-32-control {
+    background-image:url(../images/btn_control.png) !important;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+#system-tot .icon-32-delete {
+    background-image:url(../images/btn_eliminar.png) !important;
+    background-repeat:no-repeat;
+    background-position:center;
+}
+
+
+/*Ubicación de componentes}*/
+
+#system-tot #coordenadas {
+    overflow: hidden;
+}
+
+/*Paginacion estilos*/
+
+#system-tot #content-box #element-box #adminForm .adminlist ul {
+    border: 1px solid #cdcdcd;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    overflow: hidden;
+    background-image:url(../images/bg_list_1.jpg) !important;
+}
+
+#system-tot #content-box #element-box #adminForm .adminlist li {
+    float: left;
+    list-style: none;
+    padding: 5px;
+}
+
+ .stlLayers{
+    margin: 0px 5px 0px 0px;
+    float:none;
+}

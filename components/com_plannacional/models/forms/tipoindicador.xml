@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <fieldset name="essential">
+        <!-- codigo de la categoria -->
+      <field  name            = "intCodigoTipo_ind"
+              type            = "hidden"
+              label           = "JGLOBAL_FIELD_ID_LABEL"
+              description     = "JGLOBAL_FIELD_ID_DESC"
+              size            = "10"
+              readonly        = "true"
+              class           = "readonly"
+        />
+        
+        <!-- codigo de la institucion -->
+      
+      <field  name            = "intCodigoCategoria"
+              type            = "categorias"
+              extension       = "com_plannacional"
+              class           = "inputbox"
+              default         = ""
+              label           = "COM_PLANNACIONAL_FIELD_TIPOINDICADOR_CATEGORIA_LABEL"
+              description     = "COM_PLANNACIONAL_FIELD_TIPOINDICADOR_CATEGORIA_DESC"
+              required        = "true">
+         <option value="0">SELECCIONE LA CATEGORIA</option>
+      </field>
+         
+         <!-- Descripción  />-->
+      <field  name              ="strDescripcionTipo_ind" 
+              type            ="textarea" 
+              default         ="Tipo de indicador" 
+              label           ="COM_PLANNACIONAL_FIELD_TIPOINDICADOR_DESCRIPCION_LABEL" 
+              description     ="COM_PLANNACIONAL_FIELD_TIPOINDICADOR_DESCRIPCION_DESC" 
+              rows            ="10" 
+              cols            ="5"
+         />
+        <!-- Publicados -->
+      <field  name            ="published"
+              type            ="list"
+              label           ="JSTATUS"
+              description     ="JFIELD_PUBLISH_DESC"
+              class           ="inputbox"
+              filter          ="intval"
+              size            ="1"
+              default         ="1"
+      >
+         <option value="1"> JPUBLISHED </option>
+         <option value="0"> JUNPUBLISHED </option>
+      </field>
+   </fieldset>
+</form>

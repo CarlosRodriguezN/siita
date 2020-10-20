@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+   <fieldset name="essential">
+        <!-- codigo de la LINEABASE -->
+      <field  name            = "intCodigo_lb"
+              type            = "hidden"
+              label           = "JGLOBAL_FIELD_ID_LABEL"
+              description     = "JGLOBAL_FIELD_ID_DESC"
+              size            = "10"
+              readonly        = "true"
+              class           = "readonly"
+        />
+        
+        <!-- codigo de la institucion -->
+      <field  name            = "intCodigo_in"
+              type            = "indicadoresnacionales"
+              extension       = "com_plannacional"
+              class           = "inputbox"
+              default         = ""
+              label           = "COM_PLANNACIONAL_FIELD_LINEABASE_INDICADORNACIONAL_LABEL"
+              description     = "COM_PLANNACIONAL_FIELD_LINEABASE_INDICADORNACIONAL_DESC"
+              required        = "true">
+         <option value="0">INDICADOR NACIONAL</option>
+      </field>
+        <!-- codigo de la institucion -->
+      <field  name            = "intCodigo_per"
+              type            = "periodos"
+              extension       = "com_plannacional"
+              class           = "inputbox"
+              default         = ""
+              label           = "COM_PLANNACIONAL_FIELD_LINEABASE_PERIODO_LABEL"
+              description     = "COM_PLANNACIONAL_FIELD_LINEABASE_PERIODO_DESC"
+              required        = "true">
+         <option value="0">PERIODO</option>
+      </field>
+        <!-- codigo de la institucion -->
+      <field  name              = "intCodigo_uniMed"
+              type            = "unidadesmedidas"
+              extension       = "com_plannacional"
+              class           = "inputbox"
+              default         = ""
+              label           = "COM_PLANNACIONAL_FIELD_LINEABASE_UNIDADMEDIDA_LABEL"
+              description     = "COM_PLANNACIONAL_FIELD_LINEABASE_UNIDADMEDIDA_DESC"
+              required        = "true">
+         <option value="0">UNIDAD DE MEDIDA</option>
+      </field>
+         
+         <!-- Descripción  />-->
+      <field  name              ="strDescripcion_lb" 
+              type            ="textarea" 
+              default         ="Linea Base" 
+              label           ="COM_PLANNACIONAL_FIELD_LINEABASE_DESCRIPCION_LABEL" 
+              description     ="COM_PLANNACIONAL_FIELD_LINEABASE_DESCRIPCION_DESC" 
+              rows            ="10" 
+              cols            ="5"
+         />
+              <!-- sub modulo siita -->
+      <field  name            = "dcmValor_lb"
+              type            = "TEXT"
+              label           = "COM_PLANNACIONAL_FIELD_LINEABASE_VALOR_LABEL"
+              description     = "COM_PLANNACIONAL_FIELD_LINEABASE_VALOR_DESC"
+              class           = "inputbox"
+              size            = "11"
+              required        = "true"
+        />
+      
+           <!-- Fecha Fin -->
+      <field  name            = "dteFechaIni_lb"
+              type            = "calendar"
+              label           = "COM_PLANNACIONAL_FIELD_PLANNACIONAL_FCHINICIO_LABEL"
+              description     = "COM_PLANNACIONAL_FIELD_PLANNACIONAL_FCHINICIO_DESC"
+              class           = "inputbox"
+              size            = "11"
+              required        = "true"
+        />   <!-- Fecha Fin -->
+      <field  name            = "dteFechaFin_lb"
+              type            = "calendar"
+              label           = "COM_PLANNACIONAL_FIELD_PLANNACIONAL_FCHFIN_LABEL"
+              description     = "COM_PLANNACIONAL_FIELD_PLANNACIONAL_FCHFIN_DESC"
+              class           = "inputbox"
+              size            = "11"
+              required        = "true"
+        />
+          <!-- sub modulo siita -->
+      <field  name            = "strFuente_lb"
+              type            = "TEXT"
+              label           = "COM_PLANNACIONAL_FIELD_LINEABASE_FUENTE_LABEL"
+              description     = "COM_PLANNACIONAL_FIELD_LINEABASE_FUENTE_DESC"
+              class           = "inputbox"
+              size            = "11"
+              required        = "true"
+        />
+        <!-- Publicados -->
+      <field  name            ="published"
+              type            ="list"
+              label           ="JSTATUS"
+              description     ="JFIELD_PUBLISH_DESC"
+              class           ="inputbox"
+              filter          ="intval"
+              size            ="1"
+              default         ="1"
+      >
+         <option value="1"> JPUBLISHED </option>
+         <option value="0"> JUNPUBLISHED </option>
+      </field>
+   </fieldset>
+</form>

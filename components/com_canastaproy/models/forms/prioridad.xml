@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="prioridad">
+        <!-- codigo de prioridad -->
+        <field  name            = "intIdPrioridad"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- Prioridad de un proyecto para la canasta de proyectos -->
+        <field  name            = "strPrioridad"
+                type            = "text"
+                default         = "Proyecto"
+                label           = "COM_CANASTAPROY_FIELD_PRIORIDAD_NOMBRE_LABEL"
+                description     = "COM_CANASTAPROY_FIELD_PRIORIDAD_NOMBRE_DESC"
+                class           = "inputbox"
+                size            = "50"
+                required        = "true">
+        </field>
+        
+        <!-- Publicados -->
+        <field  name            ="published"
+                type            ="list"
+                label           ="JSTATUS"
+                description     ="JFIELD_PUBLISH_DESC"
+                class           ="inputbox"
+                filter          ="intval"
+                size            ="1"
+                default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+        
+        <!-- Publicados -->
+        <field  name            ="published"
+                type            ="list"
+                label           ="JSTATUS"
+                description     ="JFIELD_PUBLISH_DESC"
+                class           ="inputbox"
+                filter          ="intval"
+                size            ="1"
+                default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

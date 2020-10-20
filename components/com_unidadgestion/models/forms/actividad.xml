@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <!-- Informacion General de un Plan Estratégico Institucional -->
+    <fieldset name="actividad">
+        <!--Identificador de la actividad-->
+        <field  name        = "intIdActividad_act"
+                type        = "hidden"
+                label       = "JGLOBAL_FIELD_ACTIVIDAD_ID_LABEL"
+                description = "JGLOBAL_FIELD_ACTIVIDAD_ID_DESC"
+                size        = "10"
+        />
+        <!--Tipos de gestión-->
+        <field  name        = "intIdTipoGestion_tpg"
+                type        = "tiposgestion"
+                extension   = "com_poa"
+                class       = "inputbox"
+                label       = "COM_PEI_FIELD_ACTIVIDAD_TIPOGESTION_LABEL"
+                description = "COM_PEI_FIELD_ACTIVIDAD_TIPOGESTION_DESC"
+                required    = "true">
+            <option value="0">Tipo Gestión</option>
+        </field>
+        <!-- Descripcion-->
+        <field  name            ="strDescripcion_act" 
+                type            ="textarea" 
+                default         ="default" 
+                label           ="COM_PEI_FIELD_ACTIVIDAD_DESCRIPCION_LABEL" 
+                description     ="COM_PEI_FIELD_ACTIVIDAD_DESCRIPCION_DESC" 
+                rows            ="5" 
+                cols            ="2" 
+        >
+        </field>
+        <field  name            ="strObservacion_tpg" 
+                type            ="textarea" 
+                default         ="default" 
+                label           ="COM_PEI_FIELD_ACTIVIDAD_OBSERVACION_LABEL" 
+                description     ="COM_PEI_FIELD_ACTIVIDAD_OBSERVACION_DESC" 
+                rows            ="5" 
+                cols            ="2" 
+        >
+        </field>
+        
+        <!-- Fecha de Inicio -->
+        <field  name            = "fchActividad_tpg"
+                type            = "calendar"
+                label           = "COM_PEI_FIELD_ACTIVIDAD_FCHACTIVDAD_LABEL"
+                description     = "COM_PEI_FIELD_ACTIVIDAD_FCHACTIVDAD_DESC"
+                format          = "%Y-%m-%d"
+                required        = "true"
+        />
+        
+       
+    </fieldset>
+    <fieldset name="funcionarioRes">
+        <!--Tipos de gestión-->
+        <field  name        = "intIdUnidadGestion"
+                type        = "unidadesgestion"
+                extension   = "com_poa"
+                class       = "inputbox"
+                label       = "COM_PEI_FIELD_ACTIVIDAD_UNIDADESGESTION_LABEL"
+                description = "COM_PEI_FIELD_ACTIVIDAD_UNIDADESGESTION_DESC"
+                required    = "true">
+            <option value="0">Unidad Gestion</option>
+        </field>
+        <!-- Resonsable -->
+        
+        <field  name        = "intIdResponsable"
+                type        = "list"
+                class       = "inputbox"
+                label       = "COM_PEI_FIELD_ACTIVIDAD_RESPONSABLE_LABEL"
+                description = "COM_PEI_FIELD_ACTIVIDAD_RESPONSABLE_DESC"
+                required    = "true">
+            <option value="0">Responsable</option>
+        </field>
+    </fieldset>
+    
+</form>

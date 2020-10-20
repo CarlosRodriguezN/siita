@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="module" version="2.5.3">
+    <!-- Name of the Module -->
+    <name>Modulo Mapa</name> 
+ 
+    <!-- Name of the Author -->
+    <author>Rolando Vinicio Casigña Parra</author> 
+ 
+    <!-- Version Date of the Module -->
+    <creationDate>2012-07-30</creationDate> 
+ 
+    <!-- Copyright information -->
+    <copyright>All rights reserved by ESPOCH.</copyright> 
+ 
+    <!-- License Information -->
+    <license>GPL 2.0</license> 
+ 
+    <!-- Author's email address -->
+    <authorEmail>rolo4336@gmail.com</authorEmail> 
+ 
+    <!-- Author's website -->
+    <authorUrl>www.espoch.edu.ec</authorUrl> 
+ 
+    <!-- Module version number -->
+    <version>1.0.0</version> 
+ 
+    <!-- Description of what the module does -->
+    <description>Módulo control Mapa</description>
+ 
+    <!-- Listing of all files that should be installed for the module to function -->
+    <files>
+        <!-- The "module" attribute signifies that this is the main controller file -->
+        <filename module="mod_mapa">mod_mapa.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <languages>
+        <language tag="en-ES">en-ES.com_mapa.ini</language>
+    </languages>
+    <!-- Optional parameters -->
+    <params />
+</install>

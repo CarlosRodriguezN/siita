@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <fieldset name="grupo">
+        <!-- codigo de la categoria -->
+        <field  name            = "intCodigo_grp"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- codigo de la categoria -->
+        <field  name            = "strCodigoCategoria"
+                type            = "categoriasgrupo"
+                extension       = "com_mantenimiento"
+                class           = "inputbox"
+                default         = ""
+                label           = "COM_MANTENIMIENTO_FIELD_GRUPO_CATEGORIA_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_GRUPO_CATEGORIA_DESC"
+                required        = "true">
+            <option value="0">Seleccione la Categoría</option>
+        </field>
+        
+        <!-- Descripción  />-->
+        <field  name            ="strDescripcion_grp" 
+                type            ="textarea" 
+                default         ="Grupo" 
+                label           ="COM_MANTENIMIENTO_FIELD_GRUPO_DESCRIPCION_LABEL" 
+                description     ="COM_MANTENIMIENTO_FIELD_GRUPO_DESCRIPCION_DESC" 
+                rows            ="5" 
+                cols            ="3"
+         />
+         
+        <!-- Publicados -->
+        <field  name            ="published"
+                type            ="list"
+                label           ="JSTATUS"
+                description     ="JFIELD_PUBLISH_DESC"
+                class           ="inputbox"
+                filter          ="intval"
+                size            ="1"
+                default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

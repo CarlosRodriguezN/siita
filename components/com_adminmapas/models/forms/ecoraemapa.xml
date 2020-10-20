@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="essential">
+        <field  name            = "intCodigo_wms"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                default         = "0"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        <!-- Nombre -->
+        <field  name            = "strNombre"
+                type            = "TEXT"
+                label           = "COM_ADMINMAPAS_FIELD_ECORAEMAPA_NOMBRE_LABEL"
+                description     = "COM_ADMINMAPAS_FIELD_ECORAEMAPA_NOMBRE_DESC"
+                class           = "inputbox"
+                size            = "45"
+                required        = "true"
+        />
+        
+        <!-- Copy Rigth -->
+        <field  name            ="strCopyright" 
+                type            ="text" 
+                label           ="COM_ADMINMAPAS_FIELD_ECORAEMAPA_COPYRIGTH_LABEL"
+                description     ="COM_ADMINMAPAS_FIELD_ECORAEMAPA_COPYRIGTH_DESC"
+                size            ="45"
+                required        ="true"
+        />
+        
+        <!-- Descripción -->
+        <field  name            ="strDescripcion" 
+                type            ="textarea" 
+                label           ="COM_ADMINMAPAS_FIELD_ECORAEMAPA_DESCRIPCION_LABEL"
+                description     ="COM_ADMINMAPAS_FIELD_ECORAEMAPA_DESCRIPCION_DESC"
+                rows            ="10" 
+                cols            ="5" 
+        />
+
+        <!-- Publicados -->
+        <field  name            ="published"
+                type            ="list"
+                label           ="JSTATUS"
+                description     ="JFIELD_PUBLISH_DESC"
+                class           ="inputbox"
+                filter          ="intval"
+                size            ="1"
+                default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+        
+        <field  name            = "dataLayer"
+                type            = "hidden"
+                readonly        = "true"
+                value       = "0"
+        />
+    </fieldset>
+    
+    <fieldset name="urlsmapas">
+        <field  name        = "strURLService" 
+                type        = "text"
+                label       = "COM_ADMINMAPAS_FIELD_MAPA_URLSERVICE_LABEL"
+                description = "COM_ADMINMAPAS_FIELD_MAPA_URLSERVICE_DESC"
+                required    = "true"
+        />
+    </fieldset>
+    
+</form>

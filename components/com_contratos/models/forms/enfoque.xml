@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <fieldset name="enfoque">
+
+        <!-- Lista de Enfoque -->
+        <field  name        = "idEnfoque"
+                type        = "tiposenfoque"
+                extension   = "com_proyectos"
+                class       = "inputbox"
+                required    = "true"
+                label       = "COM_PROGRAMA_INDICADOR_ENFOQUE_LABEL"
+                description = "COM_PROGRAMA_INDICADOR_ENFOQUE_DESC">
+            <option value="0">COM_PROGRAMA_INDICADOR_ENFOQUE_TITLE</option>
+        </field>
+        
+        <!-- Lista de Dimensiones -->
+        <field  name        = "idDimension"
+                type        = "list"
+                label       = "COM_PROGRAMA_INDICADOR_DIMENSION_LABEL"
+                description = "COM_PROGRAMA_INDICADOR_DIMENSION_DESC"
+                class       = "inputbox">
+            <option value="0"> COM_PROGRAMA_INDICADOR_DIMENSION_TITLE </option>
+        </field>
+        
+    </fieldset>
+</form>

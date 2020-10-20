@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="unidadmedida">
+        <!-- codigo de la categoria -->
+        <field  name            = "intCodigo_unimed"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- Tipo de unidad de medida -->
+        <field  name            = "intId_tum"
+                type            = "tiposunidadmedida"
+                extension       = "com_mantenimiento"
+                class           = "inputbox"
+                label           = "COM_MANTENIMIENTO_FIELD_UNIDADMEDIDA_TIPOUNIDADMEDIDA_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_UNIDADMEDIDA_TIPOUNIDADMEDIDA_DESC"
+                required        = "true">
+            <option value="0">COM_MANTENIMIENTO_FIELD_UNIDADMEDIDA_TIPOUNIDADMEDIDA_TITLE</option>
+        </field>
+        
+        <!-- Codigo de unidad de medida  />-->
+        <field  name            ="strCodigo_unimed" 
+                type            ="text" 
+                default         ="Codigo" 
+                label           ="COM_MANTENIMIENTO_FIELD_UNIDADMEDIDA_CODIGOUNIDADMEDIDA_LABEL" 
+                description     ="COM_MANTENIMIENTO_FIELD_UNIDADMEDIDA_CODIGOUNIDADMEDIDA_DESC" 
+                size            = "10"
+         />
+        <!-- Descripción de unidad de medida  -->
+        <field  name            ="strDescripcion_unimed" 
+                type            ="textarea" 
+                default         ="Unidad de Medida" 
+                label           ="COM_MANTENIMIENTO_FIELD_UNIDADMEDIDA_DESCRIPCION_LABEL" 
+                description     ="COM_MANTENIMIENTO_FIELD_UNIDADMEDIDA_DESCRIPCION_DESC" 
+                rows            ="5" 
+                cols            ="3"
+         />
+        <!-- Simbolo de unidad de medida   -->
+        <field  name            ="strSimbolo_unimed" 
+                type            ="textarea" 
+                default         ="Símbolo" 
+                label           ="COM_MANTENIMIENTO_FIELD_UNIDADMEDIDA_SIMBOLOUNIDADMEDIDA_LABEL" 
+                description     ="COM_MANTENIMIENTO_FIELD_UNIDADMEDIDA_SIMBOLOUNIDADMEDIDA_DESC" 
+                size            = "10"
+         />
+        <!-- Publicados -->
+        <field  name            ="published"
+                type            ="list"
+                label           ="JSTATUS"
+                description     ="JFIELD_PUBLISH_DESC"
+                class           ="inputbox"
+                filter          ="intval"
+                size            ="1"
+                default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

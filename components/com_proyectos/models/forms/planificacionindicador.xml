@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <fieldset name="planificacionIndicador">
+        <!-- Fecha Planificacion -->
+        <field  name        = "fchPlanificada" 
+                type        = "calendar" 
+                label       = "COM_PROYECTOS_FIELD_PLANIFICACION_FECHA_LABEL"
+                description = "COM_PROYECTOS_FIELD_PLANIFICACION_FECHA_DESC"
+                format      = "%Y-%m-%d"/>
+        
+        <field  name        = "valorPlanificacion" 
+                type        = "text" 
+                label       = "COM_PROYECTOS_FIELD_PLANIFICACION_VALOR_LABEL"
+                description = "COM_PROYECTOS_FIELD_PLANIFICACION_VALOR_DESC"
+                size        = "10" />
+    </fieldset>
+</form>

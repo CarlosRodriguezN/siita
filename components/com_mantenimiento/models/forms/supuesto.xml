@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <fieldset name="supuesto">
+        <!-- codigo de la categoria -->
+        <field  name            = "intCodigo_susp"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        <!-- codigo de la institucion -->
+        <field  name            = "intCodigo_ojtoml"
+                type            = "marcoslogicossupuesto"
+                extension       = "com_mantenimiento"
+                class           = "inputbox"
+                default         = ""
+                label           = "COM_MANTENIMIENTO_FIELD_SUPUESTO_OJTOML_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_SUPUESTO_OJTOML_DESC"
+                required        = "true">
+            <option value="0">Seleccione marco lógico </option>
+        </field>
+        <!-- codigo de la institucion -->
+        <field  name            = "intCodigoCategoria"
+                type            = "categoriassupuesto"
+                extension       = "com_mantenimiento"
+                class           = "inputbox"
+                default         = ""
+                label           = "COM_MANTENIMIENTO_FIELD_SUPUESTO_CATEGORIA_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_SUPUESTO_CATEGORIA_DESC"
+                required        = "true">
+            <option value="0">Seleccione la Categoría</option>
+        </field>
+        <!-- Descripción  />-->
+        <field  name            ="strDescripcion_susp" 
+                type            ="textarea" 
+                default         ="Supuesto" 
+                label           ="COM_MANTENIMIENTO_FIELD_SUPUESTO_DESCRIPCION_LABEL" 
+                description     ="COM_MANTENIMIENTO_FIELD_SUPUESTO_DESCRIPCION_DESC" 
+                rows            ="5" 
+                cols            ="3"
+         />
+        <!-- Fecha registro supuesto -->
+        <field  name            = "dteFechaRegistro_susp"
+                type            = "CALENDAR"
+                label           = "COM_MANTENIMIENTO_FIELD_SUPUESTO_FECHAREGISTRO_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_SUPUESTO_FECHAREGISTRO_DESC"
+                class           = "inputbox"
+                size            = "50"
+                required        = "true"
+        /><!-- Fecha modificación supuesto -->
+        <field  name            = "dteFechaModificacion_susp"
+                type            = "CALENDAR"
+                label           = "COM_MANTENIMIENTO_FIELD_SUPUESTO_FECHAMODIFICACION_LABEL"
+                description     = "COM_MANTENIMIENTO_FIELD_SUPUESTO_FECHAMODIFICACION_DESC"
+                class           = "inputbox"
+                size            = "50"
+                required        = "true"
+        />
+        <!-- Publicados -->
+        <field  name            ="published"
+                type            ="list"
+                label           ="JSTATUS"
+                description     ="JFIELD_PUBLISH_DESC"
+                class           ="inputbox"
+                filter          ="intval"
+                size            ="1"
+                default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

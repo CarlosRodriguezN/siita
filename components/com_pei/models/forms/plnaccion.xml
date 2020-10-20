@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <!-- Informacion General de un Plan Estratégico Institucional -->
+    <fieldset name="plnaccion">
+        <!-- Identificador del  plan de accion del identificador del pei -->
+        <field  name            = "intId_plnAccion"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_PLAN_ACCION_LABEL"
+                description     = "JGLOBAL_FIELD_ID_PLAN_ACCION_DESC"
+                size            = "10"
+        />
+        
+        <!-- Identificador del objetivo del pei -->
+        <field  name            = "intId_ob"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_OBJ_PLAN_ACCION_LABEL"
+                description     = "JGLOBAL_FIELD_ID_OBJ_PLAN_ACCION_DESC"
+                size            = "10"
+                default         = "4" 
+        />
+        
+        <!-- Identificador del tipo del gestion -->
+        <field  name            = "intTpoActividad_plnAccion"
+                type            = "tiposgestion"
+                extension       = "com_pei"
+                class           = "inputbox"
+                label           = "COM_PEI_FIELD_PLAN_ACCION_TIPO_ACCION_LABEL"
+                description     = "COM_PEI_FIELD_PLAN_ACCION_TIPO_ACCION_DESC"
+                required        = "true">
+            <option value="0">COM_PEI_FIELD_PLAN_ACCION_TIPO_ACCION_TITLE</option>
+        </field>
+        
+        <!-- Descripción/Nobre del plan de accion del pei -->
+        <field  name            = "strDescripcion_plnAccion"
+                type            = "textarea"
+                label           = "COM_PEI_FIELD_PLAN_ACCION_DESCRIPCION_LABEL"
+                description     = "COM_PEI_FIELD_PLAN_ACCION_DESCRIPCION_DESC"
+                class           = "inputbox"
+                rows            = "3" 
+                cols            = "2"
+                required        = "true"
+        />
+        
+        <!-- Fecha de inicio del palan de accion -->
+        <field  name            = "dteFechaInicio_planAccion"
+                type            = "calendar"
+                label           = "COM_PEI_FIELD_PLAN_ACCION_FECHA_EJECUCION_LABEL"
+                description     = "COM_PEI_FIELD_PLAN_ACCION_FECHA_EJECUCION_DESC"
+                format          = "%Y-%m-%d"
+                required        = "true"
+        />
+        
+        <!-- Fecha de fin del palan de accion -->
+        <field  name            = "dteFechaFin_planAccion"
+                type            = "calendar"
+                label           = "COM_PEI_FIELD_PLAN_ACCION_FECHA_FIN_LABEL"
+                description     = "COM_PEI_FIELD_PLAN_ACCION_FECHA_FIN_DESC"
+                format          = "%Y-%m-%d"
+                required        = "true"
+        />
+        
+        <!-- presupuesto para el plan de accion  -->
+        <field  name            = "mnPresupuesto_plnAccion"
+                type            = "text"
+                label           = "COM_PEI_FIELD_PLAN_ACCION_PRESUPUESTO_LABEL"
+                description     = "COM_PEI_FIELD_PLAN_ACCION_PRESUPUESTO_DESC"
+                class           = "inputbox"
+                size            = "22"
+                required        = "true"
+        />
+        
+        <!-- Descripción/Nobre del plan de accion del pei -->
+        <field  name            = "strObservacion_plnAccion"
+                type            = "textarea"
+                label           = "COM_PEI_FIELD_PLAN_ACCION_OBSERVACION_LABEL"
+                description     = "COM_PEI_FIELD_PLAN_ACCION_OBSERVACION_DESC"
+                class           = "inputbox"
+                rows            = "3" 
+                cols            = "2"
+        />
+    </fieldset>
+    <!--  FUNCIONARIO RESPONSABLE  -->
+    <fieldset name="funcionarioRes">
+        <!-- Id del responsable del plan de accion -->
+        <field  name            = "unidad_gestion"
+                type            = "ugresponsable"
+                extension       = "com_pei"
+                class           = "inputbox"
+                label           = "COM_PEI_FIELD_PLAN_ACCION_RESPONSABLE_LABEL"
+                description     = "COM_PEI_FIELD_PLAN_ACCION_RESPONSABLE_DESC"
+                required        = "true">
+            <option value="0">COM_PEI_FIELD_PLAN_ACCION_UG_RESPONSABLE_TITLE</option>
+        </field>
+        
+        <field  name            = "intId_ugf"
+                type            = "list"
+                class           = "inputbox"
+                label           = ""
+                description     = "">
+            <option value="0">COM_PEI_FIELD_PLAN_ACCION_RESPONSABLE_TITLE</option>
+        </field>
+        
+        <!-- Fecha de inicio gestion de de unidad de gestion responsable -->
+        <field  name            = "dteFechaInicio_plnFR"
+                type            = "calendar"
+                label           = "COM_PEI_FIELD_PLAN_ACCION_FR_FECHA_INICIO_LABEL"
+                description     = "COM_PEI_FIELD_PLAN_ACCION_FR_FECHA_INICIO_DESC"
+                format          = "%Y-%m-%d"
+                required        = "true"
+        />
+    </fieldset>
+    
+    <!-- UNIDAD DE GESTION RESPONSABLE -->
+    <fieldset name="unidadGestionRes">
+        <!-- Id de la unidad de gestion responsable de la accion -->
+        <field  name            = "intCodigo_ug"
+                type            = "ugresponsable"
+                extension       = "com_pei"
+                class           = "inputbox"
+                label           = "COM_PEI_FIELD_PLAN_ACCION_UG_RESPONSABLE_LABEL"
+                description     = "COM_PEI_FIELD_PLAN_ACCION_UG_RESPONSABLE_DESC"
+                required        = "true">
+            <option value="0">COM_PEI_FIELD_PLAN_ACCION_UG_RESPONSABLE_TITLE</option>
+        </field>
+        
+        <!-- Fecha de inicio de gestion del funcionario responsable -->
+        <field  name            = "dteFechaInicio_plnUGR"
+                type            = "calendar"
+                label           = "COM_PEI_FIELD_PLAN_ACCION_UGR_FECHA_INICIO_LABEL"
+                description     = "COM_PEI_FIELD_PLAN_ACCION_UGR_FECHA_INICIO_DESC"
+                format          = "%Y-%m-%d"
+                required        = "true"
+        />
+    </fieldset>
+    
+</form>

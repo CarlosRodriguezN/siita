@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <fieldset name="essential">
+        <!-- ID de Programa -->
+        <field  name            = "intId_SubPrograma"
+                type            = "hidden"
+                size            = "10"
+                default         = "0"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        <!-- ID de Programa -->
+        <field  name            = "intcodigo_prg"
+                type            = "hidden"
+                size            = "10"
+                default         = "0"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        <!-- CODIGO del Programa -->
+        <field  name        = "strCodigoSubPrograma" 
+                type        = "text" 
+                default     = "" 
+                required    = "true"
+                label       = "COM_PROGRAMA_FIELD_SUB_PROGRAMA_CODIGO_LABEL" 
+                description = "COM_PROGRAMA_FIELD_SUB_PROGRAMA_CODIGO_DESC" 
+                size        = "25" />
+         
+        <!-- DESCRIPCION del programa -->
+        <field  name        = "strDescripcion" 
+                type        = "textarea" 
+                default     = ""
+                label       = "COM_PROGRAMA_FIELD_SUB_PROGRAMA_DESCRIPCION_LABEL" 
+                description = "COM_PROGRAMA_FIELD_SUB_PROGRAMA_DESCRIPCION_DESC" 
+                required    = "true"
+                rows        = "5" 
+                cols        = "10" />
+        
+        <!-- CODIGO del Programa -->
+        <field  name        = "strAlias" 
+                type        = "text" 
+                required    = "true"
+                label       = "COM_PROGRAMA_FIELD_SUB_PROGRAMA_ALIAS_LABEL" 
+                description = "COM_PROGRAMA_FIELD_SUB_PROGRAMA_ALIAS_DESC" 
+                size        = "25" />
+        
+        <!-- Publicados -->
+        <field  name        = "published"
+                type        = "list"
+                label       = "JSTATUS"
+                description = "JFIELD_PUBLISH_DESC"
+                class       = "inputbox"
+                filter      = "intval"
+                size        = "1"
+                default     = "1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+        
+        <field  name            = "dataPrograma"
+                type            = "hidden"
+                default         = "0"
+                readonly        = "true"
+        />
+        
+        
+    </fieldset>
+</form>

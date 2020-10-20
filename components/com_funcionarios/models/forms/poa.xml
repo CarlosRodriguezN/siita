@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <!-- Informacion General de un Plan Estratégico Institucional -->
+    <fieldset name="datosgeneralespoa">
+        <!-- Identificador del poa -->
+        <field  name            = "intId_pi"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_POA_LABEL"
+                description     = "JGLOBAL_FIELD_ID_POA_DESC"
+                size            = "10"
+                default         = "0"
+        />
+        
+        <!-- Identificador del tipo de plan, por defecto "2" id de tipo POA -->
+        <field  name            = "intId_tpoPlan"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_TPO_PLAN_POA_LABEL"
+                description     = "JGLOBAL_FIELD_ID_TPO_PLAN_POA_DESC"
+                size            = "10"
+                default         = "2"   
+        />
+        
+        <!-- Identificador de la institución -->
+        <field  name            = "intIdentidad_ent"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_ENTIDAD_LABEL"
+                description     = "JGLOBAL_FIELD_ID_ENTIDAD_DESC"
+                size            = "10"
+        />
+        
+        <!-- Descripción/Nobre del POA -->
+        <field  name            = "strDescripcion_pi"
+                type            = "text"
+                label           = "COM_FUNCIONARIOS_FIELD_POA_DESCRIPCION_LABEL"
+                description     = "COM_FUNCIONARIOS_FIELD_POA_DESCRIPCION_DESC"
+                class           = "inputbox"
+                size            = "50"
+                required        = "true"
+        />
+        
+        <!-- Anio del POA -->
+        <field  name            = "anioPOA"
+                type            = "anios"
+                extension       = "com_unidadgestion"
+                label           = "COM_FUNCIONARIOS_FIELD_POA_ANIO_PLAN_LABEL"
+                description     = "COM_FUNCIONARIOS_FIELD_POA_ANIO_PLAN_DESC"
+                class           = "inputbox">
+                <option value="0">COM_FUNCIONARIOS_FIELD_POA_ANIO_PLAN_TITLE</option>
+        </field>
+        
+        <!-- Fecha de Inicio -->
+        <field  name            = "dteFechainicio_pi"
+                type            = "text"
+                label           = "COM_FUNCIONARIOS_FIELD_POA_FECHA_INICIO_LABEL"
+                description     = "COM_FUNCIONARIOS_FIELD_POA_FECHA_INICIO_DESC"
+                required        = "true"
+                readonly        = "false"
+        />
+        
+        <!-- Fecha de Fin -->
+        <field  name            = "dteFechafin_pi"
+                type            = "text"
+                label           = "COM_FUNCIONARIOS_FIELD_POA_FECHA_FIN_LABEL"
+                description     = "COM_FUNCIONARIOS_FIELD_POA_FECHA_FIN_DESC"
+                required        = "true"
+                readonly        = "false"
+        />
+        
+        <!-- Alias del POA -->
+        <field  name            = "strAlias_pi"
+                type            = "text"
+                label           = "COM_FUNCIONARIOS_FIELD_POA_ALIAS_LABEL"
+                description     = "COM_FUNCIONARIOS_FIELD_POA_ALIAS_DESC"
+                class           = "inputbox"
+                size            = "50"
+        />
+        
+        <!-- Vigente -->
+        <field  name            = "blnVigente_pi"
+                type            = "hidden"
+                label           = "COM_FUNCIONARIOS_FIELD_POA_VIGENTE_LABEL"
+                description     = "COM_FUNCIONARIOS_FIELD_POA_VIGENTE_DESC"
+                class           = "inputbox"
+                filter          = "intval"
+                size            = "1"
+                default         = "0"
+        />
+        
+    </fieldset>
+</form>

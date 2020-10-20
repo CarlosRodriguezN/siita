@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fieldset name="tipogestion">
+        <!-- identificador tipo de gestion -->
+        <field  name            = "intIdTipoGestion_tpg"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        <!-- Descripcion -->
+        <field  name            ="strDescripcion_tpg" 
+                type            ="textarea" 
+                default         ="Tipo Variable" 
+                label           ="COM_MANTENIMIENTO_FIELD_TIPOGESTION_DESCRIPCION_LABEL" 
+                description     ="COM_MANTENIMIENTO_FIELD_TIPOGESTION_DESCRIPCION_DESC" 
+        />
+        <!-- nombre />-->
+        <field  name            ="strNombre_tpg" 
+                type            ="text" 
+                default         ="Tipo Variable" 
+                label           ="COM_MANTENIMIENTO_FIELD_TIPOGESTION_NOMBRE_LABEL" 
+                description     ="COM_MANTENIMIENTO_FIELD_TIPOGESTION_NOMBRE_DESC" 
+        />
+        <!-- Publicados -->
+        <field  name            ="published"
+                type            ="list"
+                label           ="JSTATUS"
+                description     ="JFIELD_PUBLISH_DESC"
+                class           ="inputbox"
+                filter          ="intval"
+                size            ="1"
+                default         ="1"
+        >
+            <option value="1"> JPUBLISHED </option>
+            <option value="0"> JUNPUBLISHED </option>
+        </field>
+    </fieldset>
+</form>

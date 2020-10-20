@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <!-- Informacion General de un Plan Estratégico Institucional -->
+    <fieldset name="funcionario">
+        
+        <!-- Cedula del funcionario -->
+        <field  name            = "strCI_fnc"
+                type            = "text"
+                label           = "COM_UNIDAD_GESTION_FNC_FIELD_FNC_CI_LABEL"
+                description     = "COM_UNIDAD_GESTION_FNC_FIELD_FNC_CI_DESC"
+                size            = "10"
+        />
+        
+        <!-- Descripción/Apellidos del Funcionario -->
+        <field  name            = "strApellido_fnc"
+                type            = "text"
+                label           = "COM_UNIDAD_GESTION_FNC_FIELD_FNC_APELLIDOS_LABEL"
+                description     = "COM_UNIDAD_GESTION_FNC_FIELD_FNC_APELLIDOS_DESC"
+                size            = "30"
+        />
+        
+        <!-- Descripción/Nobres del Funcionario -->
+        <field  name            = "strNombre_fnc"
+                type            = "text"
+                label           = "COM_UNIDAD_GESTION_FNC_FIELD_FNC_NOMBRES_LABEL"
+                description     = "COM_UNIDAD_GESTION_FNC_FIELD_FNC_NOMBRES_DESC"
+                size            = "30"
+        />
+        
+        <!-- DescripciónCorreo electronico del Funcionario-->
+        <field  name            = "strCorreoElectronico_fnc"
+                type            = "text"
+                label           = "COM_UNIDAD_GESTION_FNC_FIELD_FNC_EMAIL_LABEL"
+                description     = "COM_UNIDAD_GESTION_FNC_FIELD_FNC_EMAIL_DESC"
+                size            = "30"
+        />
+        
+        <!-- Descripción/Teléfono del Funcionario -->
+        <field  name            = "strTelefono_fnc"
+                type            = "text"
+                label           = "COM_UNIDAD_GESTION_FNC_FIELD_FNC_TELEFONO_LABEL"
+                description     = "COM_UNIDAD_GESTION_FNC_FIELD_FNC_TELEFONO_DESC"
+                size            = "15"
+        />
+        
+        <!-- Descripción/Celular del Funcionario -->
+        <field  name            = "strCelular_fnc"
+                type            = "text"
+                label           = "COM_UNIDAD_GESTION_FNC_FIELD_FNC_CELULAR_LABEL"
+                description     = "COM_UNIDAD_GESTION_FNC_FIELD_FNC_CELULAR_DESC"
+                size            = "15"
+                readonly        = "false"
+        />
+        
+    </fieldset>
+    
+</form>

@@ -1,0 +1,188 @@
+/* $Id: example.css,v 1.5 2006/03/27 02:44:36 pat Exp $ */
+
+/*--------------------------------------------------
+  REQUIRED to hide the non-active tab content.
+  But do not hide them in the print stylesheet!
+  --------------------------------------------------*/
+.tabberlive .tabbertabhide {
+    display:none;
+}
+
+/*--------------------------------------------------
+  .tabber = before the tabber interface is set up
+  .tabberlive = after the tabber interface is set up
+  --------------------------------------------------*/
+/*yo modifique*/
+.tabber {
+    text-align:left;
+}
+
+.tabberlive {
+    margin-top: 5px;
+}
+
+.tabberlive .tabberlive {
+    margin-top: 5px;
+}
+/*--------------------------------------------------
+  ul.tabbernav = the tab navigation list
+  li.tabberactive = the active tab
+  --------------------------------------------------*/
+ul.tabbernav
+{
+    margin:0;
+    padding: 3px 0;
+    border-bottom: 1px solid #778;
+    font: bold 11px sans-serif, Verdana;
+
+    text-align: left;
+}
+
+.tabberlive .tabbertab .tabberlive ul.tabbernav
+{
+    margin:0;
+    padding: 3px 0;
+    border-bottom: 1px solid #778;
+    font: bold 11px sans-serif, Verdana;
+
+    text-align: right;
+}
+
+ul.tabbernav li
+{
+    list-style: none;
+    margin: 0;
+    display: inline;
+}
+
+ul.tabbernav li a
+{
+    padding: 3px 0.5em;
+    margin-left: 3px;
+    border: 1px solid #88ac33;
+    border-bottom: none;
+    background: #88ac33;
+    text-decoration: none;
+}
+/*estilo para el tab cuando esta en reposo.*/
+ul.tabbernav li a:link { 
+    /*    color: #DE6903; */
+    color: #283C52;
+}
+
+/*cambia el color del TEXTO cuando se lo pasa sobre los tab
+ul.tabbernav li a:visited { color: #667; }*/
+ul.tabbernav li a:visited { 
+    /*    color: #DE6903; */
+    color: #283C52;
+}
+
+ul.tabbernav li a:hover
+{
+    color: #DE6903;
+    background: #DDD;
+    border-color: #DDD;
+}
+
+ul.tabbernav li.tabberactive a
+{
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+ul.tabbernav li.tabberactive a:hover
+{
+    color: #000;
+    background: white;
+    border-bottom: 1px solid white;
+}
+
+/*--------------------------------------------------
+  .tabbertab = the tab content
+  Add style only after the tabber interface is set up (.tabberlive)
+  --------------------------------------------------*/
+.tabberlive .tabbertab {
+    padding:3px;
+    border:1px solid #aaa;
+    border-top:2px;
+    text-align: left;
+
+    font-size: 0.8em;
+
+    /* If you don't want the tab size changing whenever a tab is changed
+       you can set a fixed height */
+
+    height:126px; 
+    /* width: 300px;*/
+    /* If you set a fix height set overflow to auto and you will get a
+       scrollbar when necessary */
+
+    overflow:auto;
+    /*colo de fondo
+    background-color: goldenrod;*/
+
+    width: 370px;
+}
+
+.tabberlive .tabbertab .tabberlive .tabbertab {
+    padding:3px;
+    border:1px solid #aaa;
+    border-top:2px;
+    text-align: left;
+
+    font-size: 0.8em;
+
+    /* If you don't want the tab size changing whenever a tab is changed
+       you can set a fixed height */
+
+    height:93px; 
+    /* width: 300px;*/
+    /* If you set a fix height set overflow to auto and you will get a
+       scrollbar when necessary */
+
+    overflow:auto;
+    /*colo de fondo
+    background-color: goldenrod;*/
+
+    width: 362px;
+}
+
+/* If desired, hide the heading since a heading is provided by the tab */
+.tabberlive .tabbertab h2 {
+    display:none;
+}
+.tabberlive .tabbertab h3 {
+    display:none;
+}
+
+/* Example of using an ID to set different styles for the tabs on the page */
+.tabberlive#tab1 {
+}
+.tabberlive#tab2 {
+}
+.tabberlive#tab2 .tabbertab {
+    height:200px;
+    overflow:auto;
+}
+
+/******************estos son los mios *********************/
+div.tituloinfo {
+    /*    border: 1px solid red;*/
+    background-color: #283C52; /*shadow color*/ 
+    color: #FFFFFF;
+
+    position: absolute;
+    width: 370px;
+} 
+
+.infoProyecto {
+    width: 100%;
+    height: 100px
+
+}
+
+
+.tableImgLog{
+    width: 78px;
+    height: 55px
+}

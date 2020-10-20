@@ -1,0 +1,2 @@
+COM_PROYECTOS_SELECCIONE_VARIABLE = "Seleccione Variable"
+COM_PROYECTOS_SIN_REGISTROS = "Sin Registros Disponibles"

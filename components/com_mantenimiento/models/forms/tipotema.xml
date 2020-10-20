@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<form>
+    <fieldset name="tipotema">
+        <field  name            = "intId_tt"
+                type            = "hidden"
+                label           = "JGLOBAL_FIELD_ID_LABEL"
+                description     = "JGLOBAL_FIELD_ID_DESC"
+                size            = "10"
+                readonly        = "true"
+                class           = "readonly"
+        />
+        
+        <!-- Nombre  />-->
+        <field  name            ="strNombre_tt" 
+                type            ="text" 
+                default         ="Estado" 
+                label           ="COM_MANTENIMIENTO_FIELD_TIPOS_TEMA_NOMBRE_LABEL" 
+                description     ="COM_MANTENIMIENTO_FIELD_TIPOS_TEMA_NOMBRE_DESC" 
+                required         ="true"
+                size             ="30"
+        />
+        
+        <!-- Descripción  />-->
+        <field  name            ="strDescripcion_tt" 
+                type            ="textarea" 
+                default         ="" 
+                label           ="COM_MANTENIMIENTO_FIELD_TIPOS_TEMA_DESCRIPCION_LABEL" 
+                description     ="COM_MANTENIMIENTO_FIELD_TIPOS_TEMA_DESCRIPCION_DESC" 
+                rows            ="5" 
+                cols            ="3"
+        />
+        
+    </fieldset>
+</form>
